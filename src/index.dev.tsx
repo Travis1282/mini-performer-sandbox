@@ -1,9 +1,6 @@
 import { Hono } from "hono";
 import { renderToString } from "react-dom/server";
 
-import manifest from "../dist/.vite/manifest.json";
-let cssFile: string | undefined = manifest["src/client.tsx"]?.css?.at(0);
-
 const app = new Hono();
 
 app.get("*", async (c) => {
@@ -14,12 +11,7 @@ app.get("*", async (c) => {
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-          {cssFile ? <link rel="stylesheet" href={cssFile} /> : null}
-          {import.meta.env.PROD ? (
-            <script type="module" src="/static/client.js"></script>
-          ) : (
-            <script type="module" src="/src/client.tsx"></script>
-          )}
+          <script type="module" src="/src/client.tsx"></script>
         </head>
         <body>
           <div id="root"></div>

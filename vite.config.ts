@@ -4,6 +4,7 @@ import adapter from "@hono/vite-dev-server/cloudflare";
 import { defineConfig } from "vite";
 
 export default defineConfig(({ mode }) => {
+  const isProd = process.env.NODE_ENV === "production";
   if (mode === "client") {
     return {
       build: {
@@ -25,7 +26,7 @@ export default defineConfig(({ mode }) => {
         build(),
         devServer({
           adapter,
-          entry: "src/index.tsx",
+          entry: isProd ? "src/index.tsx" : "src/index.dev.tsx",
         }),
       ],
     };
