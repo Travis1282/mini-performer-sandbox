@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { renderToString } from "react-dom/server";
 
-const manifestPath = "../dist/.vite/manifest.json";
+const manifestPath = ".vite/manifest.json";
 let cssFile: string | null = null;
 
 const app = new Hono();
