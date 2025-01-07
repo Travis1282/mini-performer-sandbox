@@ -1,5 +1,4 @@
 import { Link, Outlet } from "react-router";
-import { Button } from "../components/button/button";
 
 export function Layout() {
   return (

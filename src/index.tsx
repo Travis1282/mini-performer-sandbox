@@ -1,6 +1,11 @@
 import { Hono } from "hono";
 import { renderToString } from "react-dom/server";
 
+const manifestPath = "../dist/manifest.json";
+const cssFile = import.meta.env.PROD
+  ? (await import(manifestPath)).default["src/client.tsx"]?.css?.at(0)
+  : null;
+
 const app = new Hono();
 
 app.get("*", (c) => {
@@ -10,6 +15,8 @@ app.get("*", (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+          {cssFile ? <link rel="stylesheet" href={cssFile} /> : null}
           <link href="/static/style.css" rel="stylesheet" />
           {import.meta.env.PROD ? (
             <script type="module" src="/static/client.js"></script>
