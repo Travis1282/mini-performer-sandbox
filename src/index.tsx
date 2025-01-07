@@ -1,17 +1,16 @@
 import { Hono } from "hono";
 import { renderToString } from "react-dom/server";
 
-const manifestPath = ".vite/manifest.json";
-let cssFile: string | null = null;
+import manifest from "../dist/.vite/manifest.json";
+let cssFile: string | undefined = manifest["src/client.tsx"]?.css?.at(0);
+
+// if (import.meta.env.PROD && !cssFile) {
+//   cssFile = (await import(manifestPath)).default["src/client.tsx"]?.css?.at(0);
+// }
 
 const app = new Hono();
 
 app.get("*", async (c) => {
-  if (import.meta.env.PROD && !cssFile) {
-    cssFile = (await import(manifestPath)).default["src/client.tsx"]?.css?.at(
-      0
-    );
-  }
   return c.html(
     renderToString(
       <html>
