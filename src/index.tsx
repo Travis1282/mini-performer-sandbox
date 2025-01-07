@@ -1,10 +1,21 @@
 import { Hono } from "hono";
 import { renderToString } from "react-dom/server";
+import fs from "fs";
 
-const manifestPath = "../dist/manifest.json";
-const cssFile = import.meta.env.PROD
-  ? (await import(manifestPath)).default["src/client.tsx"]?.css?.at(0)
-  : null;
+const manifestPath = "../dist/.vite/manifest.json";
+let cssFile: string | null = null;
+
+if (import.meta.env.PROD) {
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8")) as Record<
+    string,
+    { css: string[] }
+  >;
+  cssFile = manifest["src/client.tsx"].css[0];
+}
+
+// import.meta.env.PROD
+//   ? (await import(manifestPath)).default["src/client.tsx"]?.css?.at(0)
+//   : null;
 
 const app = new Hono();
 
