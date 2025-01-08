@@ -10,7 +10,6 @@ app.get("*", async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-
           <script type="module" src="/src/client.tsx"></script>
         </head>
         <body>

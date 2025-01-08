@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
         rollupOptions: {
           input: "./src/client.tsx",
           output: {
-            entryFileNames: "static/client.js",
+            // entryFileNames: "static/client.js",
           },
         },
       },
