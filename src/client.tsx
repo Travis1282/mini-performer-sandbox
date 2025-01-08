@@ -1,25 +1,18 @@
 import { createRoot } from "react-dom/client";
-import { Layout } from "./pages/layout";
-import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "./pages/home";
+import { RouterProvider } from "react-router";
+import router from "./router";
 
 import "./style.css";
-import About from "./pages/about";
-import Slug from "./pages/slug";
+
+console.log(import.meta.env.VITE_API_URL);
 
 const rootNode = document.getElementById("root");
 if (rootNode) {
-  createRoot(rootNode).render(
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path=":slug" element={<Slug />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+  try {
+    createRoot(rootNode).render(<RouterProvider router={router} />);
+  } catch (error) {
+    console.error("Error rendering router:", error);
+  }
 } else {
   console.error("Root node not found");
 }
