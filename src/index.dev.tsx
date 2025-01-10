@@ -4,9 +4,11 @@ import { renderToString } from "react-dom/server";
 const app = new Hono();
 
 app.get("*", async (c) => {
+  //   console.log(c.env.MY_VAR);
+  //   console.log(import.meta.env.VITE_API_URL);
   return c.html(
     renderToString(
-      <html>
+      <html lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />

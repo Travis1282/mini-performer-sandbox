@@ -6,10 +6,13 @@ import About from "./pages/about";
 import { getEventListings } from "./services/maverick/getEventListings";
 import { getEventMetadata } from "./services/maverick/getEventMetadata";
 import { getSearchTrendingEvents } from "./services/maverick/getSearchTrendingEvents";
+import { Tickets } from "./pages/tickets/tickets";
+import { GlobalErrorContent } from "./components/errors/oh-no";
 
 let router = createBrowserRouter([
   {
     Component: Layout,
+    ErrorBoundary: GlobalErrorContent,
     children: [
       {
         Component: Home,
@@ -33,6 +36,21 @@ let router = createBrowserRouter([
       {
         Component: Slug,
         path: ":slug",
+      },
+      {
+        Component: Tickets,
+        path: "/tickets/:eventId/:slug/:localDate",
+        loader: ({ request, params }) =>
+          getEventMetadata({
+            init: {
+              signal: request.signal,
+            },
+            params: {
+              path: {
+                "event-id": Number(params.eventId),
+              },
+            },
+          }),
       },
     ],
   },
