@@ -152,6 +152,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
         `${listing.section}-${listing.row}`,
         "ticket-list-item"
       )}`}
+      id={`${listing.id}`}
       to={`${getEventTicketsPath(event)}/${listing.id}`}
       style={{ ...style, borderLeftColor: sectionColor }}
     >

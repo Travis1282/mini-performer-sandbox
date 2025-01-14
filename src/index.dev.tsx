@@ -3,6 +3,15 @@ import { renderToString } from "react-dom/server";
 
 const app = new Hono();
 
+// app.get("/rest/*", (c) => {
+//   return fetch(`${import.meta.env.VITE_API_URL_PROXY}/${c.req.path}`, {
+//     headers: {
+//       "CF-Access-Client-Id": import.meta.env.VITE_API_CLIENT_ID ?? "",
+//       "CF-Access-Client-Secret": import.meta.env.VITE_API_CLIENT_SECRET ?? "",
+//     },
+//   });
+// });
+
 app.get("*", async (c) => {
   //   console.log(c.env.MY_VAR);
   //   console.log(import.meta.env.VITE_API_URL);

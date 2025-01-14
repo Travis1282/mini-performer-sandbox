@@ -4,13 +4,22 @@ import { useQuery } from "@tanstack/react-query";
 import { getEventListingsWithBotProtection } from "./services/getEventListingsWithBotProtection";
 import TicketListItem from "./components/ticket-list-item";
 import { components } from "../../services/maverick/generated/maverick-schema";
+import { findMasterPerformerFromEvent } from "../../services/events/find-master-performer-from-event";
+import { LayoutNavbarTickets } from "./components/layout-navbar-tickets";
+import { TicketList } from "./components/ticket-list";
 
 export function Tickets() {
-  // TODO: what happens if loader has error in route?
   const { data: loaderData } = useLoaderData<{
     data: components["schemas"]["GetEventMetadataResponse"];
   }>();
+
+  if (!loaderData.event) {
+    throw new Error("Event not found");
+  }
+
   const params = useParams<{ eventId: string }>();
+
+  const performer = findMasterPerformerFromEvent(loaderData.event);
 
   const {
     data: listings,
@@ -93,15 +102,16 @@ export function Tickets() {
   }
 
   return (
-    <main className="flex flex-col gap-4 pt-4">
-      <h1 className="pl-3 text-2xl font-bold">{loaderData.title}</h1>
-      <ul>
-        {listings.data.listings?.map((listing) => (
-          <li key={listing.id}>
-            <TicketListItem event={loaderData.event!} listing={listing} />
-          </li>
-        ))}
-      </ul>
+    <main className="flex flex-col w-full h-full">
+      <LayoutNavbarTickets
+        event={loaderData.event}
+        performer={performer?.performer}
+      />
+      <img
+        className="w-full object-cover"
+        src="https://place-hold.it/250x250"
+      />
+      <TicketList listings={listings.data.listings} event={loaderData.event} />
     </main>
   );
 }
