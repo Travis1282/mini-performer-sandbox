@@ -18,11 +18,11 @@ app.get("*", async (c) => {
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-          {cssFile ? <link rel="stylesheet" href={cssFile} /> : null}
+          {cssFile ? <link rel="stylesheet" href={`/${cssFile}`} /> : null}
         </head>
         <body>
           <div id="root"></div>
-          {entryFile ? <script async src={entryFile}></script> : null}
+          {entryFile ? <script async src={`/${entryFile}`}></script> : null}
         </body>
       </html>
     )
