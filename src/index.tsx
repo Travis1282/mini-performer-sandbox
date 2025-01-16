@@ -2,10 +2,13 @@ import { Hono } from "hono";
 import { renderToString } from "react-dom/server";
 
 import manifest from "../dist/.vite/manifest.json";
+import { basicProxy } from "./services/proxy";
 const cssFile: string | undefined = manifest["src/client.tsx"]?.css?.[0];
 const entryFile: string | undefined = manifest["src/client.tsx"]?.file;
 
 const app = new Hono();
+
+app.get("/rest/*", basicProxy(import.meta.env.VITE_MAVERICK_URL));
 
 app.get("*", async (c) => {
   return c.html(
