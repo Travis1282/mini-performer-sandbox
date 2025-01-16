@@ -17,6 +17,7 @@ import { components } from "../../../services/maverick/generated/maverick-schema
 import { shouldShowClearView } from "../../../services/events/should-show-clear-view";
 import { shouldShowSeatedTogether } from "../../../services/events/should-show-seated-together";
 import { Link } from "react-router";
+import { useVenueConfigurationContext } from "../services/useVenueConfiguration";
 
 interface TicketListItemProps {
   className?: string;
@@ -88,14 +89,14 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
   quantityFilter,
   isInternational,
 }: TicketListItemProps) => {
-  //   const { getColorBySectionId } = useVenueConfigurationContext();
+  const { getColorBySectionId } = useVenueConfigurationContext();
+  const sectionColor = getColorBySectionId(listing.sectionId);
+
   const useAllInPricing =
     listing &&
     listing.displayPrice > 0 &&
     listing.displayPriceWithFees &&
     event?.pricingType === "ALL_IN_TICKET_PAGE";
-  //   const sectionColor = getColorBySectionId(listing.sectionId);
-  const sectionColor = "bg-stone-200";
 
   const ticketsQuantity = useMemo(
     () =>

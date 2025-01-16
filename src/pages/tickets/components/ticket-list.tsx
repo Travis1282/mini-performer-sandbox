@@ -53,7 +53,7 @@ export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
   }
 
   return (
-    <div className="h-[calc(100vh-19rem)]">
+    <div className="h-[calc(100vh-20.375rem)]">
       <AutoSizer>
         {({ height, width }) => (
           <List

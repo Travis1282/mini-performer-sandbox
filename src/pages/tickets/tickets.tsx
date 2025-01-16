@@ -2,11 +2,13 @@ import React from "react";
 import { useLoaderData, useParams } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import { getEventListingsWithBotProtection } from "./services/getEventListingsWithBotProtection";
-import TicketListItem from "./components/ticket-list-item";
 import { components } from "../../services/maverick/generated/maverick-schema";
 import { findMasterPerformerFromEvent } from "../../services/events/find-master-performer-from-event";
 import { LayoutNavbarTickets } from "./components/layout-navbar-tickets";
 import { TicketList } from "./components/ticket-list";
+import { mapsUrl } from "../../services/config";
+import { Map } from "./components/map";
+import { VenueConfigurationProvider } from "./services/useVenueConfiguration";
 
 export function Tickets() {
   const { data: loaderData } = useLoaderData<{
@@ -101,17 +103,25 @@ export function Tickets() {
     );
   }
 
+  const svgMapUrl = loaderData.event?.venueConfiguration?.svgMapFileName
+    ? `${mapsUrl}/${loaderData.event.venueConfiguration.svgMapFileName}`
+    : "";
+
   return (
     <main className="flex flex-col w-full h-full">
       <LayoutNavbarTickets
         event={loaderData.event}
         performer={performer?.performer}
       />
-      <img
-        className="w-full object-cover"
-        src="https://place-hold.it/250x250"
-      />
-      <TicketList listings={listings.data.listings} event={loaderData.event} />
+      <VenueConfigurationProvider
+        venueConfig={listings.data.venueConfiguration}
+      >
+        <Map mapSrc={svgMapUrl} />
+        <TicketList
+          listings={listings.data.listings}
+          event={loaderData.event}
+        />
+      </VenueConfigurationProvider>
     </main>
   );
 }

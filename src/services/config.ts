@@ -3,9 +3,15 @@ export const basePath =
 export const mapsUrl =
   import.meta.env.VITE_MAP_URL ?? "https://maverick-svg-maps.s3.amazonaws.com";
 export const isProd = import.meta.env.VITE_VERCEL_ENV === "production";
+
+export const maverickUrl =
+  import.meta.env.VITE_MAVERICK_URL ??
+  "https://maverick-public-services-stage.dev.gotickets.com";
+
 export const apiUrl =
   import.meta.env.VITE_API_URL ??
   "https://maverick-public-services-stage.dev.gotickets.com";
+
 export const s3Url =
   import.meta.env.VITE_S3_URL ?? "https://static.gotickets.com";
 export const siteName = import.meta.env.VITE_NAME ?? "GoTickets";
