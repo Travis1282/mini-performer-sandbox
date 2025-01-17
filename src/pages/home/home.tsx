@@ -3,10 +3,9 @@ import { useLoaderData } from 'react-router'
 import { components } from '../../services/maverick/generated/maverick-schema'
 import { Event } from './components/event'
 
-export default function Home(props: any) {
-  const { data, response } = useLoaderData<{
+export default function Home() {
+  const { data } = useLoaderData<{
     data: components['schemas']['Event'][]
-    response: any
   }>()
 
   return (

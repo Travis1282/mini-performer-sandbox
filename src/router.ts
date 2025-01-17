@@ -9,7 +9,7 @@ import { Tickets } from './pages/tickets/tickets'
 import { GlobalErrorContent } from './components/errors/oh-no'
 import { PrimaryLayout } from './pages/primary-layout'
 
-let router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     Component: Layout,
     ErrorBoundary: GlobalErrorContent,
@@ -20,7 +20,7 @@ let router = createBrowserRouter([
           {
             Component: Home,
             index: true,
-            loader: ({ request, params }) =>
+            loader: ({ request }) =>
               getSearchTrendingEvents({
                 init: {
                   signal: request.signal,

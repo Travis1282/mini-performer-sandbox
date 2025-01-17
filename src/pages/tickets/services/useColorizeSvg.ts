@@ -1,7 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { getSectionElementBySvgSectionId } from './getSectionElementBySvgSectionId'
 import { useVenueConfigurationContext } from './useVenueConfiguration'
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 
 interface UseColorizeSvgOptions {
   mapRef: React.RefObject<HTMLDivElement | null>

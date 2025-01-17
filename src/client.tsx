@@ -11,7 +11,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 const queryClient = new QueryClient()
 
-console.log({ apiUrl: import.meta.env.VITE_API_URL })
+// console.log({ apiUrl: import.meta.env.VITE_API_URL })
 
 const rootNode = document.getElementById('root')
 if (rootNode) {

@@ -4,7 +4,7 @@ import { Link, useRouteError } from 'react-router'
 import { resolveImagePath } from '../../services/images/resolve-image-path'
 
 export function GlobalErrorContent() {
-  let error = useRouteError()
+  const error = useRouteError()
   console.error(error)
   return (
     <div className="w-dvh flex h-dvh h-screen w-screen flex-col items-center justify-center">

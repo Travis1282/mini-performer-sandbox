@@ -12,14 +12,13 @@
 import EllipsisVerticalIcon from '@heroicons/react/24/outline/EllipsisVerticalIcon'
 import clsx from 'clsx'
 import dayjs from 'dayjs'
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import SVG from 'react-inlinesvg'
-import { Link, useLocation, useNavigate, useSearchParams } from 'react-router'
+import { Link } from 'react-router'
 import { resolveImagePath } from '../../../services/images/resolve-image-path'
 // import { ContactHeader } from "../ContactHeader";
 import { components } from '../../../services/maverick/generated/maverick-schema'
-import { useIsMobile } from '../../../services/devices/use-is-mobile'
-import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path'
+// import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path'
 import { getEventName } from '../../../services/events/get-event-name'
 
 // const MultiEventPopup = dynamic(
@@ -47,26 +46,26 @@ export function LayoutNavbarTickets({
   event,
   performer,
 }: LayoutNavbarTicketsProps) {
-  const [open, setOpen] = useState(false)
-  const eventUrl = event ? getEventTicketsPath(event) : ''
+  const [, setOpen] = useState(false)
+  // const eventUrl = event ? getEventTicketsPath(event) : ''
   // const breadcrumbLinks = generateBreadcrumbLinks(performer, {
   //   title: event?.name ?? "",
   //   url: `${basePath}/${eventUrl}`,
   // });
-  const { isMobile } = useIsMobile()
+  // const { isMobile } = useIsMobile()
 
   const eventDate = dayjs(event.eventTimeLocal)
   // let { showResaleDisclosure } = useDisclosureContext();
 
-  const isUtah = event?.venue?.state === 'UT'
+  // const isUtah = event?.venue?.state === 'UT'
   // if (isUtah) {
   //   showResaleDisclosure = true;
   // }
 
-  const [searchParams] = useSearchParams()
-  const quantity = searchParams.get('quantity')
-  const navigate = useNavigate()
-  const location = useLocation()
+  // const [searchParams] = useSearchParams()
+  // const quantity = searchParams.get('quantity')
+  // const navigate = useNavigate()
+  // const location = useLocation()
   // const { listingDetails } = useListingDetailsContext();
   // const onDetailsPage = Boolean(
   //   listingDetails && location.pathname.includes(listingDetails.id.toString())

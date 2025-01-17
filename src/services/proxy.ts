@@ -1,6 +1,6 @@
 import { Context, Handler } from 'hono'
 
-export function basicProxy(target_url: string = ''): Handler {
+export function basicProxy(target_url = ''): Handler {
   return async (c: Context) => {
     let path = target_url ? target_url + c.req.path : c.req.url
     if (c.req.query()) path = path + '?' + new URLSearchParams(c.req.query())
