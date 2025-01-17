@@ -31,8 +31,8 @@ export const Map = ({ mapSrc }: MapProps) => {
     const panZoom = panzoom(svgGroup as SVGElement, {
       bounds: true,
       boundsPadding: 0.1,
-      maxZoom: 4,
-      minZoom: 0.7,
+      maxZoom: 1,
+      minZoom: 0.1,
     });
     panZoomRef.current = panZoom;
   }, [mapLoaded]);
