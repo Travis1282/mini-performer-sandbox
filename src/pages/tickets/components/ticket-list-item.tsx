@@ -161,7 +161,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
         <div className="flex flex-col">
           <span
             className={clsx(
-              "inline-block break-words font-semibold text-sm lg:text-base"
+              "inline-block italic break-words font-semibold text-sm lg:text-base"
             )}
             data-testid="ticket-list-item-title"
           >

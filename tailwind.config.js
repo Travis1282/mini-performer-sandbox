@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-plus-jakarta-sans)"],
+        sans: ["var(--font-plus-jakarta-sans-variable)", "sans-serif"],
       },
       colors: {
         "go-blue": {

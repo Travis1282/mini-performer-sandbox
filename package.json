@@ -10,6 +10,7 @@
     "check-env": "node scripts/get-env.js"
   },
   "dependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "^5.1.1",
     "@heroicons/react": "^2.2.0",
     "@tanstack/react-query": "^5.63.0",
     "@types/react": "^19.0.2",

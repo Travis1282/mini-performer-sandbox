@@ -2,28 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("/static/fonts/PlusJakartaSans-VariableFont_wght.ttf")
-    format("truetype-variations");
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400 700;
-}
-
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("/static/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf")
-    format("truetype-variations");
-  font-style: italic;
-  font-display: swap;
-  font-weight: 400 700;
-}
-
-* {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+@layer base {
+  :root {
+    --font-plus-jakarta-sans-variable: "Plus Jakarta Sans Variable";
+  }
 }
 
 #root,
