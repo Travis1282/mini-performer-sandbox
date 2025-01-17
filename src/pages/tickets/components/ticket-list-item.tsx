@@ -1,22 +1,25 @@
 'use client'
 // Missing growthbook check for smaller fonts/maps
 
+import type { CSSProperties } from 'react'
+
 // import { Button } from "@/components/Shared/Button";
 // import TicketBadge from "@/components/Shared/TicketBadge";
 // import Tooltip from "@/components/Shared/Tooltip";
 // import { SeatSecureBadge } from "@/components/TicketsContainer/TicketListItem/SeatSecure";
 // import { useVenueConfigurationContext } from "@/components/TicketsContainer/utils/useVenueConfiguration";
 import clsx from 'clsx'
-import type { CSSProperties } from 'react'
 import React from 'react'
 import { useMemo } from 'react'
-import { makeTestid } from '../../../services/string/make-test-id'
+import { Link } from 'react-router'
+
+import type { components } from '../../../services/maverick/generated/maverick-schema'
+import type { Listing } from '../../../types/listing'
+
 import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path'
-import { Listing } from '../../../types/listing'
-import { components } from '../../../services/maverick/generated/maverick-schema'
 import { shouldShowClearView } from '../../../services/events/should-show-clear-view'
 import { shouldShowSeatedTogether } from '../../../services/events/should-show-seated-together'
-import { Link } from 'react-router'
+import { makeTestid } from '../../../services/string/make-test-id'
 import { useVenueConfigurationContext } from '../services/useVenueConfiguration'
 
 interface TicketListItemProps {
@@ -154,8 +157,8 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
         'ticket-list-item'
       )}`}
       id={`${listing.id}`}
-      to={`${getEventTicketsPath(event)}/${listing.id}`}
       style={{ ...style, borderLeftColor: sectionColor }}
+      to={`${getEventTicketsPath(event)}/${listing.id}`}
     >
       <>
         <div className="flex flex-col">

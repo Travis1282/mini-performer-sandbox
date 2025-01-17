@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+
 import { Display } from './display.constants'
 
 export function useIsMobile(): { isMobile: boolean } {

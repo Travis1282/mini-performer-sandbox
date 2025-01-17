@@ -1,6 +1,8 @@
-import type { paths } from './generated/maverick-schema'
-import { apiUrl, isProd } from '../config'
 import createClient from 'openapi-fetch'
+
+import type { paths } from './generated/maverick-schema'
+
+import { apiUrl, isProd } from '../config'
 import { cloudflareHeadersMiddleware } from './cloudflareHeadersMiddleware'
 import { errorThrowMiddleware } from './errorThrowMiddleware'
 

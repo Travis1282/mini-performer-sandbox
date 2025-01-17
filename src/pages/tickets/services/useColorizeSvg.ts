@@ -1,6 +1,7 @@
+import { useCallback, useRef } from 'react'
+
 import { getSectionElementBySvgSectionId } from './getSectionElementBySvgSectionId'
 import { useVenueConfigurationContext } from './useVenueConfiguration'
-import { useCallback, useRef } from 'react'
 
 interface UseColorizeSvgOptions {
   mapRef: React.RefObject<HTMLDivElement | null>

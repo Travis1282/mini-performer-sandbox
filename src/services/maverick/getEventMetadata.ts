@@ -1,4 +1,5 @@
-import { paths } from './generated/maverick-schema'
+import type { paths } from './generated/maverick-schema'
+
 import { client } from './maverick-client'
 
 export interface GetEventMetadataOptions {

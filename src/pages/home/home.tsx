@@ -1,6 +1,8 @@
 import React from 'react'
 import { useLoaderData } from 'react-router'
-import { components } from '../../services/maverick/generated/maverick-schema'
+
+import type { components } from '../../services/maverick/generated/maverick-schema'
+
 import { Event } from './components/event'
 
 export default function Home() {

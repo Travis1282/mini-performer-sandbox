@@ -1,6 +1,7 @@
 'use client'
 
 import { Link, useRouteError } from 'react-router'
+
 import { resolveImagePath } from '../../services/images/resolve-image-path'
 
 export function GlobalErrorContent() {

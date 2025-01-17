@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { renderToString } from 'react-dom/server'
+
 import { basicProxy } from './services/proxy'
 
 const app = new Hono()
@@ -15,7 +16,7 @@ app.get('*', async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-          <script type="module" src="/src/client.tsx"></script>
+          <script src="/src/client.tsx" type="module"></script>
         </head>
         <body>
           <div id="root"></div>

@@ -1,13 +1,14 @@
 import { createBrowserRouter } from 'react-router'
-import { Layout } from './pages/layout'
-import Home from './pages/home/home'
-import Slug from './pages/slug'
+
+import { GlobalErrorContent } from './components/errors/oh-no'
 import About from './pages/about'
+import Home from './pages/home/home'
+import { Layout } from './pages/layout'
+import { PrimaryLayout } from './pages/primary-layout'
+import Slug from './pages/slug'
+import { Tickets } from './pages/tickets/tickets'
 import { getEventMetadata } from './services/maverick/getEventMetadata'
 import { getSearchTrendingEvents } from './services/maverick/getSearchTrendingEvents'
-import { Tickets } from './pages/tickets/tickets'
-import { GlobalErrorContent } from './components/errors/oh-no'
-import { PrimaryLayout } from './pages/primary-layout'
 
 const router = createBrowserRouter([
   {

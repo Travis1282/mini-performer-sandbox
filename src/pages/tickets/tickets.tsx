@@ -1,13 +1,15 @@
+import { getEventListingsWithBotProtection } from '@/pages/tickets/services/getEventListingsWithBotProtection'
+import { useQuery } from '@tanstack/react-query'
 import React from 'react'
 import { useLoaderData, useParams } from 'react-router'
-import { useQuery } from '@tanstack/react-query'
-import { getEventListingsWithBotProtection } from '@/pages/tickets/services/getEventListingsWithBotProtection'
-import { components } from '../../services/maverick/generated/maverick-schema'
+
+import type { components } from '../../services/maverick/generated/maverick-schema'
+
+import { mapsUrl } from '../../services/config'
 import { findMasterPerformerFromEvent } from '../../services/events/find-master-performer-from-event'
 import { LayoutNavbarTickets } from './components/layout-navbar-tickets'
-import { TicketList } from './components/ticket-list'
-import { mapsUrl } from '../../services/config'
 import { Map } from './components/map'
+import { TicketList } from './components/ticket-list'
 import { VenueConfigurationProvider } from './services/useVenueConfiguration'
 
 export function Tickets() {
@@ -118,8 +120,8 @@ export function Tickets() {
       >
         <Map mapSrc={svgMapUrl} />
         <TicketList
-          listings={listings.data.listings}
           event={loaderData.event}
+          listings={listings.data.listings}
         />
       </VenueConfigurationProvider>
     </main>

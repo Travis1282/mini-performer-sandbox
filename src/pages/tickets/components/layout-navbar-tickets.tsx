@@ -15,11 +15,13 @@ import dayjs from 'dayjs'
 import { useState } from 'react'
 import SVG from 'react-inlinesvg'
 import { Link } from 'react-router'
-import { resolveImagePath } from '../../../services/images/resolve-image-path'
+
 // import { ContactHeader } from "../ContactHeader";
-import { components } from '../../../services/maverick/generated/maverick-schema'
+import type { components } from '../../../services/maverick/generated/maverick-schema'
+
 // import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path'
 import { getEventName } from '../../../services/events/get-event-name'
+import { resolveImagePath } from '../../../services/images/resolve-image-path'
 
 // const MultiEventPopup = dynamic(
 //   () => import("./MultiEventPopup").then((mod) => mod.MultiEventPopup),
@@ -231,8 +233,8 @@ export function LayoutNavbarTickets({
           <Link
             aria-label="Go to Home Page"
             className="w-[177px]"
-            to="/"
             id="logoNavBar"
+            to="/"
           >
             <img
               alt="gotickets logo"

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { resolveImagePath } from '../../services/images/resolve-image-path'
 
 export default function NotFound() {

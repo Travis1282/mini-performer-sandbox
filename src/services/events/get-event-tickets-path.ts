@@ -1,5 +1,7 @@
 import dayjs from 'dayjs'
-import { components } from '../maverick/generated/maverick-schema'
+
+import type { components } from '../maverick/generated/maverick-schema'
+
 import { sanitizeString } from '../string/sanitize-string'
 
 export function getEventTicketsPath(event: components['schemas']['Event']) {

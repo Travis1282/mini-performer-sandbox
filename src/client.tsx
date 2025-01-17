@@ -1,13 +1,13 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router'
-import router from './router'
 // Supports weights 200-800
 import '@fontsource-variable/plus-jakarta-sans'
 // Supports weights 200-800, italic
 import '@fontsource-variable/plus-jakarta-sans/wght-italic.css'
 
 import './style.css'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import router from './router'
 
 const queryClient = new QueryClient()
 

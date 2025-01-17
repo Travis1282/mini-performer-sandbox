@@ -1,6 +1,7 @@
+import type { ImageApiParams } from './images.types'
+
 import { s3Url } from '../config'
 import { hasUUID } from '../files/has-uuid'
-import { ImageApiParams } from './images.types'
 
 export const resolveImagePath = (
   str: string | undefined,

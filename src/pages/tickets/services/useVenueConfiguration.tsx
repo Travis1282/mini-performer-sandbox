@@ -1,8 +1,10 @@
 'use client'
 
 import type { ReactNode } from 'react'
+
 import React, { createContext, useCallback, useContext, useMemo } from 'react'
-import { components } from '../../../services/maverick/generated/maverick-schema'
+
+import type { components } from '../../../services/maverick/generated/maverick-schema'
 
 /** applied if the section id has no group or color */
 const defaultColor = '#ffffff00'

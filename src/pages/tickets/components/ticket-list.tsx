@@ -1,9 +1,13 @@
-import React, { FC, useRef } from 'react'
-import { components } from '../../../services/maverick/generated/maverick-schema'
-import TicketListItem from './ticket-list-item'
-import NotFound from '../../../components/errors/not-found'
-import { VariableSizeList as List } from 'react-window'
+import type { FC} from 'react';
+
+import React, { useRef } from 'react'
 import AutoSizer from 'react-virtualized-auto-sizer'
+import { VariableSizeList as List } from 'react-window'
+
+import type { components } from '../../../services/maverick/generated/maverick-schema'
+
+import NotFound from '../../../components/errors/not-found'
+import TicketListItem from './ticket-list-item'
 
 const Row = ({ index, style, data }) => {
   return (
@@ -14,8 +18,8 @@ const Row = ({ index, style, data }) => {
 }
 
 interface TicketListProps {
-  listings?: components['schemas']['Listing'][]
   event: components['schemas']['Event']
+  listings?: components['schemas']['Listing'][]
 }
 
 export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
@@ -57,13 +61,13 @@ export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
       <AutoSizer>
         {({ height, width }) => (
           <List
+            estimatedItemSize={100}
             height={height}
             itemCount={listings.length}
+            itemData={{ event, listings }}
             itemSize={getItemSize}
-            estimatedItemSize={100}
             onItemsRendered={handleItemRendered}
             width={width}
-            itemData={{ event, listings }}
           >
             {Row}
           </List>

@@ -1,6 +1,9 @@
-import SVG from 'react-inlinesvg'
+import type { PanZoom } from 'panzoom';
+
+import panzoom from 'panzoom'
 import { useEffect, useRef, useState } from 'react'
-import panzoom, { PanZoom } from 'panzoom'
+import SVG from 'react-inlinesvg'
+
 import useColorizeSVG from '../services/useColorizeSvg'
 
 interface MapProps {

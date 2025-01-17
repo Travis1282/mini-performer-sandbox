@@ -1,4 +1,4 @@
-import { components } from '../services/maverick/generated/maverick-schema'
+import type { components } from '../services/maverick/generated/maverick-schema'
 
 export type Listing = components['schemas']['Listing'] & {
   lowPrice?: boolean
