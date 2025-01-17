@@ -1,10 +1,10 @@
 import build from '@hono/vite-build/cloudflare-pages'
 import devServer from '@hono/vite-dev-server'
 import adapter from '@hono/vite-dev-server/cloudflare'
-import { defineConfig } from 'vite'
-import { parse } from 'smol-toml'
 import fs from 'fs'
 import path from 'path'
+import { parse } from 'smol-toml'
+import { defineConfig } from 'vite'
 
 export default defineConfig(({ mode }) => {
   const isProd = process.env.NODE_ENV === 'production'

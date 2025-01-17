@@ -9,7 +9,9 @@
     "types-generate": "pnpm openapi-typescript https://maverick-public-services-stage.dev.gotickets.com/api/open-api -o ./src/services/maverick/generated/maverick-schema.d.ts",
     "check-env": "node scripts/get-env.js",
     "format": "pnpm prettier 'src/**/*.{ts,tsx}' --write",
-    "format-check": "pnpm prettier 'src/**/*.{ts,tsx}' --check"
+    "format-check": "pnpm prettier 'src/**/*.{ts,tsx}' --check",
+    "lint": "pnpm eslint --cache",
+    "validate": "pnpm tsc --noEmit"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.1.1",

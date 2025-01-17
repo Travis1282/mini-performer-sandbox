@@ -1,15 +1,16 @@
-import type { FC} from 'react';
-
-import React, { useRef } from 'react'
+import type { FC } from 'react'
+import type {
+  ListChildComponentProps,
+  ListOnItemsRenderedProps,
+} from 'react-window'
+import { useRef } from 'react'
 import AutoSizer from 'react-virtualized-auto-sizer'
 import { VariableSizeList as List } from 'react-window'
-
 import type { components } from '../../../services/maverick/generated/maverick-schema'
-
 import NotFound from '../../../components/errors/not-found'
 import TicketListItem from './ticket-list-item'
 
-const Row = ({ index, style, data }) => {
+const Row = ({ index, style, data }: ListChildComponentProps) => {
   return (
     <div style={style}>
       <TicketListItem event={data.event} listing={data.listings[index]} />
@@ -23,7 +24,7 @@ interface TicketListProps {
 }
 
 export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
-  const itemSizes = useRef({})
+  const itemSizes = useRef<Record<number, number>>({})
 
   const getItemSize = (index: number): number => {
     if (itemSizes.current[index]) {
@@ -33,7 +34,7 @@ export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
     }
   }
 
-  const handleItemRendered = (props) => {
+  const handleItemRendered = (props: ListOnItemsRenderedProps) => {
     for (let i = props.visibleStartIndex; i < props.visibleStopIndex + 1; i++) {
       if (itemSizes.current[i]) {
         continue

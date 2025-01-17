@@ -17,14 +17,24 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ['dist/', 'node_modules/', 'src/services/maverick/generated/'],
+    ignores: [
+      'coverage/',
+      'public/',
+      'dist/',
+      'node_modules/',
+      'src/services/maverick/generated/',
+      'src/icons/**/*.tsx',
+    ],
   },
   {
     plugins: {
       perfectionist,
     },
     rules: {
-      'perfectionist/sort-imports': 'error',
+      'perfectionist/sort-imports': [
+        'error',
+        { type: 'alphabetical', newlinesBetween: 'ignore' },
+      ],
       'perfectionist/sort-interfaces': 'error',
       'perfectionist/sort-jsx-props': 'error',
       'perfectionist/sort-union-types': 'error',
@@ -37,6 +47,7 @@ export default tseslint.config(
   {
     rules: {
       'no-useless-catch': 'off',
+      'no-empty': ['error', { allowEmptyCatch: true }],
       curly: 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
     },

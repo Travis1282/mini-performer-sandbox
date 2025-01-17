@@ -1,8 +1,11 @@
 import { Hono } from 'hono'
 import { renderToString } from 'react-dom/server'
-
-import manifest from '../dist/.vite/manifest.json'
 import { basicProxy } from './services/proxy'
+
+// @ts-expect-error this file only exists when building the app
+// eslint-disable-next-line perfectionist/sort-imports
+import manifest from '../dist/.vite/manifest.json'
+
 const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
 const entryFile: string | undefined = manifest['src/client.tsx']?.file
 
