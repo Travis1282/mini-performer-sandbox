@@ -1,12 +1,12 @@
-import { Hono } from "hono";
-import { renderToString } from "react-dom/server";
-import { basicProxy } from "./services/proxy";
+import { Hono } from 'hono'
+import { renderToString } from 'react-dom/server'
+import { basicProxy } from './services/proxy'
 
-const app = new Hono();
+const app = new Hono()
 
-app.get("/rest/*", basicProxy(import.meta.env.VITE_MAVERICK_URL));
+app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
-app.get("*", async (c) => {
+app.get('*', async (c) => {
   //   console.log(c.env.MY_VAR);
   //   console.log(import.meta.env.VITE_API_URL);
   return c.html(
@@ -22,7 +22,7 @@ app.get("*", async (c) => {
         </body>
       </html>
     )
-  );
-});
+  )
+})
 
-export default app;
+export default app

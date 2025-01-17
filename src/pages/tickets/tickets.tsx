@@ -1,114 +1,114 @@
-import React from "react";
-import { useLoaderData, useParams } from "react-router";
-import { useQuery } from "@tanstack/react-query";
-import { getEventListingsWithBotProtection } from "./services/getEventListingsWithBotProtection";
-import { components } from "../../services/maverick/generated/maverick-schema";
-import { findMasterPerformerFromEvent } from "../../services/events/find-master-performer-from-event";
-import { LayoutNavbarTickets } from "./components/layout-navbar-tickets";
-import { TicketList } from "./components/ticket-list";
-import { mapsUrl } from "../../services/config";
-import { Map } from "./components/map";
-import { VenueConfigurationProvider } from "./services/useVenueConfiguration";
+import React from 'react'
+import { useLoaderData, useParams } from 'react-router'
+import { useQuery } from '@tanstack/react-query'
+import { getEventListingsWithBotProtection } from './services/getEventListingsWithBotProtection'
+import { components } from '../../services/maverick/generated/maverick-schema'
+import { findMasterPerformerFromEvent } from '../../services/events/find-master-performer-from-event'
+import { LayoutNavbarTickets } from './components/layout-navbar-tickets'
+import { TicketList } from './components/ticket-list'
+import { mapsUrl } from '../../services/config'
+import { Map } from './components/map'
+import { VenueConfigurationProvider } from './services/useVenueConfiguration'
 
 export function Tickets() {
   const { data: loaderData } = useLoaderData<{
-    data: components["schemas"]["GetEventMetadataResponse"];
-  }>();
+    data: components['schemas']['GetEventMetadataResponse']
+  }>()
 
   if (!loaderData.event) {
-    throw new Error("Event not found");
+    throw new Error('Event not found')
   }
 
-  const params = useParams<{ eventId: string }>();
+  const params = useParams<{ eventId: string }>()
 
-  const performer = findMasterPerformerFromEvent(loaderData.event);
+  const performer = findMasterPerformerFromEvent(loaderData.event)
 
   const {
     data: listings,
     status,
     error,
   } = useQuery({
-    queryKey: ["event-listings", "get", params.eventId],
+    queryKey: ['event-listings', 'get', params.eventId],
     queryFn: () =>
       getEventListingsWithBotProtection({
-        params: { path: { "event-id": Number(params.eventId) } },
+        params: { path: { 'event-id': Number(params.eventId) } },
       }),
-  });
+  })
 
-  if (status === "pending") {
+  if (status === 'pending') {
     return (
-      <div className="flex flex-col gap-3 w-full">
-        <div className="border border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
-          <div className="animate-pulse flex space-x-4">
-            <div className="rounded-full bg-slate-700 h-10 w-10"></div>
+      <div className="flex w-full flex-col gap-3">
+        <div className="mx-auto w-full max-w-sm rounded-md border border-gray-300 p-4 shadow">
+          <div className="flex animate-pulse space-x-4">
+            <div className="h-10 w-10 rounded-full bg-slate-700"></div>
             <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 bg-slate-700 rounded"></div>
+              <div className="h-2 rounded bg-slate-700"></div>
               <div className="space-y-3">
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="h-2 bg-slate-700 rounded col-span-2"></div>
-                  <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div className="col-span-2 h-2 rounded bg-slate-700"></div>
+                  <div className="col-span-1 h-2 rounded bg-slate-700"></div>
                 </div>
-                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 rounded bg-slate-700"></div>
               </div>
             </div>
           </div>
         </div>
-        <div className="border border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
-          <div className="animate-pulse flex space-x-4">
-            <div className="rounded-full bg-slate-700 h-10 w-10"></div>
+        <div className="mx-auto w-full max-w-sm rounded-md border border-gray-300 p-4 shadow">
+          <div className="flex animate-pulse space-x-4">
+            <div className="h-10 w-10 rounded-full bg-slate-700"></div>
             <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 bg-slate-700 rounded"></div>
+              <div className="h-2 rounded bg-slate-700"></div>
               <div className="space-y-3">
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="h-2 bg-slate-700 rounded col-span-2"></div>
-                  <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div className="col-span-2 h-2 rounded bg-slate-700"></div>
+                  <div className="col-span-1 h-2 rounded bg-slate-700"></div>
                 </div>
-                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 rounded bg-slate-700"></div>
               </div>
             </div>
           </div>
         </div>
-        <div className="border border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
-          <div className="animate-pulse flex space-x-4">
-            <div className="rounded-full bg-slate-700 h-10 w-10"></div>
+        <div className="mx-auto w-full max-w-sm rounded-md border border-gray-300 p-4 shadow">
+          <div className="flex animate-pulse space-x-4">
+            <div className="h-10 w-10 rounded-full bg-slate-700"></div>
             <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 bg-slate-700 rounded"></div>
+              <div className="h-2 rounded bg-slate-700"></div>
               <div className="space-y-3">
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="h-2 bg-slate-700 rounded col-span-2"></div>
-                  <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div className="col-span-2 h-2 rounded bg-slate-700"></div>
+                  <div className="col-span-1 h-2 rounded bg-slate-700"></div>
                 </div>
-                <div className="h-2 bg-slate-700 rounded"></div>
+                <div className="h-2 rounded bg-slate-700"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
+    )
   }
 
-  if (status === "error") {
+  if (status === 'error') {
     return (
-      <span className="text-red-600 p-4 text-center border border-red-600">
+      <span className="border border-red-600 p-4 text-center text-red-600">
         Error: {error.message}
       </span>
-    );
+    )
   }
 
   if (!loaderData.event) {
     return (
-      <span className="text-red-600 p-4 text-center border border-red-600">
+      <span className="border border-red-600 p-4 text-center text-red-600">
         No event
       </span>
-    );
+    )
   }
 
   const svgMapUrl = loaderData.event?.venueConfiguration?.svgMapFileName
     ? `${mapsUrl}/${loaderData.event.venueConfiguration.svgMapFileName}`
-    : "";
+    : ''
 
   return (
-    <main className="flex flex-col w-full h-full">
+    <main className="flex h-full w-full flex-col">
       <LayoutNavbarTickets
         event={loaderData.event}
         performer={performer?.performer}
@@ -123,5 +123,5 @@ export function Tickets() {
         />
       </VenueConfigurationProvider>
     </main>
-  );
+  )
 }

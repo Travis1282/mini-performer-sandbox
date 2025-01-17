@@ -1,4 +1,4 @@
-import type { Middleware } from "openapi-fetch";
+import type { Middleware } from 'openapi-fetch'
 
 export const errorThrowMiddleware: Middleware = {
   async onResponse({ response }) {
@@ -6,8 +6,8 @@ export const errorThrowMiddleware: Middleware = {
       // Will produce error messages like "https://example.org/api/v1/example: 404 Not Found".
       throw new Error(
         `${response.url}: ${response.status} ${response.statusText}`
-      );
+      )
     }
-    return response;
+    return response
   },
-};
+}

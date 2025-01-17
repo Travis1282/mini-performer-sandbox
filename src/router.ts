@@ -1,13 +1,13 @@
-import { createBrowserRouter } from "react-router";
-import { Layout } from "./pages/layout";
-import Home from "./pages/home/home";
-import Slug from "./pages/slug";
-import About from "./pages/about";
-import { getEventMetadata } from "./services/maverick/getEventMetadata";
-import { getSearchTrendingEvents } from "./services/maverick/getSearchTrendingEvents";
-import { Tickets } from "./pages/tickets/tickets";
-import { GlobalErrorContent } from "./components/errors/oh-no";
-import { PrimaryLayout } from "./pages/primary-layout";
+import { createBrowserRouter } from 'react-router'
+import { Layout } from './pages/layout'
+import Home from './pages/home/home'
+import Slug from './pages/slug'
+import About from './pages/about'
+import { getEventMetadata } from './services/maverick/getEventMetadata'
+import { getSearchTrendingEvents } from './services/maverick/getSearchTrendingEvents'
+import { Tickets } from './pages/tickets/tickets'
+import { GlobalErrorContent } from './components/errors/oh-no'
+import { PrimaryLayout } from './pages/primary-layout'
 
 let router = createBrowserRouter([
   {
@@ -27,24 +27,24 @@ let router = createBrowserRouter([
                 },
                 params: {
                   query: {
-                    regionId: "1",
+                    regionId: '1',
                   },
                 },
               }),
           },
           {
             Component: About,
-            path: "about",
+            path: 'about',
           },
           {
             Component: Slug,
-            path: ":slug",
+            path: ':slug',
           },
         ],
       },
       {
         Component: Tickets,
-        path: "/tickets/:eventId/:slug/:localDate",
+        path: '/tickets/:eventId/:slug/:localDate',
         loader: ({ request, params }) =>
           getEventMetadata({
             init: {
@@ -52,13 +52,13 @@ let router = createBrowserRouter([
             },
             params: {
               path: {
-                "event-id": Number(params.eventId),
+                'event-id': Number(params.eventId),
               },
             },
           }),
       },
     ],
   },
-]);
+])
 
-export default router;
+export default router

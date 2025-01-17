@@ -1,21 +1,21 @@
-import type { paths } from "./generated/maverick-schema";
-import { apiUrl, isProd } from "../config";
-import createClient from "openapi-fetch";
-import { cloudflareHeadersMiddleware } from "./cloudflareHeadersMiddleware";
-import { errorThrowMiddleware } from "./errorThrowMiddleware";
+import type { paths } from './generated/maverick-schema'
+import { apiUrl, isProd } from '../config'
+import createClient from 'openapi-fetch'
+import { cloudflareHeadersMiddleware } from './cloudflareHeadersMiddleware'
+import { errorThrowMiddleware } from './errorThrowMiddleware'
 
 const client = createClient<paths>({
   baseUrl: apiUrl,
-  credentials: "include",
+  credentials: 'include',
   fetch: fetch,
-});
+})
 
 // when not in production, we need to provide the client id and secret
 // to allow requests through cloudflare security
 if (!isProd) {
-  client.use(cloudflareHeadersMiddleware);
+  client.use(cloudflareHeadersMiddleware)
 }
 
-client.use(errorThrowMiddleware);
+client.use(errorThrowMiddleware)
 
-export { client };
+export { client }

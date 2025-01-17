@@ -1,16 +1,16 @@
-import { Hono } from "hono";
-import { renderToString } from "react-dom/server";
+import { Hono } from 'hono'
+import { renderToString } from 'react-dom/server'
 
-import manifest from "../dist/.vite/manifest.json";
-import { basicProxy } from "./services/proxy";
-const cssFile: string | undefined = manifest["src/client.tsx"]?.css?.[0];
-const entryFile: string | undefined = manifest["src/client.tsx"]?.file;
+import manifest from '../dist/.vite/manifest.json'
+import { basicProxy } from './services/proxy'
+const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
+const entryFile: string | undefined = manifest['src/client.tsx']?.file
 
-const app = new Hono();
+const app = new Hono()
 
-app.get("/rest/*", basicProxy(import.meta.env.VITE_MAVERICK_URL));
+app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
-app.get("*", async (c) => {
+app.get('*', async (c) => {
   return c.html(
     renderToString(
       <html>
@@ -26,7 +26,7 @@ app.get("*", async (c) => {
         </body>
       </html>
     )
-  );
-});
+  )
+})
 
-export default app;
+export default app

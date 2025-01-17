@@ -1,9 +1,9 @@
-import { Link, Outlet } from "react-router";
+import { Link, Outlet } from 'react-router'
 
 export function PrimaryLayout() {
   return (
     <div className="">
-      <div className="text-3xl font-bold bg-go-blue-900 text-white w-full p-4">
+      <div className="w-full bg-go-blue-900 p-4 text-3xl font-bold text-white">
         GoTickets
       </div>
       <nav className="flex gap-4 bg-go-blue-200 p-4 font-semibold">
@@ -19,5 +19,5 @@ export function PrimaryLayout() {
       </nav>
       <Outlet />
     </div>
-  );
+  )
 }
