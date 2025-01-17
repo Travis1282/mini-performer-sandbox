@@ -1,8 +1,6 @@
 'use client'
 // Missing growthbook check for smaller fonts/maps
-
 import type { CSSProperties } from 'react'
-
 // import { Button } from "@/components/Shared/Button";
 // import TicketBadge from "@/components/Shared/TicketBadge";
 // import Tooltip from "@/components/Shared/Tooltip";
@@ -12,10 +10,8 @@ import clsx from 'clsx'
 import React from 'react'
 import { useMemo } from 'react'
 import { Link } from 'react-router'
-
 import type { components } from '../../../services/maverick/generated/maverick-schema'
 import type { Listing } from '../../../types/listing'
-
 import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path'
 import { shouldShowClearView } from '../../../services/events/should-show-clear-view'
 import { shouldShowSeatedTogether } from '../../../services/events/should-show-seated-together'
