@@ -4,7 +4,13 @@ pages_build_output_dir = "./dist"
 compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
-MY_VAR = "my-variable"
+VITE_API_URL = "http://localhost:5173" 
+
+[env.preview.vars]
+VITE_API_URL = "https://fluffy-couscous-53f.pages.dev" 
+
+[env.production.vars]
+VITE_API_URL = "https://fluffy-couscous-53f.pages.dev" 
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
