@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLoaderData, useParams } from 'react-router'
 import { useQuery } from '@tanstack/react-query'
-import { getEventListingsWithBotProtection } from './services/getEventListingsWithBotProtection'
+import { getEventListingsWithBotProtection } from '@/pages/tickets/services/getEventListingsWithBotProtection'
 import { components } from '../../services/maverick/generated/maverick-schema'
 import { findMasterPerformerFromEvent } from '../../services/events/find-master-performer-from-event'
 import { LayoutNavbarTickets } from './components/layout-navbar-tickets'

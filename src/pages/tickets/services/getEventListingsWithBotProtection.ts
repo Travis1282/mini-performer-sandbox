@@ -1,8 +1,8 @@
-import { paths } from '../../../services/maverick/generated/maverick-schema'
+import { paths } from '@/services/maverick/generated/maverick-schema'
 import {
   getEventListings,
   GetEventListingsOptions,
-} from '../../../services/maverick/getEventListings'
+} from '@/services/maverick/getEventListings'
 import { getBotDetectionToken } from './getBotDetectionToken'
 
 export async function getEventListingsWithBotProtection(
