@@ -7,7 +7,7 @@ interface MapProps {
   mapSrc: string;
 }
 
-export const Map = ({ mapSrc, onMapLoaded }: MapProps) => {
+export const Map = ({ mapSrc }: MapProps) => {
   const [mapLoaded, setMapLoaded] = useState(false);
   const mapRef = useRef<HTMLDivElement>(null);
   const panZoomRef = useRef<PanZoom>(null);
@@ -31,8 +31,8 @@ export const Map = ({ mapSrc, onMapLoaded }: MapProps) => {
     const panZoom = panzoom(svgGroup as SVGElement, {
       bounds: true,
       boundsPadding: 0.1,
-      maxZoom: 1,
-      minZoom: 0.1,
+      maxZoom: 4,
+      minZoom: 0.7,
     });
     panZoomRef.current = panZoom;
   }, [mapLoaded]);

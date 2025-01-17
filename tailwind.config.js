@@ -3,6 +3,9 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-plus-jakarta-sans)"],
+      },
       colors: {
         "go-blue": {
           50: "#eff8ff",
