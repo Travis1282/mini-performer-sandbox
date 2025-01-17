@@ -11,9 +11,7 @@ export default defineConfig(({ mode }) => {
         manifest: true,
         rollupOptions: {
           input: "./src/client.tsx",
-          output: {
-            // entryFileNames: "static/client.js",
-          },
+          output: {},
         },
       },
     };
