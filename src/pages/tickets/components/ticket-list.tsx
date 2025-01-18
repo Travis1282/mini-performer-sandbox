@@ -3,7 +3,7 @@ import type {
   ListChildComponentProps,
   ListOnItemsRenderedProps,
 } from 'react-window'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import AutoSizer from 'react-virtualized-auto-sizer'
 import { VariableSizeList as List } from 'react-window'
 import type { components } from '../../../services/maverick/generated/maverick-schema'
@@ -25,6 +25,7 @@ interface TicketListProps {
 
 export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
   const itemSizes = useRef<Record<number, number>>({})
+  const listRef = useRef<List>(null)
 
   const getItemSize = (index: number): number => {
     if (itemSizes.current[index]) {
@@ -36,22 +37,23 @@ export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
 
   const handleItemRendered = (props: ListOnItemsRenderedProps) => {
     for (let i = props.visibleStartIndex; i < props.visibleStopIndex + 1; i++) {
-      if (itemSizes.current[i]) {
+      const listing = listings ? listings[i] : undefined
+      if (!listing) {
         continue
-      } else {
-        const listing = listings ? listings[i] : undefined
-        if (!listing) {
-          continue
-        }
-        const element = listing
-          ? document.getElementById(`${listing.id}`)
-          : undefined
-        if (element) {
-          itemSizes.current[i] = element.getBoundingClientRect().height
-        }
+      }
+      const element = listing
+        ? document.getElementById(`${listing.id}`)
+        : undefined
+      if (element) {
+        itemSizes.current[i] = element.getBoundingClientRect().height
       }
     }
+    listRef.current?.resetAfterIndex(props.visibleStartIndex)
   }
+
+  useEffect(() => {
+    listRef.current?.resetAfterIndex(0)
+  }, [])
 
   if (!listings || listings?.length === 0) {
     return <NotFound />
@@ -68,6 +70,7 @@ export const TicketList: FC<TicketListProps> = ({ listings, event }) => {
             itemData={{ event, listings }}
             itemSize={getItemSize}
             onItemsRendered={handleItemRendered}
+            ref={listRef}
             width={width}
           >
             {Row}
