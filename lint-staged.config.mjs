@@ -1,3 +1,7 @@
 export default {
-  'src/**/*.{ts,tsx}': ['eslint --fix', 'prettier --write'],
+  'src/**/*.{ts,tsx}': [
+    'eslint --cache --fix',
+    'prettier --write',
+    () => 'tsc --noEmit',
+  ],
 }
