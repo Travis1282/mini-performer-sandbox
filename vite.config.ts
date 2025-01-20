@@ -1,6 +1,7 @@
 import build from '@hono/vite-build/cloudflare-pages'
 import devServer from '@hono/vite-dev-server'
 import adapter from '@hono/vite-dev-server/cloudflare'
+import react from '@vitejs/plugin-react'
 import fs from 'fs'
 import path from 'path'
 import { parse } from 'smol-toml'
@@ -19,18 +20,22 @@ export default defineConfig(({ mode }) => {
       test: {
         globals: true,
         environment: 'happy-dom',
+        setupFiles: './src/services/testing/setupTests.ts',
       },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, 'src'),
         },
       },
+      // plugins: [react()],
       build: {
         manifest: true,
         rollupOptions: {
           input: './src/client.tsx',
-          output: {},
         },
+      },
+      esbuild: {
+        target: 'es2018',
       },
     }
   } else {
