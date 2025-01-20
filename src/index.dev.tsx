@@ -1,5 +1,4 @@
 import { Hono } from 'hono'
-import { renderToString } from 'react-dom/server'
 
 import { basicProxy } from './services/proxy'
 
@@ -11,7 +10,7 @@ app.get('*', async (c) => {
   //   console.log(c.env.MY_VAR);
   //   console.log(import.meta.env.VITE_API_URL);
   return c.html(
-    renderToString(
+    `
       <html lang="en">
         <head>
           <meta charSet="utf-8" />
@@ -22,7 +21,7 @@ app.get('*', async (c) => {
           <div id="root"></div>
         </body>
       </html>
-    )
+    `
   )
 })
 

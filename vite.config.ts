@@ -46,9 +46,9 @@ export default defineConfig(({ mode }) => {
         environment: 'happy-dom',
         setupFiles: './src/services/testing/setupTests.ts',
       },
-      ssr: {
-        external: ['react', 'react-dom'],
-      },
+      // ssr: {
+      //   external: ['react', 'react-dom'],
+      // },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, 'src'),
