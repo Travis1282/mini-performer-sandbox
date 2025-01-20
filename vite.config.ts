@@ -35,11 +35,6 @@ export default defineConfig(({ mode }) => {
         sourcemap: 'hidden',
         rollupOptions: {
           input: './src/client.tsx',
-          output: {
-            manualChunks: {
-              'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-            },
-          },
         },
         target: 'es2020',
       },
