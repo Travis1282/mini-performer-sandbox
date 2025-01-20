@@ -33,9 +33,7 @@ export default defineConfig(({ mode }) => {
         rollupOptions: {
           input: './src/client.tsx',
         },
-      },
-      esbuild: {
-        target: 'es2018',
+        target: 'es2015',
       },
     }
   } else {
