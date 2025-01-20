@@ -8,14 +8,18 @@ import { defineConfig } from 'vite'
 
 export default defineConfig(({ mode }) => {
   const isProd = process.env.NODE_ENV === 'production'
-  const tomlPath = path.join(process.cwd(), 'wrangler.toml')
-  const contents = fs.readFileSync(tomlPath, 'utf-8')
-  const parsedToml = parse(contents)
+  // const tomlPath = path.join(process.cwd(), 'wrangler.toml')
+  // const contents = fs.readFileSync(tomlPath, 'utf-8')
+  // const parsedToml = parse(contents)
 
-  console.log(parsedToml)
+  // console.log(parsedToml)
 
   if (mode === 'client') {
     return {
+      test: {
+        globals: true,
+        environment: 'happy-dom',
+      },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, 'src'),
@@ -31,6 +35,11 @@ export default defineConfig(({ mode }) => {
     }
   } else {
     return {
+      test: {
+        globals: true,
+        environment: 'happy-dom',
+        setupFiles: './src/services/testing/setupTests.ts',
+      },
       ssr: {
         external: ['react', 'react-dom'],
       },

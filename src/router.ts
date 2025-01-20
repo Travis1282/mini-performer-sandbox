@@ -6,8 +6,6 @@ import Home from './pages/home/home'
 import { Layout } from './pages/layout'
 import { PrimaryLayout } from './pages/primary-layout'
 import Slug from './pages/slug'
-import { Tickets } from './pages/tickets/tickets'
-import { getEventMetadata } from './services/maverick/getEventMetadata'
 import { getSearchTrendingEvents } from './services/maverick/getSearchTrendingEvents'
 
 const router = createBrowserRouter([
@@ -44,19 +42,17 @@ const router = createBrowserRouter([
         ],
       },
       {
-        Component: Tickets,
         path: '/tickets/:eventId/:slug/:localDate',
-        loader: ({ request, params }) =>
-          getEventMetadata({
-            init: {
-              signal: request.signal,
-            },
-            params: {
-              path: {
-                'event-id': Number(params.eventId),
-              },
-            },
-          }),
+        lazy: async () => {
+          const [loaderModule, componentModule] = await Promise.all([
+            import('@/pages/tickets/tickets.loader'),
+            import('@/pages/tickets/tickets'),
+          ])
+          return {
+            loader: loaderModule.loader,
+            Component: componentModule.Tickets,
+          }
+        },
       },
     ],
   },

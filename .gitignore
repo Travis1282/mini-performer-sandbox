@@ -35,3 +35,8 @@ lerna-debug.log*
 
 # eslint
 .eslintcache
+
+
+# vitest
+coverage/
+test-results/
