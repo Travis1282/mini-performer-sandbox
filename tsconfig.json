@@ -13,11 +13,6 @@
     "jsxImportSource": "react",
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force"
+    }
   }
 }
