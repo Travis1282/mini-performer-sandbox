@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => {
       },
       // plugins: [react()],
       build: {
-        minify: false,
+        minify: false, // change back to true
         cssMinify: 'lightningcss',
         manifest: true,
         sourcemap: 'hidden',

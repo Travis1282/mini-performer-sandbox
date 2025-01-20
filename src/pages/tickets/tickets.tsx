@@ -1,6 +1,5 @@
 import { getEventListingsWithBotProtection } from '@/pages/tickets/services/getEventListingsWithBotProtection'
 import { useQuery } from '@tanstack/react-query'
-import React from 'react'
 import { useLoaderData, useParams } from 'react-router'
 
 import type { components } from '../../services/maverick/generated/maverick-schema'
@@ -12,7 +11,7 @@ import { Map } from './components/map'
 import { TicketList } from './components/ticket-list'
 import { VenueConfigurationProvider } from './services/useVenueConfiguration'
 
-export function Tickets() {
+function Tickets() {
   const { data: loaderData } = useLoaderData<{
     data: components['schemas']['GetEventMetadataResponse']
   }>()
@@ -127,3 +126,5 @@ export function Tickets() {
     </main>
   )
 }
+
+export default Tickets
