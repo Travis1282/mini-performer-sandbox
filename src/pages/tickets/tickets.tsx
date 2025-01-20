@@ -11,7 +11,7 @@ import { Map } from './components/map'
 import { TicketList } from './components/ticket-list'
 import { VenueConfigurationProvider } from './services/useVenueConfiguration'
 
-function Tickets() {
+export function Tickets() {
   const { data: loaderData } = useLoaderData<{
     data: components['schemas']['GetEventMetadataResponse']
   }>()

@@ -58,8 +58,8 @@ const router = createBrowserRouter([
         //   }),
         lazy: async () => {
           const [loaderModule, componentModule] = await Promise.all([
-            import('@/pages/tickets/tickets.loader'),
-            import('@/pages/tickets/tickets'),
+            import('./pages/tickets/tickets.loader'),
+            import('./pages/tickets/tickets'),
           ])
           return {
             loader: loaderModule.default,
