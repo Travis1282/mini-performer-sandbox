@@ -29,9 +29,17 @@ export default defineConfig(({ mode }) => {
       },
       // plugins: [react()],
       build: {
+        minify: false,
+        cssMinify: 'lightningcss',
         manifest: true,
+        sourcemap: 'hidden',
         rollupOptions: {
           input: './src/client.tsx',
+          output: {
+            manualChunks: {
+              'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+            },
+          },
         },
         target: 'es2020',
       },
