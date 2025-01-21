@@ -13,13 +13,5 @@ export function loader({ request, params }: LoaderFunctionArgs) {
     },
   })
 }
-// export function loader() {
-//   return Promise.resolve({
-//     data: {
-//       id: 1,
-//       name: 'Test',
-//     },
-//   })
-// }
 
 export default loader
