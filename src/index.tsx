@@ -19,11 +19,11 @@ app.get('*', async (c) => {
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-          ${cssFile ? `<link crossorigin href=${cssFile} rel="stylesheet" />` : null}
+          ${cssFile ? `<link crossorigin href=/${cssFile} rel="stylesheet" />` : null}
         </head>
         <body>
           <div id="root"></div>
-          ${entryFile ? `<script crossorigin async type="module" src=${entryFile}></script>` : null}
+          ${entryFile ? `<script crossorigin async type="module" src=/${entryFile}></script>` : null}
         </body>
       </html>
     `
