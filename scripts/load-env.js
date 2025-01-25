@@ -19,7 +19,13 @@ if (existsSync(envPath)) {
     config({
       path: envPath,
     })
-    console.log('Loaded environment variables:', Object.keys(process.env))
+    console.log('\nCustom Environment Variables:')
+    Object.keys(process.env).forEach((key) => {
+      // Filter out Node.js and system variables
+      if (key.startsWith('CF_') || key.startsWith('VITE_')) {
+        console.log(`${key}:`, process.env[key])
+      }
+    })
   } catch (error) {
     console.error('Error loading environment variables:', error)
   }
