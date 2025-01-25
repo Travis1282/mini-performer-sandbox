@@ -35,6 +35,12 @@ if (existsSync(envPath)) {
   }
 }
 
+// check for API_CLIENT_ID and API_CLIENT_SECRET
+const secrets = {
+  VITE_API_CLIENT_ID: process.env.VITE_API_CLIENT_ID,
+  VITE_API_CLIENT_SECRET: process.env.VITE_API_CLIENT_SECRET,
+}
+
 // parse wrangler.toml for environment variables
 // Read the wrangler.toml file
 const wranglerPath = join(process.cwd(), 'wrangler.toml')
@@ -55,7 +61,7 @@ const globalVars = parsed.vars || {}
 
 // Combine global and environment-specific variables
 // Environment-specific variables take precedence
-const combinedVars = { ...globalVars, ...envVars, ...parsedEnv }
+const combinedVars = { ...globalVars, ...envVars, ...secrets, ...parsedEnv }
 
 // Convert to .env format
 const envContent = Object.entries(combinedVars)
