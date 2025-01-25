@@ -23,6 +23,9 @@ if (existsSync(envPath)) {
       throw result.error
     }
     console.log('parsed env variables:', result.parsed)
+    for (const k in result.parsed) {
+      process.env[k] = result.parsed[k]
+    }
     console.log('\nCustom Environment Variables:')
     Object.keys(process.env).forEach((key) => {
       // Filter out Node.js and system variables
