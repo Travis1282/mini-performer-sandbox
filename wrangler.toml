@@ -7,11 +7,9 @@ compatibility_flags = [ "nodejs_compat" ]
 VITE_API_URL = "http://localhost:5173" 
 
 [env.preview.vars]
-VITE_API_URL = "https://maverick-public-services-stage.dev.gotickets.com" 
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
 
 [env.production.vars]
-VITE_API_URL = "https://fluffy-couscous-53f.pages.dev" 
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
 
 # [[kv_namespaces]]

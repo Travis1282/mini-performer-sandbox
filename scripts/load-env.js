@@ -1,5 +1,5 @@
 import { config } from 'dotenv'
-import { existsSync, readFileSync } from 'fs'
+import { existsSync } from 'fs'
 import { join } from 'path'
 
 console.log('CF_PAGES:', process.env.CF_PAGES)
@@ -13,8 +13,11 @@ console.log('NODE_ENV:', process.env.NODE_ENV)
  * @returns {Object} Object containing the loaded environment variables
  */
 const envPath = join(process.cwd(), `.env.${process.env.CF_PAGES_BRANCH}`)
-console.log('Loading environment variables from', envPath)
+console.log('setting api url to deployment url for proxy')
+process.env.VITE_API_URL = process.env.CF_PAGES_URL
+
 if (existsSync(envPath)) {
+  console.log('Loading environment variables from', envPath)
   try {
     const result = config({
       path: envPath,
