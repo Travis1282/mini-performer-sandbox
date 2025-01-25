@@ -41,6 +41,9 @@ const secrets = {
   VITE_API_CLIENT_SECRET: process.env.VITE_API_CLIENT_SECRET,
 }
 
+console.log('is secret available?', process.env.VITE_API_CLIENT_ID)
+console.log('is secret available?', process.env.VITE_API_CLIENT_SECRET)
+
 // parse wrangler.toml for environment variables
 // Read the wrangler.toml file
 const wranglerPath = join(process.cwd(), 'wrangler.toml')
