@@ -12,17 +12,15 @@ console.log('NODE_ENV:', process.env.NODE_ENV)
  * @param {string} [envPath] - Optional path to .env file. Defaults to '.env' in current directory
  * @returns {Object} Object containing the loaded environment variables
  */
-export function loadEnv() {
-  const envPath = join(process.cwd(), `.env.${process.env.CF_PAGES_BRANCH}`)
-  console.log('Loading environment variables from', envPath)
-  if (existsSync(envPath)) {
-    try {
-      config({
-        path: envPath,
-      })
-      console.log('Loaded environment variables:', Object.keys(process.env))
-    } catch (error) {
-      console.error('Error loading environment variables:', error)
-    }
+const envPath = join(process.cwd(), `.env.${process.env.CF_PAGES_BRANCH}`)
+console.log('Loading environment variables from', envPath)
+if (existsSync(envPath)) {
+  try {
+    config({
+      path: envPath,
+    })
+    console.log('Loaded environment variables:', Object.keys(process.env))
+  } catch (error) {
+    console.error('Error loading environment variables:', error)
   }
 }
