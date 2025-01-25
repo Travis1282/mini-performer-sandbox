@@ -29,14 +29,15 @@ if (existsSync(envPath)) {
     for (const k in result.parsed) {
       process.env[k] = result.parsed[k]
     }
-    console.log('\nCustom Environment Variables:')
-    Object.keys(process.env).forEach((key) => {
-      // Filter out Node.js and system variables
-      if (key.startsWith('CF_') || key.startsWith('VITE_')) {
-        console.log(`${key}:`, process.env[key])
-      }
-    })
   } catch (error) {
     console.error('Error loading environment variables:', error)
   }
 }
+
+console.log('\nCustom Environment Variables:')
+Object.keys(process.env).forEach((key) => {
+  // Filter out Node.js and system variables
+  if (key.startsWith('CF_') || key.startsWith('VITE_')) {
+    console.log(`${key}:`, process.env[key])
+  }
+})
