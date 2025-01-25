@@ -16,9 +16,13 @@ const envPath = join(process.cwd(), `.env.${process.env.CF_PAGES_BRANCH}`)
 console.log('Loading environment variables from', envPath)
 if (existsSync(envPath)) {
   try {
-    config({
+    const result = config({
       path: envPath,
     })
+    if (result.error) {
+      throw result.error
+    }
+    console.log('parsed env variables:', result.parsed)
     console.log('\nCustom Environment Variables:')
     Object.keys(process.env).forEach((key) => {
       // Filter out Node.js and system variables
