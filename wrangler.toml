@@ -4,7 +4,6 @@ pages_build_output_dir = "./dist"
 compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
-VITE_API_URL = "http://localhost:5173" 
 
 [env.preview.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
