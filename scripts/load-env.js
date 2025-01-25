@@ -1,0 +1,28 @@
+import { config } from 'dotenv'
+import { existsSync, readFileSync } from 'fs'
+import { join } from 'path'
+
+console.log('CF_PAGES:', process.env.CF_PAGES)
+console.log('CF_PAGES_BRANCH:', process.env.CF_PAGES_BRANCH)
+console.log('CF_PAGES_COMMIT_SHA:', process.env.CF_PAGES_COMMIT_SHA)
+console.log('CF_PAGES_URL:', process.env.CF_PAGES_URL)
+console.log('NODE_ENV:', process.env.NODE_ENV)
+/**
+ * Loads environment variables from a .env file into process.env
+ * @param {string} [envPath] - Optional path to .env file. Defaults to '.env' in current directory
+ * @returns {Object} Object containing the loaded environment variables
+ */
+export function loadEnv() {
+  const envPath = join(process.cwd(), `.env.${process.env.CF_PAGES_BRANCH}`)
+  console.log('Loading environment variables from', envPath)
+  if (existsSync(envPath)) {
+    try {
+      config({
+        path: envPath,
+      })
+      console.log('Loaded environment variables:', Object.keys(process.env))
+    } catch (error) {
+      console.error('Error loading environment variables:', error)
+    }
+  }
+}
