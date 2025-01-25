@@ -3,11 +3,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm run check-env && NODE_ENV=production vite build --mode client && NODE_ENV=production vite build",
+    "build": "pnpm run check-env && pnpm run check-toml CF_PAGES_BRANCH && NODE_ENV=production vite build --mode client && NODE_ENV=production vite build",
     "preview": "wrangler pages dev",
     "deploy": "pnpm run build && wrangler pages deploy",
     "types-generate": "pnpm openapi-typescript https://maverick-public-services-stage.dev.gotickets.com/api/open-api -o ./src/services/maverick/generated/maverick-schema.d.ts",
     "check-env": "node scripts/get-env.js",
+    "check-toml": "node scripts/toml-to-env.js",
     "format": "pnpm prettier 'src/**/*.{ts,tsx}' --write",
     "format-check": "pnpm prettier 'src/**/*.{ts,tsx}' --check",
     "lint": "pnpm eslint --cache",

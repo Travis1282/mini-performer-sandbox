@@ -13,6 +13,8 @@ const parsed = parse(tomlContent)
 // Get the environment from command line args or default to 'production'
 const env = process.argv[2] || 'production'
 
+console.log(`Using environment: ${env}`)
+
 // Get the environment variables
 const envVars = parsed[`env`][`${env}`]?.vars || {}
 const globalVars = parsed.vars || {}
