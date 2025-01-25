@@ -4,12 +4,19 @@ pages_build_output_dir = "./dist"
 compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
+VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
+VITE_API_CLIENT_ID="3aae56ea60955cc88d91c311cd2c01c4.access"
+VITE_API_CLIENT_SECRET="bea6b8860840c1cbabc9ea283b55962a8410164936452d3a266de7b5e8077b6e"
 
 [env.preview.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
+VITE_API_CLIENT_ID="3aae56ea60955cc88d91c311cd2c01c4.access"
+VITE_API_CLIENT_SECRET="bea6b8860840c1cbabc9ea283b55962a8410164936452d3a266de7b5e8077b6e"
 
 [env.production.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
+VITE_API_CLIENT_ID="3aae56ea60955cc88d91c311cd2c01c4.access"
+VITE_API_CLIENT_SECRET="bea6b8860840c1cbabc9ea283b55962a8410164936452d3a266de7b5e8077b6e"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
