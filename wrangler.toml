@@ -10,13 +10,11 @@ VITE_APP_ENV="development"
 
 [env.preview.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
-# NODE_ENV="production"
 VITE_APP_ENV="preview"
 
 
 [env.production.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
-# NODE_ENV="production"
 VITE_APP_ENV="production"
 
 # [[kv_namespaces]]
