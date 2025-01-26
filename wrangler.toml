@@ -4,13 +4,20 @@ pages_build_output_dir = "./dist"
 compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
-VITE_API_URL = "http://localhost:5173" 
+VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
+NODE_ENV="development"
+VITE_APP_ENV="development"
 
 [env.preview.vars]
-VITE_API_URL = "https://fluffy-couscous-53f.pages.dev" 
+VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
+# NODE_ENV="production"
+VITE_APP_ENV="preview"
+
 
 [env.production.vars]
-VITE_API_URL = "https://fluffy-couscous-53f.pages.dev" 
+VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
+# NODE_ENV="production"
+VITE_APP_ENV="production"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
