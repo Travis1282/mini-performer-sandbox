@@ -1,3 +1,17 @@
+/**
+ * Environment Variable Configuration Script for Cloudflare Pages
+ *
+ * This script manages environment variable configuration for the application:
+ * - Logs current Cloudflare Pages environment variables that are available to the build (CF_PAGES, CF_PAGES_BRANCH, etc.)
+ * - Supports branch-specific environment overrides via .env.[branch-name] files
+ * - Sets up VITE_API_URL for proxy configuration based on CF_PAGES_URL
+ * - Processes and merges environment variables from multiple sources:
+ *   1. Cloudflare Pages environment variables
+ *   2. Branch-specific .env files
+ *   3. wrangler.toml configuration
+ *   4. Specific varables that are managed as secrets in pages dashboard
+ */
+
 import { config } from 'dotenv'
 import { existsSync } from 'fs'
 import { readFileSync, writeFileSync } from 'fs'
@@ -12,11 +26,13 @@ console.log('CF_PAGES_URL:', process.env.CF_PAGES_URL)
 
 // see if there is a branch env file for override
 const envPath = join(process.cwd(), `.env.${process.env.CF_PAGES_BRANCH}`)
-console.log('setting api url to deployment url for proxy')
+console.log('setting VITE_API_URL to CF_PAGES_URL for proxy')
 process.env.VITE_API_URL = process.env.CF_PAGES_URL
 
 let parsedEnv = {
   VITE_API_URL: process.env.CF_PAGES_URL,
+  VITE_BASE_PATH: process.env.CF_PAGES_URL,
+  VITE_PAGES_COMMIT_SHA: process.env.CF_PAGES_COMMIT_SHA,
 }
 
 if (existsSync(envPath)) {
@@ -35,14 +51,11 @@ if (existsSync(envPath)) {
   }
 }
 
-// check for API_CLIENT_ID and API_CLIENT_SECRET
+// check for API_CLIENT_ID and API_CLIENT_SECRET for cloudflare access headers
 const secrets = {
   VITE_API_CLIENT_ID: process.env.VITE_API_CLIENT_ID,
   VITE_API_CLIENT_SECRET: process.env.VITE_API_CLIENT_SECRET,
 }
-
-console.log('is secret available?', process.env.VITE_API_CLIENT_ID)
-console.log('is secret available?', process.env.VITE_API_CLIENT_SECRET)
 
 // parse wrangler.toml for environment variables
 // Read the wrangler.toml file
@@ -56,7 +69,7 @@ const parsed = parse(tomlContent)
 // Get the environment from command line args or default to 'production'
 const env = process.env.CF_PAGES_BRANCH === 'main' ? 'production' : 'preview'
 
-console.log(`Using environment: ${env}`)
+console.log(`Using environment for toml file: ${env}`)
 
 // Get the environment variables
 const envVars = parsed[`env`][`${env}`]?.vars || {}
@@ -74,11 +87,9 @@ const envContent = Object.entries(combinedVars)
 // Write to .env file
 writeFileSync(envFilePath, envContent)
 
-console.log(
-  `Created .env at ${envFilePath} with ${Object.keys(combinedVars).length} variables for environment: ${env}`
-)
+console.log(`Created .env at ${envFilePath} for environment: ${env}`)
 
-console.log('\nCustom Environment Variables:')
+console.log('\nEnvironment Variables being loaded for the build:')
 Object.entries(combinedVars).forEach(([key, value]) => {
   console.log(`${key}=${value}`)
 })
