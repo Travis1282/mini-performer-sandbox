@@ -2,6 +2,7 @@ import { Hono } from 'hono'
 
 import manifest from '../dist/.vite/manifest.json'
 
+import { getIpAndLoc } from './services/location/get-ip-loc'
 import { basicProxy } from './services/proxy'
 
 const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
@@ -12,6 +13,8 @@ const app = new Hono()
 app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
 app.get('*', async (c) => {
+  const { ip, loc, latitude, longitude } = getIpAndLoc(c.req.raw)
+  console.log({ ip, loc, latitude, longitude })
   return c.html(
     `
       <html>
