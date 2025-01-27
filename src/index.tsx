@@ -21,6 +21,14 @@ app.get('*', async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
+          <script>
+            window.__GT_LOC__ = {
+              ip: '${ip}',
+              loc: '${loc}',
+              latitude: '${latitude}',
+              longitude: '${longitude}'
+            }
+          </script>
 
           ${cssFile ? `<link crossorigin href=/${cssFile} rel="stylesheet" />` : null}
         </head>

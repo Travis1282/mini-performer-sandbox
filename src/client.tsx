@@ -13,6 +13,8 @@ const queryClient = new QueryClient()
 
 // console.log({ apiUrl: import.meta.env.VITE_API_URL })
 
+console.log(window.__GT_LOC__)
+
 const rootNode = document.getElementById('root')
 if (rootNode) {
   try {
