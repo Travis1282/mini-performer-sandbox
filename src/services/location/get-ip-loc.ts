@@ -5,9 +5,6 @@ export function getIpAndLoc(request: Request): {
   longitude: null | string
 } {
   const headers = request.headers
-  for (const [key, value] of headers.entries()) {
-    console.log(`${key}: ${value}`)
-  }
 
   const ip =
     headers.get('x-gt-ip') ||

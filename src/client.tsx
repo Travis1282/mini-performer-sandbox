@@ -8,19 +8,20 @@ import '@fontsource-variable/plus-jakarta-sans/wght-italic.css'
 
 import './style.css'
 import router from './router'
+import { LocationProvider } from './services/location/useLocationContext'
 
 const queryClient = new QueryClient()
 
 // console.log({ apiUrl: import.meta.env.VITE_API_URL })
-
-console.log(window.__GT_LOC__)
 
 const rootNode = document.getElementById('root')
 if (rootNode) {
   try {
     createRoot(rootNode).render(
       <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
+        <LocationProvider location={window.__GT_LOC__}>
+          <RouterProvider router={router} />
+        </LocationProvider>
       </QueryClientProvider>
     )
   } catch (error) {
