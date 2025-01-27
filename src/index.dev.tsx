@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 
+import { getIpAndLoc } from './services/location/get-ip-loc'
 import { basicProxy } from './services/proxy'
 
 const app = new Hono()
@@ -7,8 +8,8 @@ const app = new Hono()
 app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
 app.get('*', async (c) => {
-  //   console.log(c.env.MY_VAR);
-  //   console.log(import.meta.env.VITE_API_URL);
+  const { ip, loc, latitude, longitude } = getIpAndLoc(c.req.raw)
+  console.log({ ip, loc, latitude, longitude })
   return c.html(
     `
       <html lang="en">

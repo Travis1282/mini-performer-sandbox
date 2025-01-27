@@ -44,18 +44,6 @@ const router = createBrowserRouter([
       },
       {
         path: '/tickets/:eventId/:slug/:localDate',
-        // Component: Tickets,
-        // loader: ({ request, params }) =>
-        //   getEventMetadata({
-        //     init: {
-        //       signal: request.signal,
-        //     },
-        //     params: {
-        //       path: {
-        //         'event-id': Number(params.eventId),
-        //       },
-        //     },
-        //   }),
         lazy: async () => {
           const [loaderModule, componentModule] = await Promise.all([
             import('./pages/tickets/tickets.loader'),
