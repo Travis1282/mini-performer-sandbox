@@ -9,13 +9,20 @@ app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
 app.get('*', async (c) => {
   const { ip, loc, latitude, longitude } = getIpAndLoc(c.req.raw)
-  console.log({ ip, loc, latitude, longitude })
   return c.html(
     `
       <html lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
+          <script>
+            window.__GT_LOC__ = {
+              ip: '${ip}',
+              loc: '${loc}',
+              latitude: '${latitude}',
+              longitude: '${longitude}'
+            }
+          </script>
           <script src="/src/client.tsx" type="module"></script>
         </head>
         <body>

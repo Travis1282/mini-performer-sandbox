@@ -14,7 +14,6 @@ app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
 app.get('*', async (c) => {
   const { ip, loc, latitude, longitude } = getIpAndLoc(c.req.raw)
-  console.log({ ip, loc, latitude, longitude })
   return c.html(
     `
       <html>
