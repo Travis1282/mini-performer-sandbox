@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => {
     }
   } else {
     return {
+      logLevel: 'info',
       test: {
         globals: true,
         environment: 'happy-dom',
