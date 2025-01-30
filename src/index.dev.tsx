@@ -1,6 +1,7 @@
 import type { FeatureApiResponse } from '@growthbook/growthbook-react'
 import { Hono } from 'hono'
 import { setCookie } from 'hono/cookie'
+import { logger } from 'hono/logger'
 import type { paths } from './services/maverick/generated/maverick-schema'
 import { gbClientKey } from './services/config'
 import { getIpAndLoc } from './services/location/get-ip-loc'
@@ -18,6 +19,8 @@ import {
 import { basicProxy } from './services/proxy'
 
 const app = new Hono()
+
+app.use(logger())
 
 app.all('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 

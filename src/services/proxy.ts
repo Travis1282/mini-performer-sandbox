@@ -9,11 +9,16 @@ export function basicProxy(target_url = ''): Handler {
 
     const headers = new Headers(c.req.raw.headers)
     headers.delete('host')
-    return fetch(path, {
-      duplex: 'half',
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { url, ...rest } = c.req.raw
+    const fetchOptions = {
       method: c.req.method,
       headers: headers,
-      body: c.req.raw.body,
-    })
+      body: c.req.method !== 'GET' ? await c.req.arrayBuffer() : undefined,
+    } as unknown as RequestInit
+    if (c.req.method === 'POST') {
+      fetchOptions.duplex = 'half'
+    }
+    return fetch(path, fetchOptions)
   }
 }
