@@ -70,6 +70,8 @@ app.get('*', async (c) => {
     console.log(error)
   }
 
+  console.log({ sessionsPayload })
+
   if (sessionsPayload?.sessionId) {
     c.header('X-Go-Session-Id', sessionsPayload.sessionId)
     setCookie(c, SESSION_COOKIE, sessionsPayload.sessionId, {
