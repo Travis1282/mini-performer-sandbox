@@ -11,7 +11,14 @@ import { getIpAndLoc } from './services/location/get-ip-loc'
 import { getFeatures } from './services/maverick/get-features'
 import { postSessions } from './services/maverick/post-sessions'
 import { buildUtmHash } from './services/ppc/buildUtmHash'
-import { PROFILE_COOKIE, SESSION_COOKIE } from './services/ppc/constants'
+import {
+  COOKIE_DOMAIN,
+  COOKIE_EXPIRY_DAYS,
+  COOKIE_SAME_SITE,
+  PREVIOUS_PARAMS_COOKIE,
+  PROFILE_COOKIE,
+  SESSION_COOKIE,
+} from './services/ppc/constants'
 import { basicProxy } from './services/proxy'
 
 const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
@@ -44,6 +51,8 @@ app.get('*', async (c) => {
     | paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
     | undefined = undefined
 
+  const currentParams = buildUtmHash(new URLSearchParams(c.req.query()))
+
   const headerMap = {} as Record<string, string>
   for (const [key, value] of c.req.raw.headers.entries()) {
     headerMap[key] = value
@@ -52,7 +61,7 @@ app.get('*', async (c) => {
     const { data } = await postSessions({
       body: {
         url: c.req.url,
-        params: buildUtmHash(new URLSearchParams(c.req.query())),
+        params: currentParams,
         headers: headerMap,
       },
     })
@@ -62,11 +71,29 @@ app.get('*', async (c) => {
   }
 
   if (sessionsPayload?.sessionId) {
-    setCookie(c, SESSION_COOKIE, sessionsPayload.sessionId)
+    c.header('X-Go-Session-Id', sessionsPayload.sessionId)
+    setCookie(c, SESSION_COOKIE, sessionsPayload.sessionId, {
+      domain: COOKIE_DOMAIN,
+      sameSite: COOKIE_SAME_SITE,
+      secure: true,
+      path: '/',
+    })
   }
   if (sessionsPayload?.profileId) {
-    setCookie(c, PROFILE_COOKIE, sessionsPayload.profileId)
+    c.header('X-Go-Profile-Id', sessionsPayload.profileId)
+    setCookie(c, PROFILE_COOKIE, sessionsPayload.profileId, {
+      path: '/',
+      domain: COOKIE_DOMAIN,
+      sameSite: COOKIE_SAME_SITE,
+      secure: true,
+      maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
+    })
   }
+
+  setCookie(c, PREVIOUS_PARAMS_COOKIE, btoa(JSON.stringify(currentParams)), {
+    path: '/',
+    maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
+  })
 
   return c.html(
     `
