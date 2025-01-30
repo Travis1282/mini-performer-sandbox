@@ -44,7 +44,7 @@ app.get('*', async (c) => {
               longitude,
             })}
           </script>
-          window.__GT_GB_PAYLOAD__ = ${JSON.stringify(featuresPayload)}
+          <script>window.__GT_GB_PAYLOAD__ = ${JSON.stringify(featuresPayload)}</script>
 
           ${cssFile ? `<link crossorigin href=/${cssFile} rel="stylesheet" />` : null}
         </head>
