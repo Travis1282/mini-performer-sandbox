@@ -58,6 +58,7 @@ app.get('*', async (c) => {
         headers: headerMap,
       },
     })
+    console.info({ data })
     sessionsPayload = data
   } catch (error) {
     console.log(error)
