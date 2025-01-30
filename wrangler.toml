@@ -18,7 +18,7 @@ VITE_GB_CLIENT_KEY="sdk-nBR0cXqdj9rICERK"
 [env.production.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
 VITE_APP_ENV="production"
-VITE_GB_CLIENT_KEY="sdk-Qfu8RXU7YapBe0HF"
+VITE_GB_CLIENT_KEY="sdk-nBR0cXqdj9rICERK"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
