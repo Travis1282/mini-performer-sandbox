@@ -29,7 +29,10 @@ const envPath = join(process.cwd(), `.env.${process.env.CF_PAGES_BRANCH}`)
 console.log('setting VITE_API_URL to CF_PAGES_URL for proxy')
 
 let parsedEnv = {
-  VITE_API_URL: process.env.CF_PAGES_BRANCH === 'main' ? '' : '',
+  VITE_API_URL:
+    process.env.CF_PAGES_BRANCH === 'main'
+      ? 'https://fluffy-couscous-53f.pages.dev'
+      : `https://${process.env.CF_PAGES_BRANCH}.fluffy-couscous-53f.pages.dev`,
   VITE_BASE_PATH: process.env.CF_PAGES_URL,
   VITE_PAGES_COMMIT_SHA: process.env.CF_PAGES_COMMIT_SHA,
 }
