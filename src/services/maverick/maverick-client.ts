@@ -6,9 +6,12 @@ import { apiUrl, isProd } from '../config'
 import { cloudflareHeadersMiddleware } from './cloudflare-headers-middleware'
 import { errorThrowMiddleware } from './error-throw-middleware'
 
+// cloudflare workers crash if credentials are set since not in browser
+const isCredentialsSupported = 'credentials' in Request.prototype
+
 const client = createClient<paths>({
   baseUrl: apiUrl,
-  credentials: 'include',
+  credentials: isCredentialsSupported ? 'include' : undefined,
   fetch: fetch,
 })
 
