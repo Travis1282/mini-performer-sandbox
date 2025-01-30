@@ -9,8 +9,6 @@ export function basicProxy(target_url = ''): Handler {
 
     const headers = new Headers(c.req.raw.headers)
     headers.delete('host')
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { url, ...rest } = c.req.raw
     const fetchOptions = {
       method: c.req.method,
       headers: headers,
