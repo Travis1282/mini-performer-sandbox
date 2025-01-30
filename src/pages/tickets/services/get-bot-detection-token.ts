@@ -1,7 +1,7 @@
 import { solveChallenge } from 'altcha-lib'
 import * as jose from 'jose'
 
-import { getIssuesChallenge } from '../../../services/maverick/getIssuesChallenge'
+import { getIssuesChallenge } from '../../../services/maverick/get-issues-challenge'
 
 export const getBotDetectionToken = async () => {
   try {

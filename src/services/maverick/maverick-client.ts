@@ -3,8 +3,8 @@ import createClient from 'openapi-fetch'
 import type { paths } from './generated/maverick-schema'
 
 import { apiUrl, isProd } from '../config'
-import { cloudflareHeadersMiddleware } from './cloudflareHeadersMiddleware'
-import { errorThrowMiddleware } from './errorThrowMiddleware'
+import { cloudflareHeadersMiddleware } from './cloudflare-headers-middleware'
+import { errorThrowMiddleware } from './error-throw-middleware'
 
 const client = createClient<paths>({
   baseUrl: apiUrl,

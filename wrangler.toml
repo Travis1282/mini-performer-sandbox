@@ -7,15 +7,17 @@ compatibility_flags = [ "nodejs_compat" ]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
 NODE_ENV="development"
 VITE_APP_ENV="development"
+VITE_GB_CLIENT_KEY="sdk-nBR0cXqdj9rICERK"
 
 [env.preview.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
 VITE_APP_ENV="preview"
-
+VITE_GB_CLIENT_KEY="sdk-nBR0cXqdj9rICERK"
 
 [env.production.vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
 VITE_APP_ENV="production"
+VITE_GB_CLIENT_KEY="sdk-Qfu8RXU7YapBe0HF"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"

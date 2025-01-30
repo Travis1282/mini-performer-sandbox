@@ -6,8 +6,8 @@ import Home from './pages/home/home'
 import { Layout } from './pages/layout'
 import { PrimaryLayout } from './pages/primary-layout'
 import Slug from './pages/slug'
-// import { getEventMetadata } from './services/maverick/getEventMetadata'
-import { getSearchTrendingEvents } from './services/maverick/getSearchTrendingEvents'
+// import { getEventMetadata } from './services/maverick/get-event-metadata'
+import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events'
 
 const router = createBrowserRouter([
   {
