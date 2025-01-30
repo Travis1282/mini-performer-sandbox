@@ -16,7 +16,7 @@ const app = new Hono()
 
 app.use(logger())
 
-app.all('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
+app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
 app.get('*', async (c) => {
   const { ip, loc, latitude, longitude } = getIpAndLoc(c.req.raw)
