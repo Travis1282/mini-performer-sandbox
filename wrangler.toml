@@ -5,7 +5,6 @@ compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
 VITE_MAVERICK_URL="https://maverick-public-services-stage.dev.gotickets.com"
-NODE_ENV="development"
 VITE_APP_ENV="development"
 VITE_GB_CLIENT_KEY="sdk-nBR0cXqdj9rICERK"
 
