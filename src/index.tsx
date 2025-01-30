@@ -44,7 +44,7 @@ app.get('*', async (c) => {
     })
     featuresPayload = data as FeatureApiResponse // maverick has incorrect types for this
   } catch (error) {
-    console.log(error)
+    console.log('features error', error)
   }
 
   let sessionsPayload:
@@ -67,7 +67,7 @@ app.get('*', async (c) => {
     })
     sessionsPayload = data
   } catch (error) {
-    console.log(error)
+    console.log('sessions error', error)
   }
 
   console.log({ sessionsPayload })
