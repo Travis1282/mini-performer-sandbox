@@ -6,7 +6,7 @@ import { logger } from 'hono/logger'
 import manifest from '../dist/.vite/manifest.json'
 import { gbClientKey } from './services/config'
 import { getIpAndLoc } from './services/location/get-ip-loc'
-import { getFeatures } from './services/maverick/get-features'
+import { serverClient } from './services/maverick/maverick-client-server'
 import { basicProxy } from './services/proxy'
 
 const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
@@ -23,13 +23,16 @@ app.get('*', async (c) => {
 
   let featuresPayload: FeatureApiResponse | undefined = undefined
   try {
-    const { data } = await getFeatures({
-      params: {
-        path: {
-          clientKey: gbClientKey,
+    const { data } = await serverClient.GET(
+      '/rest/experiments/features/{clientKey}',
+      {
+        params: {
+          path: {
+            clientKey: gbClientKey,
+          },
         },
-      },
-    })
+      }
+    )
     featuresPayload = data as FeatureApiResponse // maverick has incorrect types for this
   } catch (error) {
     console.log('features error', error)
