@@ -12,10 +12,12 @@ export function basicProxy(target_url = ''): Handler {
     const fetchOptions = {
       method: c.req.method,
       headers: headers,
-      body: c.req.method !== 'GET' ? await c.req.arrayBuffer() : undefined,
     } as unknown as RequestInit
     if (c.req.method === 'POST') {
       fetchOptions.duplex = 'half'
+    }
+    if (c.req.raw.body) {
+      fetchOptions.body = c.req.raw.body
     }
     return fetch(path, fetchOptions)
   }
