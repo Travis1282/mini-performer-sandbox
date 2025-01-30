@@ -1,36 +1,16 @@
-import type { FeatureApiResponse } from '@growthbook/growthbook-react'
 import { Hono } from 'hono'
-import { logger } from 'hono/logger'
-import { gbClientKey } from './services/config'
+import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures'
 import { getIpAndLoc } from './services/location/get-ip-loc'
-import { serverClient } from './services/maverick/maverick-client-server'
 import { basicProxy } from './services/proxy'
 
 const app = new Hono()
-
-app.use(logger())
 
 app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
 app.get('*', async (c) => {
   const { ip, loc, latitude, longitude } = getIpAndLoc(c.req.raw)
 
-  let featuresPayload: FeatureApiResponse | undefined = undefined
-  try {
-    const { data } = await serverClient.GET(
-      '/rest/experiments/features/{clientKey}',
-      {
-        params: {
-          path: {
-            clientKey: gbClientKey,
-          },
-        },
-      }
-    )
-    featuresPayload = data as FeatureApiResponse // maverick has incorrect types for this
-  } catch (error) {
-    console.log('features error', error)
-  }
+  const featuresPayload = await getGrowthbookFeatures()
 
   // let sessionsPayload:
   //   | paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
