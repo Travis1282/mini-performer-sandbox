@@ -23,7 +23,7 @@ export const PopoverFade = ({
     <div
       className={clsx(
         isOpen
-          ? 'relative left-0 top-0 z-50 flex min-h-[79px] w-full max-w-[1024px] shrink flex-col items-center justify-between bg-white px-6 h-full-screen'
+          ? 'h-full-screen relative left-0 top-0 z-50 flex min-h-[79px] w-full max-w-[1024px] shrink flex-col items-center justify-between bg-white px-6'
           : ''
       )}
     >
@@ -31,7 +31,7 @@ export const PopoverFade = ({
         className={clsx(
           'duration-600 transition-colors',
           isOpen
-            ? 'fixed left-0 top-0 flex w-full flex-col bg-white opacity-100 h-full-screen'
+            ? 'h-full-screen fixed left-0 top-0 flex w-full flex-col bg-white opacity-100'
             : 'absolute bg-transparent'
         )}
       >

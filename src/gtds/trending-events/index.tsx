@@ -81,7 +81,7 @@ export function TrendingEvents({
     <div
       className={clsx(
         !hideGradient
-          ? 'bg-gradient-to-b from-dark from-0% via-dark to-[#fafafb]'
+          ? 'from-dark via-dark bg-gradient-to-b from-0% to-[#fafafb]'
           : 'bg-transparent',
         !hideGradient
           ? trendings?.length
@@ -99,7 +99,7 @@ export function TrendingEvents({
               <div className="flex flex-col sm:flex-row">
                 <h1
                   className={clsx(
-                    'mb-1 !font-bold text-white !h2-sm sm:self-end lg:mb-2 lg:!h2-lg',
+                    '!h2-sm lg:!h2-lg mb-1 !font-bold text-white sm:self-end lg:mb-2',
                     slots?.title?.className
                   )}
                 >
@@ -188,18 +188,18 @@ export function TrendingEvents({
               <div className="flex w-full items-center justify-between lg:pb-[10px]">
                 <div className="col-span-1 mr-2 h-full w-[calc(100%-0.75rem)] rounded last:mr-6 last:w-[calc(100%-0.5rem)] md:mr-6 md:w-[calc(100%-1rem)] last:md:mr-0 last:md:w-[calc(100%-1rem)] lg:h-[calc(100%-20px)]">
                   <div className="h-[174px] animate-pulse rounded bg-gradient-to-t from-gray-300 to-neutral-500 opacity-70 md:h-[152px] lg:h-[201px]"></div>
-                  <div className="mt-3 h-[21px] w-3/4 animate-pulse rounded bg-dark opacity-70"></div>
-                  <div className="mt-[1px] h-[16px] w-2/4 animate-pulse rounded bg-dark opacity-50"></div>
+                  <div className="bg-dark mt-3 h-[21px] w-3/4 animate-pulse rounded opacity-70"></div>
+                  <div className="bg-dark mt-[1px] h-[16px] w-2/4 animate-pulse rounded opacity-50"></div>
                 </div>
                 <div className="col-span-1 mr-2 h-full w-[calc(100%-0.75rem)] rounded last:mr-6 last:w-[calc(100%-0.5rem)] md:mr-6 md:w-[calc(100%-1rem)] last:md:mr-0 last:md:w-[calc(100%-1rem)] lg:h-[calc(100%-20px)]">
                   <div className="h-[174px] animate-pulse rounded bg-gradient-to-t from-gray-300 to-neutral-500 opacity-70 md:h-[152px] lg:h-[201px]"></div>
-                  <div className="mt-3 h-[21px] w-3/4 animate-pulse rounded bg-dark opacity-70"></div>
-                  <div className="mt-[1px] h-[16px] w-2/4 animate-pulse rounded bg-dark opacity-50"></div>
+                  <div className="bg-dark mt-3 h-[21px] w-3/4 animate-pulse rounded opacity-70"></div>
+                  <div className="bg-dark mt-[1px] h-[16px] w-2/4 animate-pulse rounded opacity-50"></div>
                 </div>
                 <div className="col-span-1 mr-2 hidden h-full w-[calc(100%-0.75rem)] rounded last:mr-6 last:w-[calc(100%-0.5rem)] md:mr-6 md:block md:w-[calc(100%-1rem)] last:md:mr-0 last:md:w-[calc(100%-1rem)] lg:h-[calc(100%-20px)]">
                   <div className="h-[174px] animate-pulse rounded bg-gradient-to-t from-gray-300 to-neutral-500 opacity-70 md:h-[152px] lg:h-[201px]"></div>
-                  <div className="mt-3 h-[21px] w-3/4 animate-pulse rounded bg-dark opacity-70"></div>
-                  <div className="mt-[1px] h-[16px] w-2/4 animate-pulse rounded bg-dark opacity-50"></div>
+                  <div className="bg-dark mt-3 h-[21px] w-3/4 animate-pulse rounded opacity-70"></div>
+                  <div className="bg-dark mt-[1px] h-[16px] w-2/4 animate-pulse rounded opacity-50"></div>
                 </div>
               </div>
             ) : !trendings?.length ? (
@@ -209,7 +209,7 @@ export function TrendingEvents({
                 {...settings}
                 className="!relative !grid !w-full !grid-cols-2 md:!grid-cols-3"
               >
-                <span className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 transform whitespace-nowrap text-center font-semibold text-white opacity-50 h6-lg md:font-medium md:h4-lg">
+                <span className="h6-lg md:h4-lg absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 transform whitespace-nowrap text-center font-semibold text-white opacity-50 md:font-medium">
                   No Trending Events in Your Location
                 </span>
                 {Array.from({ length: 3 }).map((_, index) => (
@@ -305,8 +305,8 @@ export function TrendingEvents({
                         />
                         <div
                           className={clsx(
-                            'absolute m-1 flex flex-col items-center justify-center gap-1 !font-medium text-white !h6-sm md:!font-bold md:!h5-lg lg:m-2.5',
-                            'rounded bg-dark px-[3px] pt-[1.5px] leading-[140%] sm:px-2 sm:py-[3px] lg:rounded-sm'
+                            '!h6-sm md:!h5-lg absolute m-1 flex flex-col items-center justify-center gap-1 !font-medium text-white md:!font-bold lg:m-2.5',
+                            'bg-dark rounded px-[3px] pt-[1.5px] leading-[140%] sm:px-2 sm:py-[3px] lg:rounded-sm'
                           )}
                         >
                           {date}
@@ -328,11 +328,11 @@ export function TrendingEvents({
                           rel="noopener noreferrer"
                           target="_blank"
                         >
-                          <h3 className="overflow-hidden text-ellipsis whitespace-nowrap pt-3 text-sm font-semibold leading-[1.1] text-dark md:text-lg md:leading-[1.2]">
+                          <h3 className="text-dark overflow-hidden text-ellipsis whitespace-nowrap pt-3 text-sm font-semibold leading-[1.1] md:text-lg md:leading-[1.2]">
                             {getEventName(event)}
                           </h3>
                         </a>
-                        <div className="flex flex-row gap-3 text-xs font-semibold leading-[1.1] text-dark text-opacity-60 md:text-sm">
+                        <div className="text-dark flex flex-row gap-3 text-xs font-semibold leading-[1.1] text-opacity-60 md:text-sm">
                           <h4 className="relative inline-block w-full items-center overflow-hidden">
                             <span className="inline-block lg:hidden">
                               <span className="inline-block">
@@ -345,7 +345,7 @@ export function TrendingEvents({
                             <span className="hidden lg:inline-block">
                               {event.venue?.city || ''},{' '}
                               {event.venue?.state || ''}{' '}
-                              <span className="relative bottom-[2px] mx-[6px] inline-block h-[2px] w-[2px] flex-shrink-0 self-center rounded-[21px] bg-dark opacity-40 md:mx-[12px]"></span>
+                              <span className="bg-dark relative bottom-[2px] mx-[6px] inline-block h-[2px] w-[2px] flex-shrink-0 self-center rounded-[21px] opacity-40 md:mx-[12px]"></span>
                               {dateTimeDisplay}
                             </span>
                           </h4>

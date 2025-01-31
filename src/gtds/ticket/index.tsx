@@ -38,7 +38,7 @@ export function Ticket({
 
   return (
     <div className="px-4 lg:px-0">
-      <div className="flex w-full items-center rounded-t-lg bg-accent px-4 py-3 text-[14px] font-semibold text-white md:px-6 lg:px-8 lg:py-4">
+      <div className="bg-accent flex w-full items-center rounded-t-lg px-4 py-3 text-[14px] font-semibold text-white md:px-6 lg:px-8 lg:py-4">
         <Image
           alt="exclamation icon"
           className="mr-2"
@@ -49,11 +49,11 @@ export function Ticket({
         />{' '}
         This is not a ticket
       </div>
-      <div className="rounded-b-lg border border-gray-300 bg-white pb-6 pt-4 text-dark md:rounded-t-lg md:py-8 lg:mx-0 lg:rounded-t-none">
+      <div className="text-dark rounded-b-lg border border-gray-300 bg-white pb-6 pt-4 md:rounded-t-lg md:py-8 lg:mx-0 lg:rounded-t-none">
         <div className="flex flex-col gap-3 px-6 lg:px-8">
           <div className="hidden md:block lg:hidden">
             <span
-              className="opacity-60 text-large"
+              className="text-large opacity-60"
               data-testid="eventDateTimeQuantity"
               id="eventDateTimeQuantity"
             >
@@ -72,14 +72,14 @@ export function Ticket({
           </h3>
           <div className="flex flex-col-reverse gap-0 md:flex-col md:gap-1">
             <span
-              className="opacity-60 h6-sm md:text-large"
+              className="h6-sm md:text-large opacity-60"
               data-testid="eventVenueNameCityState"
               id="eventVenueNameCityState"
             >
               {`${event?.venue?.name}, ${event?.venue?.city}, ${event?.venue?.state}`}
             </span>
             <span
-              className="opacity-60 h6-sm md:hidden md:text-large lg:block"
+              className="h6-sm md:text-large opacity-60 md:hidden lg:block"
               data-testid="eventDateTime"
               id="eventDateTime"
             >
@@ -100,7 +100,7 @@ export function Ticket({
                 name={DeliveryMethodIcon[deliveryMethod?.enumName || '']}
                 width={20}
               />
-              <span className="self-center !font-semibold h6-lg">
+              <span className="h6-lg self-center !font-semibold">
                 {deliveryMethod?.retailDisplayName}
               </span>
               <ToolTip open={isInfoTooltipOpen}>
@@ -127,7 +127,7 @@ export function Ticket({
                   </div>
                 </ToolTip.Activator>
                 <ToolTip.Content>
-                  <p className="max-w-[328px] bg-dark p-3 text-start text-white opacity-80 text-large">
+                  <p className="bg-dark text-large max-w-[328px] p-3 text-start text-white opacity-80">
                     {deliveryMethod?.description}
                   </p>
                 </ToolTip.Content>
@@ -139,7 +139,7 @@ export function Ticket({
                 setOpen={setIsInfoModal}
                 title={deliveryMethod?.retailDisplayName || ''}
               >
-                <p className="px-4 text-dark text-large">
+                <p className="text-dark text-large px-4">
                   {deliveryMethod?.description}
                 </p>
               </Modal>
@@ -153,9 +153,9 @@ export function Ticket({
         </div>
         <div className="flex flex-row flex-wrap justify-between gap-x-6 gap-y-3 px-6 lg:gap-y-6 lg:px-8">
           <div className="flex flex-col gap-1.5">
-            <span className="opacity-60 h6-sm md:text-large">Section</span>
+            <span className="h6-sm md:text-large opacity-60">Section</span>
             <span
-              className="!font-semibold display-xs md:!font-bold md:display-sm"
+              className="display-xs md:display-sm !font-semibold md:!font-bold"
               data-testid="ticketSection"
               id="ticketSection"
             >
@@ -164,9 +164,9 @@ export function Ticket({
           </div>
           <div className="flex flex-row flex-nowrap gap-6">
             <div className="flex flex-col gap-1.5">
-              <span className="opacity-60 h6-sm md:text-large">Row</span>
+              <span className="h6-sm md:text-large opacity-60">Row</span>
               <span
-                className="!font-semibold display-xs md:!font-bold md:display-sm"
+                className="display-xs md:display-sm !font-semibold md:!font-bold"
                 data-testid="ticketRow"
                 id="ticketRow"
               >
@@ -175,12 +175,12 @@ export function Ticket({
             </div>
 
             <div className="ml-auto flex flex-col gap-1.5 text-center md:self-center">
-              <span className={clsx('opacity-60 h6-sm md:text-large lg:block')}>
+              <span className={clsx('h6-sm md:text-large opacity-60 lg:block')}>
                 Quantity
               </span>
               <span
                 className={clsx(
-                  '!font-semibold display-xs md:!font-bold md:display-sm lg:block'
+                  'display-xs md:display-sm !font-semibold md:!font-bold lg:block'
                 )}
                 data-testid="ticketQuantity"
                 id="ticketQuantity"
@@ -192,7 +192,7 @@ export function Ticket({
         </div>
         {(flex || notes) && (
           <div className="mt-6 block px-8">
-            <span className="flex flex-col gap-2 opacity-60 h6-sm md:text-large">
+            <span className="h6-sm md:text-large flex flex-col gap-2 opacity-60">
               Notes
             </span>
             <div className="h6-sm md:text-large">

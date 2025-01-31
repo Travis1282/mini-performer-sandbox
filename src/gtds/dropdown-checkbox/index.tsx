@@ -45,9 +45,9 @@ export function DropdownCheckbox({
   }
 
   useEffect(() => {
-    initialDropdownOption &&
-      selectedItems.length === 0 &&
+    if (initialDropdownOption && selectedItems.length === 0) {
       handleSelectedItems(initialDropdownOption)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -92,7 +92,7 @@ export function DropdownCheckbox({
     <div className={`${className ?? ''} flex-col sm:flex sm:w-fit`} ref={ref}>
       <button
         className={clsx(
-          `w-22 flex h-[33px] flex-row items-center gap-2 overflow-hidden rounded-3xl bg-white text-center font-medium text-dark shadow-dropdown-button-box-shadow h6-sm lg:h-[36px] lg:h6-lg`,
+          `w-22 text-dark shadow-dropdown-button-box-shadow h6-sm lg:h6-lg flex h-[33px] flex-row items-center gap-2 overflow-hidden rounded-3xl bg-white text-center font-medium lg:h-[36px]`,
           selectedItems.length > 0 && '!bg-accent text-white'
         )}
         data-cy="dropdown-button"
@@ -136,10 +136,10 @@ export function DropdownCheckbox({
           onClick={handleDropdownSpanClick}
         >
           <div
-            className="absolute z-10 w-screen rounded bg-white shadow-dropdown-options-box-shadow sm:mt-2.5 sm:w-40"
+            className="shadow-dropdown-options-box-shadow absolute z-10 w-screen rounded bg-white sm:mt-2.5 sm:w-40"
             id="dropdown"
           >
-            <div className="flex w-full justify-between rounded bg-white px-4 py-6 font-bold text-dark sm:hidden">
+            <div className="text-dark flex w-full justify-between rounded bg-white px-4 py-6 font-bold sm:hidden">
               <span className="h3-lg">{title}</span>
               <Image
                 alt="Close Button"
@@ -151,14 +151,14 @@ export function DropdownCheckbox({
                 width={25}
               />
             </div>
-            <ul className="font-medium h6-lg sm:h6-sm lg:h6-lg">
+            <ul className="h6-lg sm:h6-sm lg:h6-lg font-medium">
               {dropdownOptions &&
                 dropdownOptions.map((option, optionIdx) => (
                   <li
                     className={clsx(
-                      'flex justify-between rounded border-l-4 border-t border-light border-l-transparent bg-white px-6 py-4 text-dark hover:rounded-l-none hover:border-l-accent hover:bg-dropdown-hover-blue-bg lg:py-[7px]',
+                      'border-light text-dark hover:border-l-accent hover:bg-dropdown-hover-blue-bg flex justify-between rounded border-l-4 border-t border-l-transparent bg-white px-6 py-4 hover:rounded-l-none lg:py-[7px]',
                       selectedItems.includes(option)
-                        ? 'rounded-none !border-accent !bg-accent text-white'
+                        ? '!border-accent !bg-accent rounded-none text-white'
                         : '',
                       optionIdx === 0 &&
                         dropdownOptions.length === 2 &&
@@ -176,7 +176,7 @@ export function DropdownCheckbox({
                     {option}
                     <input
                       checked={selectedItems.includes(option)}
-                      className="self-center rounded border border-[#B3B8BE] text-accent"
+                      className="text-accent self-center rounded border border-[#B3B8BE]"
                       onChange={() => {
                         handleOptionClick(
                           option,

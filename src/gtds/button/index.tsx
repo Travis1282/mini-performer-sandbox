@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import { Arrow } from '../Arrow'
 import Loader from '../Loader'
 
-type DataAttributes = Record<`data-${string}`, unknown>;
+type DataAttributes = Record<`data-${string}`, unknown>
 
 export interface ButtonProps extends DataAttributes {
   ariaLabel?: string
@@ -77,16 +77,16 @@ export function Button({
   ]
 
   const variantClasses = {
-    primary: tw`bg-accent text-white hover:bg-accent-hover active:bg-accent-dark`,
-    secondary: tw`border border-accent bg-transparent text-accent hover:bg-accent-hover hover:text-white active:bg-accent-dark active:text-white`,
-    tertiary: tw`bg-transparent text-accent`,
-    quaternary: tw`bg-accent-light text-accent hover:bg-accent-hover hover:text-white active:accent-accent-dark disabled:bg-accent-light disabled:text-accent disabled:text-opacity-60`,
-    green: tw`disabled:submit-disabled bg-submit text-white hover:bg-submit-hover active:bg-submit-active`,
+    primary: tw`bg-accent hover:bg-accent-hover active:bg-accent-dark text-white`,
+    secondary: tw`border-accent text-accent hover:bg-accent-hover active:bg-accent-dark border bg-transparent hover:text-white active:text-white`,
+    tertiary: tw`text-accent bg-transparent`,
+    quaternary: tw`bg-accent-light text-accent hover:bg-accent-hover active:accent-accent-dark disabled:bg-accent-light disabled:text-accent hover:text-white disabled:text-opacity-60`,
+    green: tw`disabled:submit-disabled bg-submit hover:bg-submit-hover active:bg-submit-active text-white`,
   }
 
   const sizeClasses = {
     sm: tw`px-[16px] py-[12px] text-sm`,
-    lg: tw`px-[24px] py-[12px] text-large`,
+    lg: tw`text-large px-[24px] py-[12px]`,
   }
 
   const disabledClasses = disabled && tw`hover:none active:none opacity-50`
@@ -112,7 +112,9 @@ export function Button({
           className
         )}
         onClick={() => {
-          onClick && onClick()
+          if (onClick) {
+            onClick()
+          }
         }}
         title={title}
         type={type}
@@ -156,7 +158,9 @@ export function Button({
       )}
       disabled={disabled}
       onClick={() => {
-        onClick && onClick()
+        if (onClick) {
+          onClick()
+        }
       }}
       role={role}
       title={title}

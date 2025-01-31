@@ -67,7 +67,7 @@ export function AdGroupAllEvents({
   return (
     <div className="container">
       <div className="flex w-full select-none flex-col justify-between gap-4 whitespace-nowrap pt-6 md:flex-row lg:pt-[35px]">
-        <h3 className="px-4 h3-lg lg:px-0" data-cy="venue-subtitle">
+        <h3 className="h3-lg px-4 lg:px-0" data-cy="venue-subtitle">
           All Events
         </h3>
         <div

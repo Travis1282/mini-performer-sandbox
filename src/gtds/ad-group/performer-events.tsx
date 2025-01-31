@@ -19,7 +19,7 @@ export function AdGroupPerformerEvents({
   return (
     <div className="container">
       <div className="flex w-full select-none flex-col justify-between gap-4 pt-6 md:flex-row lg:pt-[35px]">
-        <h3 className="px-4 pb-8 h3-lg lg:h2-lg xl:px-0">
+        <h3 className="h3-lg lg:h2-lg px-4 pb-8 xl:px-0">
           {data.adGroupEntityResult?.performer?.name} Tickets
         </h3>
       </div>

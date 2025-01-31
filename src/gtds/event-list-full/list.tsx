@@ -1,4 +1,3 @@
- 
 'use client'
 
 import type { components } from '@/contracts/generated/maverick-schema'
@@ -53,7 +52,7 @@ export const List = ({
           )}
           {Boolean(useLocal && useAll && locationEventsList.length) && (
             <div className="flex w-full select-none flex-col justify-between gap-4 pt-6 md:flex-row lg:pt-[35px]">
-              <h3 className="pb-8 pl-4 h3-lg lg:pl-0">All Events</h3>
+              <h3 className="h3-lg pb-8 pl-4 lg:pl-0">All Events</h3>
             </div>
           )}
         </>
@@ -78,7 +77,7 @@ export const List = ({
             />
             {onClickResetFilters && (
               <Button
-                className="mt-6 w-[226px] rounded border-none !bg-light px-4 py-3 font-semibold transition-colors !h6-lg hover:!bg-[#ebeff5] hover:!text-accent active:!bg-[#e5e8ec] active:!text-accent lg:mt-6 lg:h3-sm"
+                className="!bg-light !h6-lg hover:!text-accent active:!text-accent lg:h3-sm mt-6 w-[226px] rounded border-none px-4 py-3 font-semibold transition-colors hover:!bg-[#ebeff5] active:!bg-[#e5e8ec] lg:mt-6"
                 label="Reset Filters"
                 onClick={onClickResetFilters}
                 variant="secondary"

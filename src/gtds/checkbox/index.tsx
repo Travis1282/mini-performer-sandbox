@@ -28,7 +28,7 @@ export function Checkbox({
     <>
       <input
         checked={checked}
-        className="rounded text-accent focus:ring-accent"
+        className="text-accent focus:ring-accent rounded"
         data-testid={rest['data-testid'] ?? htmlFor}
         hidden={hidden}
         id={htmlFor}

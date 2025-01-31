@@ -51,7 +51,7 @@ export const Select = ({
       {label && (
         <div className="mb-2 flex flex-row items-center justify-between">
           <label
-            className="text-dark opacity-60 text-large"
+            className="text-dark text-large opacity-60"
             htmlFor={id ?? name ?? label}
           >
             {label}
@@ -117,7 +117,7 @@ export const Select = ({
           className="mt-1 text-[12px]"
           data-testid={defaultTestId ? `${defaultTestId}-error` : undefined}
         >
-          <span className="text-small font-medium text-error">{error}</span>
+          <span className="text-small text-error font-medium">{error}</span>
         </span>
       )}
     </div>

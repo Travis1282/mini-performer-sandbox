@@ -70,7 +70,7 @@ export const PerformerGroup = ({
         ) : (
           <div className="container flex !max-h-[calc(100dvh-200px)] max-h-[calc(100vh-200px)] flex-col items-center justify-center px-4 py-[94px]">
             {message ? Messages[message] : null}
-            <h4 className="mt-6 w-full max-w-[326px] pb-4 text-dark h2-sm lg:max-w-[638px]">
+            <h4 className="text-dark h2-sm mt-6 w-full max-w-[326px] pb-4 lg:max-w-[638px]">
               Find your event
             </h4>
             <HomeSearchBoxSearch suppressSearchResults suppressSidebar />

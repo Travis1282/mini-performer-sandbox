@@ -19,7 +19,7 @@ export function Seo({ content, replace = {}, className }: SeoProps) {
     <div className="text-black">
       <div
         className={clsx(
-          'seo-text flex list-inside list-disc flex-col marker:text-accent',
+          'seo-text marker:text-accent flex list-inside list-disc flex-col',
           className
         )}
         dangerouslySetInnerHTML={{ __html: seoContent }}

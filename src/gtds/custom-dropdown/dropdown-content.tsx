@@ -25,7 +25,7 @@ export function DropdownContent({
   return (
     <div
       className={clsx(
-        'absolute z-10 rounded bg-white shadow-dropdown-options-box-shadow',
+        'shadow-dropdown-options-box-shadow absolute z-10 rounded bg-white',
         position,
         className
       )}

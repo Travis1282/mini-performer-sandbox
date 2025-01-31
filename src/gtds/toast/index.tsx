@@ -34,7 +34,7 @@ export function Toast({ id }: { id?: string }) {
     <div
       aria-hidden={!openToast}
       className={clsx(
-        'fixed top-20 z-[999] w-[300px] border-t bg-white shadow-dropdown-button-box-shadow transition-all duration-300 ease-in-out lg:top-28 lg:w-[400px] lg:border-l lg:border-t-0',
+        'shadow-dropdown-button-box-shadow fixed top-20 z-[999] w-[300px] border-t bg-white transition-all duration-300 ease-in-out lg:top-28 lg:w-[400px] lg:border-l lg:border-t-0',
         openToast ? 'right-5 opacity-100' : '-right-5 opacity-0',
         type === 'success' && 'lg:border-l-success',
         type === 'warning' && 'lg:border-l-[#FF9C00]',

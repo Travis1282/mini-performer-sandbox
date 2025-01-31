@@ -13,7 +13,7 @@ export default function Loader({
 }: LoaderProps) {
   return (
     <div
-      className={`animate-spin rounded-full border-solid border-[#d6d6d6] border-t-accent ${className}`}
+      className={`border-t-accent animate-spin rounded-full border-solid border-[#d6d6d6] ${className}`}
       data-testid="loader"
       style={{
         height: `${height}px`,

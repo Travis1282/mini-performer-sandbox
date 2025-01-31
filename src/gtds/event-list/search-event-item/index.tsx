@@ -53,7 +53,7 @@ export function SearchEventItem({
   return (
     <Link
       aria-label={`Go to ${event.name} Tickets Page`}
-      className="group flex cursor-pointer border-y border-y-light bg-white hover:relative hover:shadow-[0_25px_50px_0px_#0113270D]"
+      className="border-y-light group flex cursor-pointer border-y bg-white hover:relative hover:shadow-[0_25px_50px_0px_#0113270D]"
       data-cy="eventItem"
       data-testid={dataTestid}
       href={path}
@@ -62,11 +62,11 @@ export function SearchEventItem({
       rel={openInNewTab ? 'noopener' : undefined}
       target={openInNewTab ? '_blank' : '_self'}
     >
-      <section className="flex w-full p-4 group-hover:border-accent lg:border-l-4 lg:border-transparent">
+      <section className="group-hover:border-accent flex w-full p-4 lg:border-l-4 lg:border-transparent">
         <div className="flex w-[80px] min-w-[80px] max-w-[80px] flex-none flex-col items-center justify-center border-r border-r-slate-300 pr-4 lg:w-[130px] lg:min-w-[130px] lg:max-w-[130px] lg:items-start lg:py-2 lg:pr-5">
           {!dateTbd ? (
             <p
-              className="block whitespace-nowrap text-[12px] text-dark lg:hidden"
+              className="text-dark block whitespace-nowrap text-[12px] lg:hidden"
               data-cy="eventDayOfWeek"
             >
               {dayjsInstance.format('ddd')}
@@ -74,7 +74,7 @@ export function SearchEventItem({
           ) : null}
 
           <h2
-            className={`whitespace-nowrap text-[14px] !font-bold uppercase leading-[21px] tracking-tighter text-accent lg:text-[18px] lg:leading-[27px] ${
+            className={`text-accent whitespace-nowrap text-[14px] !font-bold uppercase leading-[21px] tracking-tighter lg:text-[18px] lg:leading-[27px] ${
               isSameYear ? '' : 'tracking-tighter'
             }`}
           >
@@ -88,7 +88,7 @@ export function SearchEventItem({
               </>
             ) : null}
           </h2>
-          <p className="block whitespace-nowrap text-[12px] text-dark lg:text-[14px]">
+          <p className="text-dark block whitespace-nowrap text-[12px] lg:text-[14px]">
             {timeTbd ? (
               <span className="hidden lg:inline" data-cy="eventTimeLocal">
                 TBD
@@ -139,7 +139,7 @@ export function SearchEventItem({
           ) : null}
 
           <h3
-            className="overflow-hidden whitespace-normal text-[12px] font-[600] group-hover:text-accent lg:text-[18px]"
+            className="group-hover:text-accent overflow-hidden whitespace-normal text-[12px] font-[600] lg:text-[18px]"
             data-cy="eventName"
           >
             {getEventName(event)}
@@ -162,7 +162,7 @@ export function SearchEventItem({
         </div>
         <div className="ml-auto mr-4 self-center lg:block">
           <span
-            className="inline-flex flex-row items-center justify-center whitespace-nowrap rounded-md bg-accent !px-[16px] py-[7px] !font-semibold text-white transition-colors text-large hover:bg-accent-hover active:bg-accent-dark"
+            className="bg-accent text-large hover:bg-accent-hover active:bg-accent-dark inline-flex flex-row items-center justify-center whitespace-nowrap rounded-md !px-[16px] py-[7px] !font-semibold text-white transition-colors"
             data-cy="viewTicketsButton"
           >
             Tickets

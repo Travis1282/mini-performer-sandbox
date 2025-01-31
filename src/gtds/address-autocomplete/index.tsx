@@ -109,7 +109,7 @@ export const AddressAutocomplete = ({
     >
       {label ? (
         <div className="mb-2 flex flex-row items-center justify-between">
-          <label className="text-dark opacity-60 text-large" htmlFor={name}>
+          <label className="text-dark text-large opacity-60" htmlFor={name}>
             {label}
           </label>
           {rightContent}
@@ -120,7 +120,7 @@ export const AddressAutocomplete = ({
           autoComplete={autoComplete}
           className={clsx(
             'w-full rounded border p-[9px]',
-            error ? 'border-error' : 'border-[#B3B8BE] text-dark'
+            error ? 'border-error' : 'text-dark border-[#B3B8BE]'
           )}
           data-testid={`${dataTestId}`}
           disabled={disabled}
@@ -146,7 +146,7 @@ export const AddressAutocomplete = ({
             {predictions.map(({ place_id, description }) => {
               return (
                 <li
-                  className="cursor-pointer p-2 font-medium hover:bg-accent hover:bg-opacity-10 lg:border-l-4 lg:border-l-transparent lg:hover:border-l-accent"
+                  className="hover:bg-accent lg:hover:border-l-accent cursor-pointer p-2 font-medium hover:bg-opacity-10 lg:border-l-4 lg:border-l-transparent"
                   data-testid={dataTestId ?? makeTestid(description)}
                   key={place_id}
                   onClick={() => handleSuggestionClick(place_id)}
@@ -161,7 +161,7 @@ export const AddressAutocomplete = ({
 
       {error ? (
         <span className="mt-1 text-[12px]" data-testid={`${dataTestId}-error`}>
-          <span className="text-small font-medium text-error">{error}</span>
+          <span className="text-small text-error font-medium">{error}</span>
         </span>
       ) : null}
     </div>

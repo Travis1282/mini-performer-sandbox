@@ -94,7 +94,7 @@ export const SelectRegion = ({
           ) : (
             <button
               className={clsx(
-                'h-[33px] shrink-0 overflow-hidden rounded-3xl bg-white font-medium text-dark shadow-dropdown-button-box-shadow h6-sm lg:h-[36px] lg:h6-lg',
+                'text-dark shadow-dropdown-button-box-shadow h6-sm lg:h6-lg h-[33px] shrink-0 overflow-hidden rounded-3xl bg-white font-medium lg:h-[36px]',
                 selected && '!bg-accent text-white',
                 disabled &&
                   'hover:none active:none cursor-not-allowed opacity-50'

@@ -14,7 +14,7 @@ export function CallButton() {
         src={resolveImagePath('/img/icons/fi-rr-phone-call.svg')}
         width={18}
       />
-      <span className="hidden whitespace-nowrap text-submit group-hover:brightness-90 lg:block">
+      <span className="text-submit hidden whitespace-nowrap group-hover:brightness-90 lg:block">
         {supportPhoneNumber}
       </span>
     </a>

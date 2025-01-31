@@ -18,7 +18,7 @@ export const HurryStick: React.FC<HurryStickProps> = ({
       )}
       data-testid="hurry-stick"
     >
-      <div className="container px-2 text-center text-[13px] font-semibold text-dark lg:text-[15px]">
+      <div className="text-dark container px-2 text-center text-[13px] font-semibold lg:text-[15px]">
         {content ?? (
           <>
             <span className="font-semibold text-[#FE5C36]">Hurry!</span>

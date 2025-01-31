@@ -69,7 +69,7 @@ export function AdditionalVenues({
       {content.topSectionEvents?.length ? (
         <>
           <div className="flex w-full select-none flex-col justify-between gap-4 pt-6 md:flex-row lg:pt-[35px]">
-            <h3 className="px-4 pb-8 h3-lg lg:px-0">{content.title} Tickets</h3>
+            <h3 className="h3-lg px-4 pb-8 lg:px-0">{content.title} Tickets</h3>
           </div>
 
           {content.topSectionEvents.map((event, index) => {

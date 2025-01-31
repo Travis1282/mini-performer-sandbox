@@ -25,7 +25,7 @@ export function OffcanvasContainer({
   return (
     <div
       className={clsx(
-        'duration-600 fixed top-0 z-[200] flex w-full max-w-[1024px] flex-col bg-white transition-all h-full-screen',
+        'duration-600 h-full-screen fixed top-0 z-[200] flex w-full max-w-[1024px] flex-col bg-white transition-all',
         offCanvasOpen ? 'visible left-0' : 'invisible -left-[calc(100vw+100%)]',
         className
       )}

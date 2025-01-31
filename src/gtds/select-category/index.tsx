@@ -97,7 +97,7 @@ export const SelectCategory = ({
             ) : (
               <button
                 className={clsx(
-                  'h-[33px] overflow-hidden rounded-3xl bg-white font-medium text-dark shadow-dropdown-button-box-shadow h6-sm lg:h-[36px] lg:h6-lg',
+                  'text-dark shadow-dropdown-button-box-shadow h6-sm lg:h6-lg h-[33px] overflow-hidden rounded-3xl bg-white font-medium lg:h-[36px]',
                   selected.length > 0 && '!bg-accent text-white'
                 )}
                 data-cy="select-category-activator"
@@ -158,7 +158,7 @@ export const SelectCategory = ({
         <div>
           <button
             className={clsx(
-              'h-[33px] overflow-hidden rounded-3xl bg-white font-medium text-dark shadow-dropdown-button-box-shadow h6-sm lg:h-[36px] lg:h6-lg',
+              'text-dark shadow-dropdown-button-box-shadow h6-sm lg:h6-lg h-[33px] overflow-hidden rounded-3xl bg-white font-medium lg:h-[36px]',
               selected.length > 0 && '!bg-accent text-white'
             )}
             data-cy="select-category-activator"

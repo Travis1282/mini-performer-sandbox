@@ -107,9 +107,9 @@ export function Modal({
       return createPortal(
         <div
           className={clsx(
-            'modal-overlay fixed left-0 top-0 z-150 bg-dark bg-opacity-40',
+            'modal-overlay z-150 bg-dark fixed left-0 top-0 bg-opacity-40',
             open
-              ? 'flex w-full items-end h-full-screen lg:items-center lg:justify-center'
+              ? 'h-full-screen flex w-full items-end lg:items-center lg:justify-center'
               : 'hidden',
             classNameOverlay
           )}
@@ -160,7 +160,7 @@ export function Modal({
                   {showDefaultHeader && (
                     <div
                       className={clsx(
-                        'modal-container__header flex flex-row justify-between px-4 py-6 text-dark lg:px-0',
+                        'modal-container__header text-dark flex flex-row justify-between px-4 py-6 lg:px-0',
                         classNameHeader
                       )}
                     >

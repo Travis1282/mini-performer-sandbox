@@ -184,7 +184,7 @@ export function DateRangePicker({
   function DayPickerRender() {
     return (
       <div
-        className="relative bg-white lg:shadow-dropdown-options-box-shadow"
+        className="lg:shadow-dropdown-options-box-shadow relative bg-white"
         id="datePickerDropdown"
       >
         <div className="z-50 flex h-full flex-col lg:px-2 lg:py-6">
@@ -196,9 +196,9 @@ export function DateRangePicker({
               {Object.keys(options).map((option, index) => (
                 <button
                   className={clsx(
-                    'rounded-full px-3 py-1.5 font-medium text-large lg:w-auto lg:px-2.5 lg:py-2 lg:text-sm',
+                    'text-large rounded-full px-3 py-1.5 font-medium lg:w-auto lg:px-2.5 lg:py-2 lg:text-sm',
                     optionSelected === option
-                      ? 'bg-accent !text-white lg:bg-accent lg:text-accent'
+                      ? 'bg-accent lg:bg-accent lg:text-accent !text-white'
                       : 'text-dark opacity-60',
                     index === 0 && 'pl-[9px]',
                     'disabled:cursor-default disabled:opacity-40'
@@ -242,10 +242,11 @@ export function DateRangePicker({
               table: isMobile ? 'w-full ' : '',
             }}
             components={{
-              CaptionLabel: ({ displayMonth }) => {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              CaptionLabel: ({ displayMonth }: { displayMonth: any }) => {
                 return (
                   <div className="w-full text-center">
-                    <p className="text-sm font-semibold text-dark">
+                    <p className="text-dark text-sm font-semibold">
                       {displayMonth.toLocaleString('default', {
                         month: 'long',
                       })}{' '}
@@ -256,12 +257,14 @@ export function DateRangePicker({
                   </div>
                 )
               },
-              Caption: ({ displayIndex, displayMonth }) => {
+
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              Caption: ({ displayIndex, displayMonth }: any) => {
                 return (
                   <div className="mb-[9px] flex items-center justify-between">
                     <button
                       className={clsx(
-                        'p-2 text-sm text-dark',
+                        'text-dark p-2 text-sm',
                         displayIndex === 1 && 'invisible',
                         displayIndex === 0 && 'visible'
                       )}
@@ -271,13 +274,13 @@ export function DateRangePicker({
                     >
                       <ChevronLeft />
                     </button>
-                    <p className="text-sm font-semibold text-dark">
+                    <p className="text-dark text-sm font-semibold">
                       {formatDate(displayMonth, { month: 'long' })}{' '}
                       {formatDate(displayMonth, { year: 'numeric' })}
                     </p>
                     <button
                       className={clsx(
-                        'p-2 text-sm text-dark',
+                        'text-dark p-2 text-sm',
                         displayIndex === 0
                           ? 'visible lg:invisible'
                           : 'invisible',
@@ -312,16 +315,16 @@ export function DateRangePicker({
             onSelect={(e) => handleSelect(e)}
             selected={internalDateRange}
           />
-          <div className="sticky bottom-0 mt-4 flex w-full text-large lg:relative lg:mx-4 lg:w-auto lg:justify-end lg:gap-[45px] lg:px-4">
+          <div className="text-large sticky bottom-0 mt-4 flex w-full lg:relative lg:mx-4 lg:w-auto lg:justify-end lg:gap-[45px] lg:px-4">
             <button
-              className="w-1/2 bg-[#3899F8] text-white lg:w-auto lg:rounded lg:bg-transparent lg:text-accent"
+              className="lg:text-accent w-1/2 bg-[#3899F8] text-white lg:w-auto lg:rounded lg:bg-transparent"
               onClick={handleResetClick}
             >
               Reset
             </button>
             <button
               className={clsx(
-                'w-1/2 bg-[#196DD2] px-6 py-3 text-white transition-all hover:bg-opacity-75 lg:w-auto lg:rounded lg:bg-accent',
+                'lg:bg-accent w-1/2 bg-[#196DD2] px-6 py-3 text-white transition-all hover:bg-opacity-75 lg:w-auto lg:rounded',
                 internalDateRange === undefined ||
                   (internalDateRange?.from && internalDateRange?.to)
                   ? ''
@@ -353,7 +356,7 @@ export function DateRangePicker({
         <ToolTip.Activator>
           <button
             className={clsx(
-              'h-[33px] overflow-hidden rounded-3xl bg-white font-medium text-dark shadow-dropdown-button-box-shadow h6-sm lg:h-[36px] lg:h6-lg',
+              'text-dark shadow-dropdown-button-box-shadow h6-sm lg:h6-lg h-[33px] overflow-hidden rounded-3xl bg-white font-medium lg:h-[36px]',
               selectedDateRange && '!bg-accent text-white'
             )}
             id="dateFilterButton"

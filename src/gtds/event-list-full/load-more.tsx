@@ -26,7 +26,7 @@ export const LoadMore = ({ hasNextPage }: { hasNextPage: boolean }) => {
               arrowColor="#3899F8"
               arrowSize={16}
               arrowStrokeWidth={1.5}
-              className="min-h-[46px] w-full rounded border-none !bg-light px-6 py-3 font-semibold !text-[#3899F8] transition-colors !h6-lg hover:!bg-[#ebeff5] hover:!text-accent active:!bg-[#e5e8ec] active:!text-accent"
+              className="!bg-light !h6-lg hover:!text-accent active:!text-accent min-h-[46px] w-full rounded border-none px-6 py-3 font-semibold !text-[#3899F8] transition-colors hover:!bg-[#ebeff5] active:!bg-[#e5e8ec]"
               disabled={loading}
               label=""
               onClick={() => {

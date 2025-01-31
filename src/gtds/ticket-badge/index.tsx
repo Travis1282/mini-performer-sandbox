@@ -49,13 +49,13 @@ const TicketBadge = ({ type, className }: TicketBadgeProps) => {
     <div
       className={clsx(
         'inline-flex items-center justify-center gap-[5px] rounded-[40px] p-[3px] text-center lg:p-0 lg:pl-[3px] lg:pr-2',
-        type === 'POWER_SElLER' && 'bg-[#FE5C361A] text-orange',
+        type === 'POWER_SElLER' && 'text-orange bg-[#FE5C361A]',
         type === 'LOW_PRICE' &&
-          'border border-submit bg-[#46BF001A] !py-[1px] !pl-2 !pr-2 text-submit',
+          'border-submit text-submit border bg-[#46BF001A] !py-[1px] !pl-2 !pr-2',
         type === 'JUST_SOLD' &&
-          'border border-orange bg-[#FE5C361A] !py-[2px] !pl-2 text-orange',
+          'border-orange text-orange border bg-[#FE5C361A] !py-[2px] !pl-2',
         type === 'SUPER_SALE' && 'bg-[#FF9C001A] text-[#FF9C00]',
-        type === 'SELLING_FAST' && 'bg-[#46BF001A] text-submit',
+        type === 'SELLING_FAST' && 'text-submit bg-[#46BF001A]',
         type === 'LAST_IN_SECTION' &&
           'border border-[#516AEC] bg-[#516AEC1A] !py-[1px] !pl-2 !pr-2 text-[#516AEC]',
         className

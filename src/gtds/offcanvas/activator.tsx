@@ -28,7 +28,7 @@ export function OffcanvasActivator({
       }`}
       data-cy="offcanvas-activator"
     >
-      {label && <span className="font-semibold text-dark h2-sm">{label}</span>}
+      {label && <span className="text-dark h2-sm font-semibold">{label}</span>}
       {open ? (
         <button
           data-cy="offcanvas-activator-close"

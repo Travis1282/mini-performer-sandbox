@@ -24,7 +24,7 @@ export function CategoryListItem({
     <li
       className={clsx(
         'group/item flex cursor-pointer flex-row justify-between whitespace-break-spaces rounded py-2 text-sm',
-        'relative rounded-none font-medium lg:border-l-4 lg:border-transparent lg:pl-[22px] lg:pr-[22px]  lg:hover:border-accent',
+        'lg:hover:border-accent relative rounded-none font-medium lg:border-l-4 lg:border-transparent lg:pl-[22px] lg:pr-[22px]',
         checked
           ? 'bg-accent text-white lg:!border-l-0'
           : 'hover:bg-accent hover:bg-opacity-10'
@@ -38,7 +38,7 @@ export function CategoryListItem({
         {children}
         <input
           checked={checked}
-          className="mr-2.5 self-center rounded border border-[#B3B8BE] text-accent lg:mr-0"
+          className="text-accent mr-2.5 self-center rounded border border-[#B3B8BE] lg:mr-0"
           id={category?.id ? `${category.id}` : ''}
           onChange={onClick}
           type="checkbox"
@@ -59,7 +59,7 @@ function makeContainContentBold(str: string, search: string) {
   const lastPart = str.slice(lastLetterIndex + 1)
 
   return (
-    <span className="z-30 font-medium text-dark">
+    <span className="text-dark z-30 font-medium">
       {firstPart}
       <b className="ext-sm font-semibold">{includedPart}</b>
       {lastPart}

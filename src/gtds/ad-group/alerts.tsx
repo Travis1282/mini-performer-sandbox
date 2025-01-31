@@ -3,8 +3,8 @@ import Icon from '@/components/Shared/Icons'
 export function AdGroupBuyerGuarantee() {
   return (
     <div className="w-100 flex justify-center">
-      <div className="mx-4 my-8 flex w-full flex-wrap items-center rounded border-l-[10px] border-l-submit bg-submit bg-opacity-10 text-dark lg:mx-0 lg:flex-nowrap">
-        <div className="m-4 grid min-h-[42px] min-w-[42px] place-items-center rounded-full bg-submit bg-none lg:m-6">
+      <div className="border-l-submit bg-submit text-dark mx-4 my-8 flex w-full flex-wrap items-center rounded border-l-[10px] bg-opacity-10 lg:mx-0 lg:flex-nowrap">
+        <div className="bg-submit m-4 grid min-h-[42px] min-w-[42px] place-items-center rounded-full bg-none lg:m-6">
           <Icon fill="#fff" height={21} name="ShieldCheckRounded" width={26} />
         </div>
         <p className="block text-[16px] font-semibold lg:hidden">
@@ -31,8 +31,8 @@ export function AdGroupBuyerGuarantee() {
 export function SafeAndSecureBuyerGuarantee() {
   return (
     <div className="w-100 flex justify-center">
-      <div className="mx-4 my-8 flex w-full flex-wrap items-center rounded border-l-[10px] border-l-submit bg-submit bg-opacity-10 text-dark lg:mx-0 lg:flex-nowrap">
-        <div className="m-4 grid min-h-[42px] min-w-[42px] place-items-center rounded-full bg-submit bg-none lg:m-6">
+      <div className="border-l-submit bg-submit text-dark mx-4 my-8 flex w-full flex-wrap items-center rounded border-l-[10px] bg-opacity-10 lg:mx-0 lg:flex-nowrap">
+        <div className="bg-submit m-4 grid min-h-[42px] min-w-[42px] place-items-center rounded-full bg-none lg:m-6">
           <Icon fill="#fff" height={21} name="ShieldCheckRounded" width={26} />
         </div>
         <p className="block text-[16px] font-semibold lg:hidden">

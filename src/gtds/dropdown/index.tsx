@@ -47,10 +47,11 @@ export function Dropdown({
   const { isMobile } = useIsMobile()
 
   useEffect(() => {
-    initialDropdownOption &&
-      !selectedValue &&
+    if (initialDropdownOption && !selectedValue) {
       handleSelectValue(initialDropdownOption)
-  })
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false)
 
@@ -109,7 +110,7 @@ export function Dropdown({
     >
       <button
         className={clsx(
-          `w-22 flex h-[33px] flex-row items-center gap-2 overflow-hidden rounded-3xl bg-white text-center font-medium text-dark shadow-dropdown-button-box-shadow h6-sm lg:h-[36px] lg:h6-lg`,
+          `w-22 text-dark shadow-dropdown-button-box-shadow h6-sm lg:h6-lg flex h-[33px] flex-row items-center gap-2 overflow-hidden rounded-3xl bg-white text-center font-medium lg:h-[36px]`,
           selectedValue && '!bg-accent text-white'
         )}
         data-cy="dropdown-button"
@@ -167,10 +168,10 @@ export function Dropdown({
             />
           </svg>
           <div
-            className="absolute z-10 w-screen rounded bg-white shadow-dropdown-options-box-shadow sm:mt-2.5 sm:w-40"
+            className="shadow-dropdown-options-box-shadow absolute z-10 w-screen rounded bg-white sm:mt-2.5 sm:w-40"
             id="dropdown"
           >
-            <div className="flex w-full justify-between rounded bg-white px-4 py-6 font-bold text-dark sm:hidden">
+            <div className="text-dark flex w-full justify-between rounded bg-white px-4 py-6 font-bold sm:hidden">
               <span className="h3-lg">{title}</span>
               <Image
                 alt="Close Button"
@@ -182,19 +183,19 @@ export function Dropdown({
                 width={25}
               />
             </div>
-            <ul className="font-medium h6-lg sm:h6-sm lg:h6-lg">
+            <ul className="h6-lg sm:h6-sm lg:h6-lg font-medium">
               {dropdownOptions &&
                 dropdownOptions.map((option, optionIdx) => (
                   <li
-                    className={`flex justify-between rounded border-l-4 border-l-transparent bg-white px-4 py-4 text-dark hover:rounded-l-none hover:border-l-accent hover:bg-dropdown-hover-blue-bg ${
+                    className={`text-dark hover:border-l-accent hover:bg-dropdown-hover-blue-bg flex justify-between rounded border-l-4 border-l-transparent bg-white px-4 py-4 hover:rounded-l-none ${
                       option === selectedValue ? 'font-bold' : ''
                     } ${
                       optionIdx === 0 && dropdownOptions.length === 2
-                        ? 'border-b border-b-light'
+                        ? 'border-b-light border-b'
                         : optionIdx === dropdownOptions.length - 1 &&
                             dropdownOptions.length === 2
-                          ? 'border-t border-t-light'
-                          : 'border border-light'
+                          ? 'border-t-light border-t'
+                          : 'border-light border'
                     }`}
                     data-cy={option}
                     key={option}
@@ -205,7 +206,7 @@ export function Dropdown({
                       className={clsx(
                         'mr-2 inline-block rounded-full sm:hidden',
                         option === selectedValue
-                          ? 'h-4 w-4 border-[5px] border-accent'
+                          ? 'border-accent h-4 w-4 border-[5px]'
                           : 'h-4 w-4 border border-[#B3B8BE]'
                       )}
                     />
@@ -214,7 +215,7 @@ export function Dropdown({
             </ul>
             {showSaveButton && (
               <button
-                className="block w-full bg-btn-bg-color px-4 py-2 text-center text-white hover:rounded-l-none hover:bg-accent hover:px-3 sm:hidden sm:rounded"
+                className="bg-btn-bg-color hover:bg-accent block w-full px-4 py-2 text-center text-white hover:rounded-l-none hover:px-3 sm:hidden sm:rounded"
                 onClick={handleDropdownSave}
               >
                 Save

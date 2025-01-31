@@ -38,20 +38,19 @@ export const CategoryList = ({
     } else {
       setCategoriesFiltered(categories)
     }
-     
   }, [search, categories])
 
   return (
     <div
-      className="relative h-full grow pr-2 lg:shadow-dropdown-options-box-shadow"
+      className="lg:shadow-dropdown-options-box-shadow relative h-full grow pr-2"
       data-cy="categoryFilter"
     >
-      <div className="flex h-full grow flex-col  gap-[22px] px-4 pb-1.5 lg:h-[420px] lg:w-[300px] lg:px-0">
+      <div className="flex h-full grow flex-col gap-[22px] px-4 pb-1.5 lg:h-[420px] lg:w-[300px] lg:px-0">
         <div className="lg:mx-6 lg:mt-6">
-          <div className="mb-4 flex flex-row justify-between text-large lg:h6-sm">
+          <div className="text-large lg:h6-sm mb-4 flex flex-row justify-between">
             <span className="text-dark opacity-60">{`${selectedCategories.length} Selected`}</span>
             <span
-              className="cursor-pointer text-accent hover:underline"
+              className="text-accent cursor-pointer hover:underline"
               onClick={clearSelectedCategories}
             >
               Clear
@@ -103,10 +102,10 @@ export const CategoryList = ({
                 unoptimized
                 width={64}
               />
-              <h3 className="mb-[6px] mt-6 text-dark h3-sm">
+              <h3 className="text-dark h3-sm mb-[6px] mt-6">
                 No Results Found
               </h3>
-              <p className="flex flex-row flex-wrap items-center justify-center text-dark opacity-60 h6-lg">
+              <p className="text-dark h6-lg flex flex-row flex-wrap items-center justify-center opacity-60">
                 Sorry, there are no results for <span>{`"${search}"`}</span>
               </p>
             </div>

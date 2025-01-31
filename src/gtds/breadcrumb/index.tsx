@@ -13,13 +13,13 @@ export function Breadcrumb({
     <nav aria-label="Breadcrumb">
       <ol
         className={clsx(
-          'text-[14px] font-medium leading-[1.5] text-dark [&>*]:inline',
+          'text-dark text-[14px] font-medium leading-[1.5] [&>*]:inline',
           className
         )}
       >
         {links.map((item, index) => (
           <Fragment key={`breadcrumb-item-${index}`}>
-            <li className="[&>*]:inline [&>*]:whitespace-pre-wrap [&>*]:hover:text-accent">
+            <li className="[&>*]:hover:text-accent [&>*]:inline [&>*]:whitespace-pre-wrap">
               <a
                 aria-current={
                   links.length === index + 1 ? 'location' : undefined

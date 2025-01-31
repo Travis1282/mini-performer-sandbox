@@ -80,8 +80,8 @@ const OffCanvasSearch = ({
       <input
         className={clsx(
           isOpen
-            ? 'mt-1 w-full flex-1 rounded border border-[#B3B8BE] px-3 py-[10px] text-sm font-medium text-dark placeholder-dark placeholder-opacity-40'
-            : 'h-19 relative z-100 m-0 -ml-8 -mt-5 w-1 opacity-0'
+            ? 'text-dark placeholder-dark mt-1 w-full flex-1 rounded border border-[#B3B8BE] px-3 py-[10px] text-sm font-medium placeholder-opacity-40'
+            : 'h-19 z-100 relative m-0 -ml-8 -mt-5 w-1 opacity-0'
         )}
         data-cy="searchInputMobile"
         onChange={handleChangeSearchInput}

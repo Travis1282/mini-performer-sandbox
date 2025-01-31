@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { RegionListItem } from './RegionListItem'
 
-type DataAttributes = Record<`data-${string}`, unknown>;
+type DataAttributes = Record<`data-${string}`, unknown>
 
 export interface SelectRegionSearchListProps extends DataAttributes {
   clearSearchItem?: string
@@ -94,10 +94,10 @@ export const RegionList = ({
                 unoptimized
                 width={64}
               />
-              <h3 className="mb-[6px] mt-6 text-dark h3-sm">
+              <h3 className="text-dark h3-sm mb-[6px] mt-6">
                 No Results Found
               </h3>
-              <p className="flex flex-row flex-wrap items-center justify-center text-dark opacity-60 h6-lg">
+              <p className="text-dark h6-lg flex flex-row flex-wrap items-center justify-center opacity-60">
                 Sorry, there are no results for <span>{`"${search}"`}</span>
               </p>
             </li>

@@ -32,7 +32,7 @@ export function SelectLocationSearchListItem({
     <li
       className={clsx(
         'group/item flex cursor-pointer flex-row justify-between whitespace-break-spaces rounded py-2 text-sm',
-        'relative rounded-none font-medium hover:bg-accent hover:bg-opacity-10 lg:border-l-4 lg:border-transparent lg:pl-[22px] lg:pr-[22px] lg:hover:border-accent'
+        'hover:bg-accent lg:hover:border-accent relative rounded-none font-medium hover:bg-opacity-10 lg:border-l-4 lg:border-transparent lg:pl-[22px] lg:pr-[22px]'
       )}
       onClick={onClick}
     >
@@ -41,7 +41,7 @@ export function SelectLocationSearchListItem({
         : null}
       {location && !search ? `${location.city}, ${location.state}` : null}
       {children}
-      <span className="hidden items-center gap-3 font-semibold text-accent group-hover/item:flex">
+      <span className="text-accent hidden items-center gap-3 font-semibold group-hover/item:flex">
         Select <ChevronRight />{' '}
       </span>
       <span className="block text-gray-400 group-hover/item:hidden">
@@ -61,7 +61,7 @@ function makeContainContentBold(str: string, search: string) {
   const lastPart = str.slice(lastLetterIndex + 1)
 
   return (
-    <span className="z-30 font-medium text-dark">
+    <span className="text-dark z-30 font-medium">
       {firstPart}
       <b className="ext-sm font-semibold">{includedPart}</b>
       {lastPart}

@@ -99,8 +99,8 @@ const PageButton = ({ isActive, onClick, page }: PageButtonProps) => {
       className={clsx(
         'button-text rounded-[4px] px-2.5 py-2',
         isActive
-          ? 'bg-accent text-white hover:bg-accent-hover active:bg-accent-dark '
-          : 'bg-transparent text-accent  hover:text-accent-dark',
+          ? 'bg-accent hover:bg-accent-hover active:bg-accent-dark text-white'
+          : 'text-accent hover:text-accent-dark bg-transparent',
         'transition-colors duration-200 ease-in-out'
       )}
       onClick={onClick}

@@ -127,12 +127,12 @@ export function EventListFilter({
       >
         <div className="flex pl-4 xl:pl-0" data-testid="locationHeading">
           {pageType === 'region' && region ? (
-            <h3 className="pr-1 h3-lg lg:pr-2 lg:h2-lg">
+            <h3 className="h3-lg lg:h2-lg pr-1 lg:pr-2">
               Events Near {region?.name}
             </h3>
           ) : regions ? (
             <>
-              <h3 className="pr-1 h3-lg lg:pr-2 lg:h2-lg">
+              <h3 className="h3-lg lg:h2-lg pr-1 lg:pr-2">
                 {selectedTrendingRegion?.id && !showAllRegions
                   ? 'Events Near'
                   : ''}
@@ -166,7 +166,7 @@ export function EventListFilter({
               ) : null}
             </>
           ) : (
-            <h3 className="pr-1 h3-lg lg:pr-2 lg:h2-lg">All Events</h3>
+            <h3 className="h3-lg lg:h2-lg pr-1 lg:pr-2">All Events</h3>
           )}
         </div>
 
@@ -277,7 +277,7 @@ export function EventListFilter({
       <div
         className={clsx(
           'relative h-[2px] w-full rounded-t',
-          loading ? 'animate-pulse bg-accent' : ''
+          loading ? 'bg-accent animate-pulse' : ''
         )}
       />
 
@@ -299,7 +299,7 @@ export function EventListFilter({
                 arrowColor="#3899F8"
                 arrowSize={16}
                 arrowStrokeWidth={1.5}
-                className="min-h-[46px] w-full rounded border-none !bg-light px-6 py-3 font-semibold transition-colors !h6-lg hover:!bg-[#ebeff5] hover:!text-accent active:!bg-[#e5e8ec] active:!text-accent"
+                className="!bg-light !h6-lg hover:!text-accent active:!text-accent min-h-[46px] w-full rounded border-none px-6 py-3 font-semibold transition-colors hover:!bg-[#ebeff5] active:!bg-[#e5e8ec]"
                 disabled={loading}
                 label=""
                 onClick={() => {

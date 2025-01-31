@@ -31,7 +31,7 @@ function TooltipActivator({ children, disable, id }: TooltipProps) {
   )
 }
 
-type DataAttributes = Record<`data-${string}`, unknown>;
+type DataAttributes = Record<`data-${string}`, unknown>
 
 interface TooltipContentProps extends DataAttributes {
   arrowColor?: string

@@ -103,8 +103,8 @@ export function EventListNoEvents({
               unoptimized
               width={190}
             />
-            <h4 className="mt-6 text-dark h2-sm">No events happening</h4>
-            <span className="mt-3 text-center text-dark text-opacity-50 h6-lg lg:!h3-sm">
+            <h4 className="text-dark h2-sm mt-6">No events happening</h4>
+            <span className="text-dark h6-lg lg:!h3-sm mt-3 text-center text-opacity-50">
               Get notified when new events are added.
             </span>
             <form
@@ -122,7 +122,7 @@ export function EventListNoEvents({
                 />
               </div>
               <Button
-                className="self-top w-full rounded border-none !bg-submit px-4 py-3 font-semibold !text-white transition-colors !h6-lg hover:opacity-80 active:!text-white active:!opacity-100 lg:max-w-[184px] lg:h3-sm"
+                className="self-top !bg-submit !h6-lg lg:h3-sm w-full rounded border-none px-4 py-3 font-semibold !text-white transition-colors hover:opacity-80 active:!text-white active:!opacity-100 lg:max-w-[184px]"
                 disabled={loading}
                 label=""
                 prefix={
@@ -148,8 +148,8 @@ export function EventListNoEvents({
         ) : (
           <>
             <NoEventImage />
-            <h4 className="mt-6 text-dark h2-sm">No events happening</h4>
-            <span className="mt-3 text-center text-dark text-opacity-50 h6-lg lg:!h3-sm">
+            <h4 className="text-dark h2-sm mt-6">No events happening</h4>
+            <span className="text-dark h6-lg lg:!h3-sm mt-3 text-center text-opacity-50">
               Sorry but there are currently no events available, <br />
               please check back soon!
             </span>

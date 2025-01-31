@@ -20,7 +20,7 @@ export function EventList({
 }: EventListProps) {
   return (
     <div data-testid="eventList">
-      <div className="flex flex-col lg:rounded lg:border lg:border-light">
+      <div className="lg:border-light flex flex-col lg:rounded lg:border">
         {children}
         {!children?.length && (
           <EventListEmpty
@@ -36,7 +36,7 @@ export function EventList({
             arrowColor="#3899F8"
             arrowSize={16}
             arrowStrokeWidth={1.5}
-            className="w-full rounded border-none !bg-light px-6 py-3 font-semibold transition-colors !h6-lg hover:!bg-[#ebeff5] hover:!text-accent active:!bg-[#e5e8ec] active:!text-accent"
+            className="!bg-light !h6-lg hover:!text-accent active:!text-accent w-full rounded border-none px-6 py-3 font-semibold transition-colors hover:!bg-[#ebeff5] active:!bg-[#e5e8ec]"
             label="View More Events"
             onClick={handleShowMore}
             variant="secondary"

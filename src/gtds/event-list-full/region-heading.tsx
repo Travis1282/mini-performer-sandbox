@@ -76,7 +76,7 @@ export const RegionHeading: FC<RegionHeadingProps> = ({
       {useLocalEvents || isCategoryPage ? (
         <>
           {heading ? (
-            <h3 className={clsx('pr-1 h3-lg lg:pr-2')}>{heading}</h3>
+            <h3 className={clsx('h3-lg pr-1 lg:pr-2')}>{heading}</h3>
           ) : null}
 
           <SelectRegion

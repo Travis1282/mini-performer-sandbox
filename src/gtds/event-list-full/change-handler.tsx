@@ -1,4 +1,3 @@
- 
 'use client'
 
 import type { Region } from '@/contracts/entities/region'

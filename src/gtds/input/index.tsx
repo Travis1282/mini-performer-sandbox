@@ -72,7 +72,7 @@ export default function Input({
       {label && (
         <div className="mb-2 flex flex-row items-center gap-2" id={label}>
           <label
-            className="text-dark opacity-60 text-large"
+            className="text-dark text-large opacity-60"
             htmlFor={id ?? name}
           >
             {label}
@@ -103,7 +103,7 @@ export default function Input({
         <input
           autoComplete={autoCompleteValue}
           className={clsx(
-            'w-full rounded border border-[#B3B8BE] p-[9px] text-dark',
+            'text-dark w-full rounded border border-[#B3B8BE] p-[9px]',
             error ? 'border-error' : 'border-[#B3B8BE]',
             inputAppend && 'pr-12',
             inputClassName ?? ''
@@ -128,7 +128,7 @@ export default function Input({
       {error ? (
         <span className="mt-1 text-[12px]">
           <span
-            className="text-small font-medium text-error"
+            className="text-small text-error font-medium"
             data-testid={`${defaultTestId}-error`}
           >
             {error}

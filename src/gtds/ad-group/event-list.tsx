@@ -50,7 +50,7 @@ export function EventList({
 
       <div className="mt-4 text-right">
         <Link
-          className="px-6 py-2 text-sm text-accent hover:text-accent-dark"
+          className="text-accent hover:text-accent-dark px-6 py-2 text-sm"
           href={`/${data.adGroupEntityResult?.performer?.slug || ''}`}
         >
           See {data.adGroupEntityResult?.performer?.name || ''} at all venues
