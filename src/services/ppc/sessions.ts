@@ -4,7 +4,7 @@ import type { paths } from '../maverick/generated/maverick-schema'
 import { postSessions } from '../maverick/post-sessions'
 import { buildUtmHash } from './buildUtmHash'
 import {
-  COOKIE_DOMAIN,
+  // COOKIE_DOMAIN,
   COOKIE_EXPIRY_DAYS,
   COOKIE_SAME_SITE,
   PREVIOUS_PARAMS_COOKIE,
@@ -63,6 +63,9 @@ export function setSessionCookiesAndHeaders(
       secure: true,
     })
   }
+
+  console.log(currentParams, 'utm')
+  console.log(btoa(JSON.stringify(currentParams)))
 
   setCookie(c, PREVIOUS_PARAMS_COOKIE, btoa(JSON.stringify(currentParams)), {
     path: '/',
