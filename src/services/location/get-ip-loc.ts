@@ -1,9 +1,6 @@
-export function getIpAndLoc(request: Request): {
-  ip: string
-  loc: string
-  latitude: null | string
-  longitude: null | string
-} {
+import type { IpLocation } from './ip-loc.types'
+
+export function getIpAndLoc(request: Request): IpLocation {
   const headers = request.headers
 
   const ip =
@@ -14,9 +11,11 @@ export function getIpAndLoc(request: Request): {
     ''
   const loc = headers.get('cf-ipcountry') ?? ''
 
-  const latitude = headers.get('cf-iplatitude')
+  const latitude =
+    headers.get('cf-iplatitude') ?? (request.cf?.latitude as string) ?? ''
 
-  const longitude = headers.get('cf-iplongitude')
+  const longitude =
+    headers.get('cf-iplongitude') ?? (request.cf?.longitude as string) ?? ''
 
   return { ip, loc, latitude, longitude }
 }

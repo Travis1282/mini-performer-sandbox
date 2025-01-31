@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import manifest from '../dist/.vite/manifest.json'
+import { buildBootstrappedData } from './services/bootstrappedData'
 import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures'
 import { getIpAndLoc } from './services/location/get-ip-loc'
 import { basicProxy } from './services/proxy'
@@ -12,7 +13,7 @@ const app = new Hono()
 app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
 
 app.get('*', async (c) => {
-  const { ip, loc, latitude, longitude } = getIpAndLoc(c.req.raw)
+  const ipLocation = getIpAndLoc(c.req.raw)
 
   const featuresPayload = await getGrowthbookFeatures()
 
@@ -72,15 +73,7 @@ app.get('*', async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-          <script>
-            window.__GT_LOC__ = ${JSON.stringify({
-              ip,
-              loc,
-              latitude,
-              longitude,
-            })}
-          </script>
-          <script>window.__GT_GB_PAYLOAD__ = ${JSON.stringify(featuresPayload)}</script>
+          ${buildBootstrappedData({ location: ipLocation, featuresPayload })}
 
           ${cssFile ? `<link crossorigin href=/${cssFile} rel="stylesheet" />` : null}
         </head>
