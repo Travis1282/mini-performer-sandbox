@@ -11,10 +11,16 @@ import { basicProxy } from './services/proxy'
 
 const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
 const entryFile: string | undefined = manifest['src/client.tsx']?.file
+import { logger } from 'hono/logger'
 
 const app = new Hono()
+app.use(logger())
 
-app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
+app.on(
+  ['GET', 'POST', 'PUT', 'DELETE'],
+  '/rest/*',
+  basicProxy(import.meta.env.VITE_MAVERICK_URL)
+)
 
 app.get('*', async (c) => {
   const ipLocation = getIpAndLoc(c.req.raw)

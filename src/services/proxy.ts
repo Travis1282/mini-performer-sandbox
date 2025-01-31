@@ -9,10 +9,14 @@ export function basicProxy(target_url = ''): Handler {
 
     const headers = new Headers(c.req.raw.headers)
     headers.delete('host')
-    return fetch(path, {
+    const fetchOptions: RequestInit = {
       method: c.req.method,
       headers: headers,
-      body: c.req.raw.body,
-    })
+    }
+    if (c.req.raw.body) {
+      fetchOptions.body = c.req.raw.body
+      fetchOptions.duplex = 'half'
+    }
+    return fetch(path, fetchOptions)
   }
 }

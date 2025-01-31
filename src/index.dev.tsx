@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { logger } from 'hono/logger'
 import { buildBootstrappedData } from './services/bootstrappedData'
 import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures'
 import { getIpAndLoc } from './services/location/get-ip-loc'
@@ -7,9 +8,15 @@ import {
   setSessionCookiesAndHeaders,
 } from './services/ppc/sessions'
 import { basicProxy } from './services/proxy'
-const app = new Hono()
 
-app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
+const app = new Hono()
+app.use(logger())
+
+app.on(
+  ['GET', 'POST', 'PUT', 'DELETE'],
+  '/rest/*',
+  basicProxy(import.meta.env.VITE_MAVERICK_URL)
+)
 
 app.get('*', async (c) => {
   const ipLocation = getIpAndLoc(c.req.raw)
