@@ -47,20 +47,20 @@ export function setSessionCookiesAndHeaders(
   if (sessionsPayload?.sessionId) {
     c.header('X-Go-Session-Id', sessionsPayload.sessionId)
     setCookie(c, SESSION_COOKIE, sessionsPayload.sessionId, {
-      domain: COOKIE_DOMAIN,
+      // domain: COOKIE_DOMAIN,
+      path: '/',
       sameSite: COOKIE_SAME_SITE,
       secure: true,
-      path: '/',
     })
   }
   if (sessionsPayload?.profileId) {
     c.header('X-Go-Profile-Id', sessionsPayload.profileId)
     setCookie(c, PROFILE_COOKIE, sessionsPayload.profileId, {
       path: '/',
-      domain: COOKIE_DOMAIN,
+      // domain: COOKIE_DOMAIN,
+      maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
       sameSite: COOKIE_SAME_SITE,
       secure: true,
-      maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
     })
   }
 
