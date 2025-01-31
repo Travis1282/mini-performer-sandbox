@@ -37,7 +37,7 @@ app.get('*', async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-          ${buildBootstrappedData({ location: ipLocation, featuresPayload })}
+          ${buildBootstrappedData({ location: ipLocation, featuresPayload, sessionsPayload })}
 
           ${cssFile ? `<link crossorigin href=/${cssFile} rel="stylesheet" />` : null}
         </head>
