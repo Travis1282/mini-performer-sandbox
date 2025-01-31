@@ -64,9 +64,6 @@ export function setSessionCookiesAndHeaders(
     })
   }
 
-  console.log(currentParams, 'utm')
-  console.log(btoa(JSON.stringify(currentParams)))
-
   setCookie(c, PREVIOUS_PARAMS_COOKIE, btoa(JSON.stringify(currentParams)), {
     path: '/',
     maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,

@@ -1,9 +1,10 @@
+import { Loading } from '@/components/loading'
 import { getEventListingsWithBotProtection } from '@/pages/tickets/services/getEventListingsWithBotProtection'
 import { useQuery } from '@tanstack/react-query'
+
 import { useLoaderData, useParams } from 'react-router'
 
 import type { components } from '../../services/maverick/generated/maverick-schema'
-
 import { mapsUrl } from '../../services/config'
 import { findMasterPerformerFromEvent } from '../../services/events/find-master-performer-from-event'
 import { LayoutNavbarTickets } from './components/layout-navbar-tickets'
@@ -37,55 +38,7 @@ export function Tickets() {
   })
 
   if (status === 'pending') {
-    return (
-      <div className="flex w-full flex-col gap-3">
-        <div className="mx-auto w-full max-w-sm rounded-md border border-gray-300 p-4 shadow">
-          <div className="flex animate-pulse space-x-4">
-            <div className="h-10 w-10 rounded-full bg-slate-700"></div>
-            <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 rounded bg-slate-700"></div>
-              <div className="space-y-3">
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="col-span-2 h-2 rounded bg-slate-700"></div>
-                  <div className="col-span-1 h-2 rounded bg-slate-700"></div>
-                </div>
-                <div className="h-2 rounded bg-slate-700"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto w-full max-w-sm rounded-md border border-gray-300 p-4 shadow">
-          <div className="flex animate-pulse space-x-4">
-            <div className="h-10 w-10 rounded-full bg-slate-700"></div>
-            <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 rounded bg-slate-700"></div>
-              <div className="space-y-3">
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="col-span-2 h-2 rounded bg-slate-700"></div>
-                  <div className="col-span-1 h-2 rounded bg-slate-700"></div>
-                </div>
-                <div className="h-2 rounded bg-slate-700"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto w-full max-w-sm rounded-md border border-gray-300 p-4 shadow">
-          <div className="flex animate-pulse space-x-4">
-            <div className="h-10 w-10 rounded-full bg-slate-700"></div>
-            <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 rounded bg-slate-700"></div>
-              <div className="space-y-3">
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="col-span-2 h-2 rounded bg-slate-700"></div>
-                  <div className="col-span-1 h-2 rounded bg-slate-700"></div>
-                </div>
-                <div className="h-2 rounded bg-slate-700"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
+    return <Loading />
   }
 
   if (status === 'error') {
