@@ -12,9 +12,12 @@ import { basicProxy } from './services/proxy'
 const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
 const entryFile: string | undefined = manifest['src/client.tsx']?.file
 import { logger } from 'hono/logger'
+import { serveStatic } from 'hono/static'
 
 const app = new Hono()
 app.use(logger())
+
+app.use('/favicon.ico', serveStatic({ path: './favicon.ico' }))
 
 app.on(
   ['GET', 'POST', 'PUT', 'DELETE'],
