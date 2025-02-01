@@ -43,7 +43,7 @@ const useColorizeSVG = ({ mapRef }: UseColorizeSvgOptions) => {
 
       hasColorized.current = true
     })
-  }, [mapRef])
+  }, [getColorBySectionId, mapRef, venueConfiguration?.sections])
 
   return {
     colorSvgSections,

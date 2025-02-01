@@ -36,7 +36,7 @@ export const Map = ({ mapSrc }: MapProps) => {
       boundsPadding: 0.1,
     })
     panZoomRef.current = panZoom
-  }, [mapLoaded])
+  }, [colorSvgSections, mapLoaded])
 
   return (
     <div className="flex h-[17rem] w-full bg-slate-200 p-1" ref={mapRef}>

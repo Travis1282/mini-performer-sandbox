@@ -70,6 +70,7 @@ export default tseslint.config(
       'no-empty': ['error', { allowEmptyCatch: true }],
       curly: 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
+      'react/prop-types': 'off',
     },
   },
   {
