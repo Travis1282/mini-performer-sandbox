@@ -1,5 +1,5 @@
 import type { Context } from 'hono'
-import { setCookie } from 'hono/cookie'
+import { getCookie, setCookie } from 'hono/cookie'
 import type { paths } from '../maverick/generated/maverick-schema'
 import { postSessions } from '../maverick/post-sessions'
 import { buildUtmHash } from './buildUtmHash'
@@ -11,13 +11,29 @@ import {
   PROFILE_COOKIE,
   SESSION_COOKIE,
 } from './constants'
+import { paramsHaveChanged } from './paramsHaveChanged'
+import { getUtmHashCookieServer } from './server/getUtmHashCookieServer'
 
 export async function getSessions(c: Context) {
+  let needsUpdate = false
+
+  const currentParams = buildUtmHash(new URLSearchParams(c.req.query()))
+  const previousParams = getUtmHashCookieServer(c)
+  const haveParamsChanged = paramsHaveChanged(currentParams, previousParams)
+  const profileCookie = getCookie(c, PROFILE_COOKIE)
+  const sessionCookie = getCookie(c, SESSION_COOKIE)
+
+  if (!sessionCookie || !profileCookie || haveParamsChanged) {
+    needsUpdate = true
+  }
+
+  if (!needsUpdate) {
+    return undefined
+  }
+
   let sessionsPayload:
     | paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
     | undefined = undefined
-
-  const currentParams = buildUtmHash(new URLSearchParams(c.req.query()))
 
   const headerMap = {} as Record<string, string>
   for (const [key, value] of c.req.raw.headers.entries()) {
