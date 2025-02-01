@@ -1,66 +1,31 @@
 import { Hono } from 'hono'
+import { logger } from 'hono/logger'
 import { buildBootstrappedData } from './services/bootstrappedData'
 import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures'
 import { getIpAndLoc } from './services/location/get-ip-loc'
+import {
+  getSessions,
+  setSessionCookiesAndHeaders,
+} from './services/ppc/sessions'
 import { basicProxy } from './services/proxy'
 
 const app = new Hono()
+app.use(logger())
 
-app.get('/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL))
+app.on(
+  ['GET', 'POST', 'PUT', 'DELETE'],
+  '/rest/*',
+  basicProxy(import.meta.env.VITE_MAVERICK_URL)
+)
 
 app.get('*', async (c) => {
   const ipLocation = getIpAndLoc(c.req.raw)
 
   const featuresPayload = await getGrowthbookFeatures()
 
-  // let sessionsPayload:
-  //   | paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
-  //   | undefined = undefined
+  const sessionsPayload = await getSessions(c)
 
-  // const currentParams = buildUtmHash(new URLSearchParams(c.req.query()))
-
-  // const headerMap = {} as Record<string, string>
-  // for (const [key, value] of c.req.raw.headers.entries()) {
-  //   headerMap[key] = value
-  // }
-  // try {
-  //   const { data } = await postSessions({
-  //     body: {
-  //       url: c.req.url,
-  //       params: currentParams,
-  //       headers: headerMap,
-  //     },
-  //   })
-  //   console.info({ data })
-  //   sessionsPayload = data
-  // } catch (error) {
-  //   console.log(error)
-  // }
-
-  // if (sessionsPayload?.sessionId) {
-  //   c.header('X-Go-Session-Id', sessionsPayload.sessionId)
-  //   setCookie(c, SESSION_COOKIE, sessionsPayload.sessionId, {
-  //     domain: COOKIE_DOMAIN,
-  //     sameSite: COOKIE_SAME_SITE,
-  //     secure: true,
-  //     path: '/',
-  //   })
-  // }
-  // if (sessionsPayload?.profileId) {
-  //   c.header('X-Go-Profile-Id', sessionsPayload.profileId)
-  //   setCookie(c, PROFILE_COOKIE, sessionsPayload.profileId, {
-  //     path: '/',
-  //     domain: COOKIE_DOMAIN,
-  //     sameSite: COOKIE_SAME_SITE,
-  //     secure: true,
-  //     maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
-  //   })
-  // }
-
-  // setCookie(c, PREVIOUS_PARAMS_COOKIE, btoa(JSON.stringify(currentParams)), {
-  //   path: '/',
-  //   maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
-  // })
+  setSessionCookiesAndHeaders(c, sessionsPayload)
 
   return c.html(
     `
@@ -68,7 +33,7 @@ app.get('*', async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-           ${buildBootstrappedData({ location: ipLocation, featuresPayload })}
+          ${buildBootstrappedData({ location: ipLocation, featuresPayload, sessionsPayload })}
           <script src="/src/client.tsx" type="module"></script>
         </head>
         <body>

@@ -1,7 +1,8 @@
-// @ts-check
-
 import eslint from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier'
 import perfectionist from 'eslint-plugin-perfectionist'
+import reactPlugin from 'eslint-plugin-react'
+import hooksPlugin from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
@@ -45,11 +46,31 @@ export default tseslint.config(
   tseslint.configs.strict,
   tseslint.configs.stylistic,
   {
+    ...reactPlugin.configs.flat.recommended,
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    plugins: {
+      'react-hooks': hooksPlugin,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      ...hooksPlugin.configs.recommended.rules,
+    },
+    ignores: ['*.test.tsx'],
+  },
+  eslintConfigPrettier,
+  {
     rules: {
       'no-useless-catch': 'off',
       'no-empty': ['error', { allowEmptyCatch: true }],
       curly: 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
+      'react/prop-types': 'off',
     },
   },
   {

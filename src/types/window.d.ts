@@ -8,6 +8,9 @@ interface Window {
     longitude: string
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  __GT_SESSIONS_PAYLOAD__: any
+
   // Add your custom properties here
   // For example:
   // myCustomProperty: string;

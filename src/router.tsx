@@ -1,25 +1,27 @@
-// import { Tickets } from '@/pages/tickets/tickets'
 import { createBrowserRouter } from 'react-router'
 import { GlobalErrorContent } from './components/errors/oh-no'
+import { Loading } from './components/loading'
 import About from './pages/about'
 import Home from './pages/home/home'
 import { Layout } from './pages/layout'
 import { PrimaryLayout } from './pages/primary-layout'
 import Slug from './pages/slug'
-// import { getEventMetadata } from './services/maverick/get-event-metadata'
 import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events'
 
 const router = createBrowserRouter([
   {
     Component: Layout,
     ErrorBoundary: GlobalErrorContent,
+    hydrateFallbackElement: <Loading />,
     children: [
       {
         Component: PrimaryLayout,
+        hydrateFallbackElement: <Loading />,
         children: [
           {
             Component: Home,
             index: true,
+            hydrateFallbackElement: <Loading />,
             loader: ({ request }) =>
               getSearchTrendingEvents({
                 init: {
@@ -44,6 +46,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/tickets/:eventId/:slug/:localDate',
+        hydrateFallbackElement: <Loading />,
         lazy: async () => {
           const [loaderModule, componentModule] = await Promise.all([
             import('./pages/tickets/tickets.loader'),

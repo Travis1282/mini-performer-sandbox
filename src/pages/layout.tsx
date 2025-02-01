@@ -24,7 +24,7 @@ export function Layout() {
     <>
       <div
         className={clsx(
-          'fixed bottom-2 right-2 flex w-96 flex-col gap-2 rounded border border-2 border-gray-300 bg-white p-6 drop-shadow',
+          'fixed bottom-2 right-2 flex max-h-96 w-96 flex-col gap-2 overflow-auto rounded border border-2 border-gray-300 bg-white p-6 drop-shadow',
           value === 'show' ? 'block' : 'hidden'
         )}
       >
@@ -36,6 +36,7 @@ export function Layout() {
         </button>
         <h2 className="font-bold">Debugger Panel</h2>
         <pre>{JSON.stringify(location, null, 2)}</pre>
+        <pre>{JSON.stringify(window.__GT_SESSIONS_PAYLOAD__, null, 2)}</pre>
       </div>
       <Outlet />
     </>

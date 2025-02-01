@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-plus-jakarta-sans-variable: "Plus Jakarta Sans Variable";
+    --font-plus-jakarta-sans-variable: 'Plus Jakarta Sans Variable';
   }
 }
 
@@ -12,4 +12,36 @@
 body {
   height: 100%;
   width: 100%;
+}
+
+.goticket-loader {
+  clip-path: path(
+    'M70.2222 23.8992h-37.899v14.1204h22.0202v4.8286c0 2.962-1.9394 4.9097-4.8889 4.9097h-28.606c-3.0303 0-4.9697-1.9477-4.9697-4.9097V19.1518c0-3.0837 1.9394-5.0314 4.9697-5.0314h47.0707V0H18.8283C7.51515 0 0 7.54712 0 18.8678v24.2644C0 54.4529 7.51515 62 18.8283 62h32.6464c11.3132 0 18.7475-7.5471 18.7475-18.8678v-19.233ZM96.6061 62h32.6469C140.566 62 148 54.4529 148 43.1322V18.8678C148 7.54712 140.566 0 129.253 0H96.6061C85.2929 0 77.7778 7.54712 77.7778 18.8678v24.2644C77.7778 54.4529 85.2929 62 96.6061 62Zm2.0202-14.2421c-3.0303 0-4.9697-1.9477-4.9697-4.9097V19.1518c0-3.0837 1.9394-5.0314 4.9697-5.0314h28.6057c2.95 0 4.889 1.9477 4.889 5.0314v23.6964c0 2.962-1.939 4.9097-4.889 4.9097H98.6263Z'
+  );
+  width: 148px;
+  height: 62px;
+  background-blend-mode: inherit;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAEsAQMAAAC8NG79AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAAOJn4nPpGmgAAAAJ0Uk5TAP9bkSK1AAAAlElEQVR4nO3OsRGDMBSDYbgUlBkho3g0MhqjZATKFFwUx44BY9FT/Cr9nZ7VdYQQQgghl8k4+fdB0tvBTb/MRkISPRvoM5h7j7+0pQJNaVhFZ8ekVy3jJotdls9N/pso+xGhkv0I1TL7Y1E+bnOStVQtS1J+ureyuEqSfC84iSuOjSIuCIIgCIIgCIIgCIIgCIJcS75Mr/dkNnMpbwAAAABJRU5ErkJggg==');
+  background-position-y: 0;
+  background-size: 200px 300px;
+  background-color: #f2f6f6;
+  animation: 4s linear 0s infinite water-fill;
+}
+
+@keyframes water-fill {
+  0% {
+    background-position-y: 0px;
+    background-position-x: 400px;
+    opacity: 1;
+  }
+  90% {
+    background-position-y: -150px;
+    background-position-x: 0;
+    opacity: 1;
+  }
+  100% {
+    background-position-y: -150px;
+    background-position-x: 0;
+    opacity: 0.9;
+  }
 }
