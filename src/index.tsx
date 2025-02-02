@@ -1,8 +1,9 @@
 import { Hono } from 'hono'
+import { logger } from 'hono/logger'
 import manifest from '../dist/.vite/manifest.json'
 import { buildBootstrappedData } from './services/bootstrappedData'
 import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures'
-import { getIpAndLoc } from './services/location/get-ip-loc'
+import { getLocationRegion } from './services/location/getLocationRegion'
 import {
   getSessions,
   setSessionCookiesAndHeaders,
@@ -11,7 +12,6 @@ import { basicProxy } from './services/proxy'
 
 const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
 const entryFile: string | undefined = manifest['src/client.tsx']?.file
-import { logger } from 'hono/logger'
 
 const app = new Hono()
 app.use(logger())
@@ -22,14 +22,18 @@ app.on(
   basicProxy(import.meta.env.VITE_MAVERICK_URL)
 )
 
-app.get('*', async (c) => {
-  const ipLocation = getIpAndLoc(c.req.raw)
-
-  const featuresPayload = await getGrowthbookFeatures()
-
+app.get('*', async (c, next) => {
   const sessionsPayload = await getSessions(c)
 
   setSessionCookiesAndHeaders(c, sessionsPayload)
+
+  await next()
+})
+
+app.get('*', async (c) => {
+  const { ipLocation, closestRegionId } = await getLocationRegion(c)
+
+  const featuresPayload = await getGrowthbookFeatures()
 
   return c.html(
     `
@@ -37,7 +41,7 @@ app.get('*', async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-          ${buildBootstrappedData({ location: ipLocation, featuresPayload, sessionsPayload })}
+          ${buildBootstrappedData({ location: ipLocation, featuresPayload, closestRegionId })}
 
           ${cssFile ? `<link crossorigin href=/${cssFile} rel="stylesheet" />` : null}
         </head>

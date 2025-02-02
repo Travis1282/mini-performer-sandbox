@@ -36,7 +36,7 @@ export function Layout() {
         </button>
         <h2 className="font-bold">Debugger Panel</h2>
         <pre>{JSON.stringify(location, null, 2)}</pre>
-        <pre>{JSON.stringify(window.__GT_SESSIONS_PAYLOAD__, null, 2)}</pre>
+        <pre>{JSON.stringify(window.__GT_GB_PAYLOAD__, null, 2)}</pre>
       </div>
       <Outlet />
     </>

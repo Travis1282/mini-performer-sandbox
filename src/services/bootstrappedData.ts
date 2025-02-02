@@ -1,15 +1,14 @@
 import type { FeatureApiResponse } from '@growthbook/growthbook-react'
 import type { IpLocation } from './location/ip-loc.types'
-import type { paths } from './maverick/generated/maverick-schema'
 
 export function buildBootstrappedData({
   location,
   featuresPayload,
-  sessionsPayload,
+  closestRegionId,
 }: {
   location?: IpLocation
   featuresPayload?: FeatureApiResponse
-  sessionsPayload?: paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
+  closestRegionId?: string
 }) {
   const { ip, loc, latitude, longitude } = location ?? {}
   return `
@@ -19,9 +18,9 @@ export function buildBootstrappedData({
         loc,
         latitude,
         longitude,
+        closestRegionId,
       })}
       window.__GT_GB_PAYLOAD__ = ${JSON.stringify(featuresPayload)}
-      window.__GT_SESSIONS_PAYLOAD__ = ${JSON.stringify(sessionsPayload)}
     </script>
   `
 }

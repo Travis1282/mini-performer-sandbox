@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 import { logger } from 'hono/logger'
 import { buildBootstrappedData } from './services/bootstrappedData'
 import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures'
-import { getIpAndLoc } from './services/location/get-ip-loc'
+import { getLocationRegion } from './services/location/getLocationRegion'
 import {
   getSessions,
   setSessionCookiesAndHeaders,
@@ -18,14 +18,17 @@ app.on(
   basicProxy(import.meta.env.VITE_MAVERICK_URL)
 )
 
-app.get('*', async (c) => {
-  const ipLocation = getIpAndLoc(c.req.raw)
-
-  const featuresPayload = await getGrowthbookFeatures()
-
+app.get('*', async (c, next) => {
   const sessionsPayload = await getSessions(c)
 
   setSessionCookiesAndHeaders(c, sessionsPayload)
+  await next()
+})
+
+app.get('*', async (c) => {
+  const { ipLocation, closestRegionId } = await getLocationRegion(c)
+
+  const featuresPayload = await getGrowthbookFeatures()
 
   return c.html(
     `
@@ -33,7 +36,7 @@ app.get('*', async (c) => {
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
-          ${buildBootstrappedData({ location: ipLocation, featuresPayload, sessionsPayload })}
+          ${buildBootstrappedData({ location: ipLocation, featuresPayload, closestRegionId })}
           <script src="/src/client.tsx" type="module"></script>
         </head>
         <body>
