@@ -1,6 +1,7 @@
 import build from '@hono/vite-build/cloudflare-pages'
 import devServer from '@hono/vite-dev-server'
 import adapter from '@hono/vite-dev-server/cloudflare'
+import legacy from '@vitejs/plugin-legacy'
 import path from 'path'
 import { defineConfig } from 'vite'
 
@@ -19,6 +20,7 @@ export default defineConfig(({ mode }) => {
           '@': path.resolve(__dirname, 'src'),
         },
       },
+      plugins: [legacy()],
       build: {
         cssMinify: 'lightningcss',
         manifest: true,
