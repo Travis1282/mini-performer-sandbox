@@ -11,7 +11,7 @@ export function getEventMetadata({
   init = {},
   params,
 }: GetEventMetadataOptions) {
-  return client.GET('/rest/events/{event-id}/metadata', {
+  return client().GET('/rest/events/{event-id}/metadata', {
     ...init,
     params,
     cache: 'no-cache',

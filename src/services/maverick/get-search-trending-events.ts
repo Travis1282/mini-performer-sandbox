@@ -11,7 +11,7 @@ export function getSearchTrendingEvents({
   init = {},
   params = {},
 }: GetSearchTendingEventsOptions) {
-  return client.GET('/rest/search/trending/events', {
+  return client().GET('/rest/search/trending/events', {
     ...init,
     params,
   })

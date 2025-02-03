@@ -7,7 +7,7 @@ export interface GetUserLocationOptions {
 }
 
 export function getUserLocation({ params, init = {} }: GetUserLocationOptions) {
-  return client.GET('/rest/location/find', {
+  return client().GET('/rest/location/find', {
     ...init,
     params,
   })

@@ -7,7 +7,7 @@ export interface GetFeaturesOptions {
 }
 
 export function getFeatures({ init, params }: GetFeaturesOptions) {
-  return client.GET('/rest/experiments/features/{clientKey}', {
+  return client().GET('/rest/experiments/features/{clientKey}', {
     ...(init ?? {}),
     params,
   })

@@ -14,7 +14,7 @@ export async function getGrowthbookFeatures() {
     })
     featuresPayload = data as FeatureApiResponse
   } catch (error) {
-    console.log('features error', error)
+    console.log(error)
   }
   return featuresPayload
 }

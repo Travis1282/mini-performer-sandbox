@@ -5,7 +5,7 @@ export interface GetIssuesChallengeOptions {
 }
 
 export function getIssuesChallenge(options?: GetIssuesChallengeOptions) {
-  return client.GET('/rest/events/issue-challenge', {
+  return client().GET('/rest/events/issue-challenge', {
     ...(options?.init ?? {}),
   })
 }

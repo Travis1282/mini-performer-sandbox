@@ -8,7 +8,7 @@ export interface PostSessionsOptions {
 }
 
 export function postSessions({ init = {}, params, body }: PostSessionsOptions) {
-  return client.POST('/rest/sessions', {
+  return client().POST('/rest/sessions', {
     init: {
       ...init,
       duplex: true,

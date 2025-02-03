@@ -11,7 +11,7 @@ export async function getEventListings({
   init = {},
   params,
 }: GetEventListingsOptions) {
-  return client.GET('/rest/events/{event-id}/listings', {
+  return client().GET('/rest/events/{event-id}/listings', {
     ...init,
     params,
   })
