@@ -9,6 +9,8 @@ import '@fontsource-variable/plus-jakarta-sans/wght-italic.css'
 
 import './style.css'
 import router from './router'
+import { CategoriesProvider } from './services/categories/use-categories-context'
+import { RegionsProvider } from './services/categories/use-regions-context'
 import { createGrowthBook } from './services/growthbook/create-growthbook'
 import { LocationProvider } from './services/location/useLocationContext'
 
@@ -23,7 +25,11 @@ if (rootNode) {
       <GrowthBookProvider growthbook={gb}>
         <QueryClientProvider client={queryClient}>
           <LocationProvider location={window.__GT_LOC__}>
-            <RouterProvider router={router} />
+            <CategoriesProvider>
+              <RegionsProvider>
+                <RouterProvider router={router} />
+              </RegionsProvider>
+            </CategoriesProvider>
           </LocationProvider>
         </QueryClientProvider>
       </GrowthBookProvider>

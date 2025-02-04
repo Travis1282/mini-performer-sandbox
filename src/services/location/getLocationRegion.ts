@@ -1,7 +1,7 @@
 import type { Context } from 'hono'
 import { getCookie, setCookie } from 'hono/cookie'
 import type { IpLocation } from './ip-loc.types'
-import { getUserLocation } from '../maverick/getUserLocation'
+import { getUserLocation } from '../maverick/get-user-location'
 import { CLOSEST_REGION_COOKIE } from './constants'
 import { getIpAndLoc } from './get-ip-loc'
 
