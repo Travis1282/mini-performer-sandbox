@@ -2,11 +2,14 @@ import type { ReactNode } from 'react'
 import { createContext, use } from 'react'
 import type { IpLocation } from './ip-loc.types'
 
-const LocationContext = createContext<IpLocation>({
+const LocationContext = createContext<
+  IpLocation & { closestRegionId: string | undefined }
+>({
   ip: undefined,
   loc: undefined,
   latitude: undefined,
   longitude: undefined,
+  closestRegionId: undefined,
 })
 
 export const LocationProvider = ({
@@ -14,7 +17,7 @@ export const LocationProvider = ({
   location,
 }: {
   children: ReactNode
-  location: IpLocation
+  location: IpLocation & { closestRegionId: string | undefined }
 }) => {
   return <LocationContext value={location}>{children}</LocationContext>
 }

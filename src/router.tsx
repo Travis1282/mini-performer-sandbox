@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie'
 import { createBrowserRouter } from 'react-router'
 import { GlobalErrorContent } from './components/errors/oh-no'
 import { Loading } from './components/loading'
@@ -6,6 +7,7 @@ import Home from './pages/home/home'
 import { Layout } from './pages/layout'
 import { PrimaryLayout } from './pages/primary-layout'
 import Slug from './pages/slug'
+import { CLOSEST_REGION_COOKIE } from './services/location/constants'
 import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events'
 
 const router = createBrowserRouter([
@@ -22,17 +24,20 @@ const router = createBrowserRouter([
             Component: Home,
             index: true,
             hydrateFallbackElement: <Loading />,
-            loader: ({ request }) =>
-              getSearchTrendingEvents({
+            loader: ({ request }) => {
+              const closestRegionId = Cookies.get(CLOSEST_REGION_COOKIE)
+
+              return getSearchTrendingEvents({
                 init: {
                   signal: request.signal,
                 },
                 params: {
                   query: {
-                    regionId: '1',
+                    regionId: closestRegionId ?? '0',
                   },
                 },
-              }),
+              })
+            },
           },
           {
             Component: About,

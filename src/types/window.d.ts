@@ -6,6 +6,7 @@ interface Window {
     loc: string
     latitude: string
     longitude: string
+    closestRegionId: string
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
