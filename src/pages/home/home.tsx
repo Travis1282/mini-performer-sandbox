@@ -31,7 +31,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold">
           Top Events in{' '}
           <select
-            className="text-go-blue-500"
+            className="custom-select relative appearance-none text-go-blue-500 focus:outline-none"
             onChange={(event) =>
               location.onChangeTrendingRegion(event.target.value)
             }
