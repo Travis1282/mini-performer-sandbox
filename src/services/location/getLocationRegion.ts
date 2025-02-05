@@ -39,7 +39,7 @@ export async function getLocationRegion(c: Context) {
       closestRegionId = '0'
       console.error(error)
     }
-  } else {
+  } else if (!closestRegionId) {
     closestRegionId = '0'
   }
 

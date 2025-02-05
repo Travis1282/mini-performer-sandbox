@@ -7,6 +7,7 @@ import Home from './pages/home/home'
 import { Layout } from './pages/layout'
 import { PrimaryLayout } from './pages/primary-layout'
 import Slug from './pages/slug'
+import { queryClient } from './query-client'
 import { CLOSEST_REGION_COOKIE } from './services/location/constants'
 import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events'
 
@@ -24,10 +25,10 @@ const router = createBrowserRouter([
             Component: Home,
             index: true,
             hydrateFallbackElement: <Loading />,
-            loader: ({ request }) => {
+            loader: async ({ request }) => {
               const closestRegionId = Cookies.get(CLOSEST_REGION_COOKIE)
 
-              return getSearchTrendingEvents({
+              const loaderData = await getSearchTrendingEvents({
                 init: {
                   signal: request.signal,
                 },
@@ -37,6 +38,12 @@ const router = createBrowserRouter([
                   },
                 },
               })
+              queryClient.setQueryData(
+                ['trending-events', 'get', closestRegionId],
+                loaderData
+              )
+
+              return loaderData
             },
           },
           {
