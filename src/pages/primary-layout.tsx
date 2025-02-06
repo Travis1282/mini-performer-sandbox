@@ -14,7 +14,13 @@ export function PrimaryLayout() {
           About
         </Link>
         <Link className="text-blue-600" to="/bruno-mars-tickets">
-          Slug route
+          Bruno Mars Tickets
+        </Link>
+        <Link className="text-blue-600" to="/bruno-mars">
+          Bruno Mars Tickets link - redirect
+        </Link>
+        <Link className="text-blue-600" to="/bruno-mars-404">
+          Bruno Mars Tickets link - 404
         </Link>
       </nav>
       <Outlet />

@@ -1,5 +1,5 @@
 export const basePath =
-  import.meta.env.VITE_BASE_PATH ?? 'http://localhost:3000'
+  import.meta.env.VITE_BASE_PATH ?? 'http://localhost:5173'
 export const mapsUrl =
   import.meta.env.VITE_MAP_URL ?? 'https://maverick-svg-maps.s3.amazonaws.com'
 export const isProd = import.meta.env.VITE_APP_ENV === 'production'
