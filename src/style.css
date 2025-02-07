@@ -56,3 +56,7 @@ body {
   background-size: 1em auto;
   padding-right: 2.5em;
 }
+
+.scrolling-touch {
+  -webkit-overflow-scrolling: touch;
+}

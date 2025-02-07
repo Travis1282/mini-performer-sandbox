@@ -1,5 +1,4 @@
 import Cookies from 'js-cookie'
-import { createBrowserRouter } from 'react-router'
 import { GlobalErrorContent } from './components/errors/oh-no'
 import { Loading } from './components/loading'
 import About from './pages/about'
@@ -10,8 +9,9 @@ import Slug from './pages/slug'
 import { queryClient } from './query-client'
 import { CLOSEST_REGION_COOKIE } from './services/location/constants'
 import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events'
+import { sentryCreateBrowserRouter } from './services/sentry/instrument'
 
-const router = createBrowserRouter([
+const router = sentryCreateBrowserRouter([
   {
     Component: Layout,
     ErrorBoundary: GlobalErrorContent,

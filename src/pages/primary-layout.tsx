@@ -6,20 +6,23 @@ export function PrimaryLayout() {
       <div className="w-full bg-go-blue-900 p-4 text-3xl font-bold text-white">
         GoTickets
       </div>
-      <nav className="flex gap-4 bg-go-blue-200 p-4 font-semibold">
-        <Link className="text-blue-600" to="/">
+      <nav className="scrolling-touch flex flex-nowrap gap-2 overflow-x-auto bg-go-blue-200 p-4 font-semibold">
+        <Link className="flex-[0_0_auto] text-blue-600" to="/">
           Home
         </Link>
-        <Link className="text-blue-600" to="/about">
+        <Link className="flex-[0_0_auto] text-blue-600" to="/about">
           About
         </Link>
-        <Link className="text-blue-600" to="/bruno-mars-tickets">
+        <Link
+          className="flex-[0_0_auto] text-blue-600"
+          to="/bruno-mars-tickets"
+        >
           Bruno Mars Tickets
         </Link>
-        <Link className="text-blue-600" to="/bruno-mars">
+        <Link className="flex-[0_0_auto] text-blue-600" to="/bruno-mars">
           Bruno Mars Tickets link - redirect
         </Link>
-        <Link className="text-blue-600" to="/bruno-mars-404">
+        <Link className="flex-[0_0_auto] text-blue-600" to="/bruno-mars-404">
           Bruno Mars Tickets link - 404
         </Link>
       </nav>
