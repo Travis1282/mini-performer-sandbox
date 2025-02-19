@@ -21,6 +21,8 @@ app.on(
 app.get('*', async (c, next) => {
   const sessionsPayload = await getSessions(c)
 
+  console.log(sessionsPayload)
+
   setSessionCookiesAndHeaders(c, sessionsPayload)
   await next()
 })

@@ -19,6 +19,8 @@ export const PARAMS_TO_CHECK = [
 
 export const SESSION_COOKIE = 'gt_sid'
 export const PROFILE_COOKIE = 'gt_pid'
+export const PROFILE_DATA_COOKIE = 'gt_pdt'
+export const SESSION_DATA_COOKIE = 'gt_sdt'
 export const PREVIOUS_PARAMS_COOKIE = 'gt_up'
 export const COOKIE_EXPIRY_DAYS = 90
 export const COOKIE_DOMAIN =

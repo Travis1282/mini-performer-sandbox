@@ -9,7 +9,9 @@ import {
   COOKIE_SAME_SITE,
   PREVIOUS_PARAMS_COOKIE,
   PROFILE_COOKIE,
+  PROFILE_DATA_COOKIE,
   SESSION_COOKIE,
+  SESSION_DATA_COOKIE,
 } from './constants'
 import { paramsHaveChanged } from './paramsHaveChanged'
 import { getUtmHashCookieServer } from './server/getUtmHashCookieServer'
@@ -55,6 +57,12 @@ export async function getSessions(c: Context) {
   return sessionsPayload
 }
 
+/**
+ * sets cookies and headers based on the sessions payload
+ * if undefined, nothing will be set
+ * @param c Hono context
+ * @param sessionsPayload sessions payload from the maverick server
+ */
 export function setSessionCookiesAndHeaders(
   c: Context,
   sessionsPayload?: paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
@@ -63,7 +71,6 @@ export function setSessionCookiesAndHeaders(
   if (sessionsPayload?.sessionId) {
     c.header('X-Go-Session-Id', sessionsPayload.sessionId)
     setCookie(c, SESSION_COOKIE, sessionsPayload.sessionId, {
-      // domain: COOKIE_DOMAIN,
       path: '/',
       sameSite: COOKIE_SAME_SITE,
       secure: true,
@@ -73,10 +80,21 @@ export function setSessionCookiesAndHeaders(
     c.header('X-Go-Profile-Id', sessionsPayload.profileId)
     setCookie(c, PROFILE_COOKIE, sessionsPayload.profileId, {
       path: '/',
-      // domain: COOKIE_DOMAIN,
       maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
       sameSite: COOKIE_SAME_SITE,
       secure: true,
+    })
+  }
+
+  if (sessionsPayload?.profileData) {
+    setCookie(c, PROFILE_DATA_COOKIE, sessionsPayload.profileData, {
+      path: '/',
+    })
+  }
+
+  if (sessionsPayload?.sessionData) {
+    setCookie(c, SESSION_DATA_COOKIE, sessionsPayload.sessionData, {
+      path: '/',
     })
   }
 

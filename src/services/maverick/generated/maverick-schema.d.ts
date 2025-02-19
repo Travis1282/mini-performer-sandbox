@@ -994,8 +994,10 @@ export interface components {
       eventType: 'CONCERTS' | 'COMEDY' | 'SPORTS' | 'THEATER' | 'PARKING'
       slug?: string
       heroImagePath?: string
+      heroImageCredit?: string
       cardImagePath?: string
       performerHeroImagePath?: string
+      performerHeroImageCredit?: string
       performerCardImagePath?: string
     }
     DeliveryMethod: {
@@ -1118,6 +1120,7 @@ export interface components {
       parkingPerformerId?: number
       slug?: string
       heroImagePath?: string
+      heroImageCredit?: string
       cardImagePath?: string
       primaryCategory?: components['schemas']['Category']
       /** Format: int64 */
@@ -1177,6 +1180,7 @@ export interface components {
       regionId?: number
       slug?: string
       heroImagePath?: string
+      heroImageCredit?: string
       cardImagePath?: string
       /** Format: int64 */
       cmsPageId?: number
@@ -1275,7 +1279,9 @@ export interface components {
     SessionResponse: {
       sessionId: string
       profileId: string
+      profileData: string
       status?: string
+      sessionData?: string
     }
     GetSTCRequest: {
       firstName?: string
@@ -1388,6 +1394,8 @@ export interface components {
       reconciliationId?: string
       adjustmentAmount?: number
       cancelled?: boolean
+      /** Format: int64 */
+      updateUserId?: number
       updateUser?: string
     }
     OrderItem: {
@@ -1732,6 +1740,7 @@ export interface components {
       /** Format: int32 */
       venueRadius: number
       heroImagePath?: string
+      heroImageCredit?: string
       cardImagePath?: string
       slug?: string
     }
@@ -1747,6 +1756,7 @@ export interface components {
     }
     TrendingResult: {
       trendingEvents?: components['schemas']['Event'][]
+      trendingVenues?: components['schemas']['Venue'][]
       trendingConcertPerformers?: components['schemas']['Performer'][]
       trendingSportsPerformers?: components['schemas']['Performer'][]
       trendingTheaterPerformers?: components['schemas']['Performer'][]
@@ -1861,8 +1871,8 @@ export interface components {
       /** Format: int32 */
       maxAge?: number
       secure?: boolean
-      domain?: string
       httpOnly?: boolean
+      domain?: string
       path?: string
       /** @deprecated */
       comment?: string
@@ -1950,9 +1960,7 @@ export interface operations {
       path: {
         'cart-uuid': string
       }
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody?: never
     responses: {
@@ -2115,9 +2123,7 @@ export interface operations {
       path: {
         'cart-uuid': string
       }
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody: {
       content: {
@@ -3260,7 +3266,10 @@ export interface operations {
       }
       header?: never
       path?: never
-      cookie?: never
+      cookie?: {
+        gt_sdt?: string
+        gt_pdt?: string
+      }
     }
     requestBody?: never
     responses: {
@@ -3423,7 +3432,9 @@ export interface operations {
       path?: never
       cookie?: {
         gt_pid?: string
+        gt_pdt?: string
         gt_sid?: string
+        gt_sdt?: string
       }
     }
     requestBody: {
@@ -4899,9 +4910,7 @@ export interface operations {
       query?: never
       header?: never
       path?: never
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody: {
       content: {
@@ -5560,6 +5569,7 @@ export interface operations {
       cookie?: {
         gt_pid?: string
         gt_sid?: string
+        gt_pdt?: string
       }
     }
     requestBody: {
@@ -5727,9 +5737,7 @@ export interface operations {
       path: {
         'cart-uuid': string
       }
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody: {
       content: {
@@ -5896,9 +5904,7 @@ export interface operations {
       path: {
         'cart-uuid': string
       }
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody: {
       content: {
@@ -6066,6 +6072,7 @@ export interface operations {
       cookie?: {
         gt_pid?: string
         gt_sid?: string
+        gt_pdt?: string
         _ga?: string
         _gid?: string
       }
@@ -9893,6 +9900,8 @@ export interface operations {
       cookie?: {
         gt_pid?: string
         gt_sid?: string
+        gt_sdt?: string
+        gt_pdt?: string
       }
     }
     requestBody?: never
@@ -10057,9 +10066,7 @@ export interface operations {
         'event-id': number
         'listing-id': number
       }
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody?: never
     responses: {
@@ -10603,9 +10610,7 @@ export interface operations {
         'event-id': number
         'listing-id': number
       }
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody?: never
     responses: {
@@ -11750,9 +11755,7 @@ export interface operations {
         'cart-uuid': string
         'gift-card-id': number
       }
-      cookie?: {
-        gt_sid?: string
-      }
+      cookie?: never
     }
     requestBody?: never
     responses: {
