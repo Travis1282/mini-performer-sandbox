@@ -7,6 +7,10 @@ npm run dev
 npm run deploy
 ```
 
+## Cloudflare pages project
+https://dash.cloudflare.com/ace3c0a278af90a8ad53ee2fa8a8bd9f/pages/view/fluffy-couscous
+
+
 ## TODO
 
 - [ ] add growthbook
