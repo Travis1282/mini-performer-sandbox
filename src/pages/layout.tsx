@@ -24,12 +24,12 @@ export function Layout() {
     <>
       <div
         className={clsx(
-          'fixed bottom-2 right-2 flex max-h-96 w-96 flex-col gap-2 overflow-auto rounded border border-2 border-gray-300 bg-white p-6 drop-shadow',
+          'fixed right-2 bottom-2 flex max-h-96 w-96 flex-col gap-2 overflow-auto rounded-sm border border-2 border-gray-300 bg-white p-6 drop-shadow-sm',
           value === 'show' ? 'block' : 'hidden'
         )}
       >
         <button
-          className="font-xl absolute right-2 top-2 font-bold"
+          className="font-xl absolute top-2 right-2 font-bold"
           onClick={() => setValue('hide')}
         >
           &times;

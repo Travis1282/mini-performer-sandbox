@@ -1,6 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-plus-jakarta-sans-variable), sans-serif;
+
+  --color-go-blue-50: #eff8ff;
+  --color-go-blue-100: #dbeefe;
+  --color-go-blue-200: #bee3ff;
+  --color-go-blue-300: #92d3fe;
+  --color-go-blue-400: #5eb9fc;
+  --color-go-blue-500: #3899f8;
+  --color-go-blue-600: #237bed;
+  --color-go-blue-700: #1b65da;
+  --color-go-blue-800: #1c52b1;
+  --color-go-blue-900: #1d478b;
+  --color-go-blue-950: #162d55;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 @layer base {
   :root {
