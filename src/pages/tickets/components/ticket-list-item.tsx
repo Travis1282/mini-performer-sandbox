@@ -70,7 +70,7 @@ interface TicketListItemProps {
 //           <button>{InfoIconSVG}</button>
 //         </Tooltip.Activator>
 //         <Tooltip.Content
-//           className="mx-3 rounded-md !bg-gray-900 p-3 py-2 text-center text-white shadow"
+//           className="mx-3 rounded-md bg-gray-900! p-3 py-2 text-center text-white shadow-sm"
 //           side="top"
 //         >
 //           The seller has indicated no obstructions
@@ -144,7 +144,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
     <Link
       className={clsx(
         'got-ticket-list-item relative hover:bg-white hover:shadow-[0_25px_50px_0px_#0113270D]',
-        'border-b-light flex !w-full cursor-pointer justify-between border-b border-l-8 px-[15px] py-[7px] lg:px-[15px] lg:py-4 lg:pl-8 lg:pr-6',
+        'border-b-light flex w-full! cursor-pointer justify-between border-b border-l-8 px-[15px] py-[7px] lg:px-[15px] lg:py-4 lg:pr-6 lg:pl-8',
         className
       )}
       data-cy="ticketListItem"
@@ -160,7 +160,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
         <div className="flex flex-col">
           <span
             className={clsx(
-              'inline-block break-words text-sm font-semibold italic lg:text-base'
+              'inline-block text-sm font-semibold break-words italic lg:text-base'
             )}
             data-testid="ticket-list-item-title"
           >
@@ -175,7 +175,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
               <span className="mr-2 font-medium">{ticketQuantity.text}</span>
               {/* {listing.lowPrice || listing.lastInSection ? (
                 <TicketBadge
-                  className="relative mr-2 w-fit [&>span]:!block"
+                  className="relative mr-2 w-fit [&>span]:block!"
                   data-testid="ticket-badge"
                   type={listing.lowPrice ? "LOW_PRICE" : "LAST_IN_SECTION"}
                 />
@@ -202,7 +202,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
           >
             <span
               className={clsx(
-                'flex flex-row gap-1 whitespace-nowrap !font-semibold text-black'
+                'flex flex-row gap-1 font-semibold! whitespace-nowrap text-black'
               )}
               data-testid="ticket-list-item-price"
             >
@@ -213,7 +213,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
           {isInternational && (
             <div className="mb-1 text-xs text-stone-600">USD</div>
           )}
-          <div className="rounded-md bg-go-blue-500 px-3 py-2 text-xs font-semibold text-white lg:px-5 lg:py-3 lg:text-sm">
+          <div className="bg-go-blue-500 rounded-md px-3 py-2 text-xs font-semibold text-white lg:px-5 lg:py-3 lg:text-sm">
             Select
           </div>
         </div>

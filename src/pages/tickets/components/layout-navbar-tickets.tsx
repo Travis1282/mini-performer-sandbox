@@ -95,7 +95,7 @@ export function LayoutNavbarTickets({
         className="hidden size-5 lg:block 2xl:h-[0.875rem] 2xl:w-[0.875rem] [&>g]:opacity-100"
         src={'https://static.gotickets.com/img/interrogation-icon.svg'}
       />
-      <EllipsisVerticalIcon className="size-8 text-go-blue-500 lg:hidden" />
+      <EllipsisVerticalIcon className="text-go-blue-500 size-8 lg:hidden" />
     </button>
   )
 
@@ -108,14 +108,14 @@ export function LayoutNavbarTickets({
     <>
       {/* {showResaleDisclosure && (
         <ResaleDisclosure
-          className={!quantity ? "z-[250]" : ""}
+          className={!quantity ? "z-250" : ""}
           usePrimaryDisclosureText={isUtah}
         />
       )} */}
       <nav
         className={clsx(
-          // ticketsLoadingSequence ? "z-[200]" : "z-[100]",
-          'shadow-navbar-tickets relative flex h-[54px] items-center bg-white px-3 pb-0.5 pt-1.5 md:py-1.5 lg:h-[94px] lg:min-h-[94px] lg:items-center lg:px-6'
+          // ticketsLoadingSequence ? "z-200" : "z-100",
+          'shadow-navbar-tickets relative flex h-[54px] items-center bg-white px-3 pt-1.5 pb-0.5 md:py-1.5 lg:h-[94px] lg:min-h-[94px] lg:items-center lg:px-6'
         )}
         data-cy="tickets-navbar"
         id="tickets-navbar"
@@ -143,13 +143,13 @@ export function LayoutNavbarTickets({
             />
           </button> */}
 
-        {/* <div className="flex h-full w-[2px] items-center justify-center rounded bg-light" /> */}
+        {/* <div className="flex h-full w-[2px] items-center justify-center rounded-sm bg-light" /> */}
         {/* </div> */}
 
         <div className="flex grow flex-col items-start justify-center overflow-hidden lg:mr-4">
           <div className="flex w-full max-w-[100%] flex-row overflow-hidden sm:items-center sm:justify-between lg:w-auto">
             <h3
-              className="lg:h3-lg overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold leading-5 text-go-blue-500 lg:py-0 lg:!text-[20px]"
+              className="lg:h3-lg text-go-blue-500 overflow-hidden text-sm leading-5 font-bold text-ellipsis whitespace-nowrap lg:py-0 lg:text-[20px]!"
               data-testid="eventName"
               id="eventName"
             >
@@ -178,7 +178,7 @@ export function LayoutNavbarTickets({
                     TBD
                   </span>
                 )}
-                <span className="bg-dark h-[2px] w-[2px] flex-shrink-0 self-center rounded-[21px] opacity-40"></span>
+                <span className="bg-dark h-[2px] w-[2px] shrink-0 self-center rounded-[21px] opacity-40"></span>
                 {!event.timeTbd ? (
                   <span data-testid="eventTime" id="eventTime">
                     {eventDate.format('h:mma')}
@@ -204,7 +204,7 @@ export function LayoutNavbarTickets({
                 src={resolveImagePath('/img/locale-icon.svg')}
                 width={14}
               />
-              <span className="lg:opacity-1 h6-sm lg:h6-lg block gap-2 overflow-hidden text-ellipsis whitespace-nowrap text-xs font-semibold opacity-70 lg:flex">
+              <span className="h6-sm lg:h6-lg block gap-2 overflow-hidden text-xs font-semibold text-ellipsis whitespace-nowrap opacity-70 lg:flex lg:opacity-1">
                 <a
                   className="hidden lg:block"
                   data-testid="eventVenueName"
@@ -213,7 +213,7 @@ export function LayoutNavbarTickets({
                 >
                   {`${event?.venue?.name}`}
                 </a>
-                <span className="bg-dark hidden h-[2px] w-[2px] flex-shrink-0 self-center rounded-[21px] opacity-40 lg:block"></span>
+                <span className="bg-dark hidden h-[2px] w-[2px] shrink-0 self-center rounded-[21px] opacity-40 lg:block"></span>
                 <span
                   data-testid="eventVenueCityState"
                   id="eventVenueCityState"
@@ -238,7 +238,7 @@ export function LayoutNavbarTickets({
           >
             <img
               alt="gotickets logo"
-              className="flex !h-[13px] !w-[130px] lg:!h-[18px] lg:!w-[177px]"
+              className="flex h-[13px]! w-[130px]! lg:h-[18px]! lg:w-[177px]!"
               height={18}
               src={resolveImagePath('/img/gotickets-dark.svg')}
               style={{

@@ -31,7 +31,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold">
           Top Events in{' '}
           <select
-            className="custom-select relative appearance-none text-go-blue-500 focus:outline-none"
+            className="custom-select text-go-blue-500 relative appearance-none focus:outline-hidden"
             onChange={(event) =>
               location.onChangeTrendingRegion(event.target.value)
             }
@@ -48,17 +48,17 @@ export default function Home() {
 
         {isFetching && isPlaceholderData ? (
           <ul className="flex flex-col gap-2">
-            <li className="flex animate-pulse flex-col gap-2 rounded border border-gray-300 p-4">
+            <li className="flex animate-pulse flex-col gap-2 rounded-sm border border-gray-300 p-4">
               <h3 className="h-4 animate-pulse bg-gray-300"></h3>
               <h3 className="h-4 w-1/3 animate-pulse bg-gray-300"></h3>
               <h3 className="h-4 w-1/3 animate-pulse self-end bg-gray-300"></h3>
             </li>
-            <li className="flex animate-pulse flex-col gap-2 rounded border border-gray-300 p-4">
+            <li className="flex animate-pulse flex-col gap-2 rounded-sm border border-gray-300 p-4">
               <h3 className="h-4 animate-pulse bg-gray-300"></h3>
               <h3 className="h-4 w-1/3 animate-pulse bg-gray-300"></h3>
               <h3 className="h-4 w-1/3 animate-pulse self-end bg-gray-300"></h3>
             </li>
-            <li className="flex animate-pulse flex-col gap-2 rounded border border-gray-300 p-4">
+            <li className="flex animate-pulse flex-col gap-2 rounded-sm border border-gray-300 p-4">
               <h3 className="h-4 animate-pulse bg-gray-300"></h3>
               <h3 className="h-4 w-1/3 animate-pulse bg-gray-300"></h3>
               <h3 className="h-4 w-1/3 animate-pulse self-end bg-gray-300"></h3>
@@ -81,7 +81,7 @@ export default function Home() {
         <ul className="grid grid-cols-2 gap-2">
           {catgegories.map((category) => (
             <li key={category.id}>
-              <div className="flex h-full w-full cursor-pointer items-center justify-center rounded border border-gray-300 p-4 text-center">
+              <div className="flex h-full w-full cursor-pointer items-center justify-center rounded-sm border border-gray-300 p-4 text-center">
                 {category.name}
               </div>
             </li>
@@ -91,7 +91,7 @@ export default function Home() {
         <ul className="grid grid-cols-2 gap-2">
           {regions.map((region) => (
             <li key={region.id}>
-              <div className="flex h-full w-full cursor-pointer items-center justify-center rounded border border-gray-300 p-4 text-center">
+              <div className="flex h-full w-full cursor-pointer items-center justify-center rounded-sm border border-gray-300 p-4 text-center">
                 {region.name}
               </div>
             </li>
