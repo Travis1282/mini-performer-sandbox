@@ -6,1412 +6,1408 @@
 export interface paths {
   '/rest/carts/{cart-uuid}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['findByUuidWithListings']
-    put: operations['updateCart']
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['findByUuidWithListings'];
+    put: operations['updateCart'];
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/account/me': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getLoggedInUser']
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getLoggedInUser'];
     /** Update the logged in customer. All fields will be updated, this is NOT a partial update. */
-    put: operations['updateProfile']
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    put: operations['updateProfile'];
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/account/me/password': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
     /** Update the logged in customer's password. */
-    put: operations['updatePassword']
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    put: operations['updatePassword'];
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/subscriptions/unsubscribe': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['unsubscribe']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['unsubscribe'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/subscriptions/performer-event-alert': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['addPerformerEventAlert']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['addPerformerEventAlert'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/subscriptions/cart-abandonment': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['addCartAbandonment']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['addCartAbandonment'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/sessions': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getSession']
-    put?: never
-    post: operations['postSession']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getSession'];
+    put?: never;
+    post: operations['postSession'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/promos/validate': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['validatePromoCode']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['validatePromoCode'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/payments/stc': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['getSTC']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['getSTC'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/orders/{secret-value}/confirm-transfer-receipt': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
     /** Updates order status to TRANSFER_RECEIPT_CONFIRMED. */
-    post: operations['confirmTransferReceipt']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    post: operations['confirmTransferReceipt'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/orders/send-get-tickets-email': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
     /** Send an email to the customer with a link to download their tickets. This method requires user authentication. */
-    post: operations['sendGetTicketsEmail']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    post: operations['sendGetTicketsEmail'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/orders/find': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
     /** Get an order by email and order id. This method does not require user authentication. */
-    post: operations['findByEmailAndOrderId']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    post: operations['findByEmailAndOrderId'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/orders/download-file': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
     /** Downloads a file by access token. This method does not require user authentication. */
-    post: operations['downloadFile']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    post: operations['downloadFile'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/orders/accept-transfer': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
     /** Converts an access token to a transfer url for redirection. This method does not require user authentication. */
-    post: operations['acceptTransferUrl']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    post: operations['acceptTransferUrl'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/insurance/purchase': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['purchase']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['purchase'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/insurance-quote/v2': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['getInsuranceQuote']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['getInsuranceQuote'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/experiments/session': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['insertExperimentSession']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['insertExperimentSession'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/contact/support': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['emailSupport']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['emailSupport'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/contact/sell-tickets': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['submitSellTicketsForm']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['submitSellTicketsForm'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/carts': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['createCart']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['createCart'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/carts/{cart-uuid}/promo-code': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['applyPromoCode']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['applyPromoCode'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/carts/{cart-uuid}/email-token': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['applyPromoByEmailToken']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['applyPromoByEmailToken'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/carts/{cart-uuid}/checkout': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['createOrder']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['createOrder'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/auth/verify-token': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['verifyToken']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['verifyToken'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/auth/reset-password': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['resetPassword']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['resetPassword'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/auth/magic-link-login': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['authenticateUserByFPT']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['authenticateUserByFPT'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/auth/login': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['authenticateUser']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['authenticateUser'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/auth/forgot-password': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['forgotPassword']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['forgotPassword'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/auth/email-login': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post: operations['emailLogin']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post: operations['emailLogin'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/account': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
     /** Create a new customer account. */
-    post: operations['signup']
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    post: operations['signup'];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/sem/ad-group': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['searchAdGroup']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['searchAdGroup'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/search': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['searchLucene']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['searchLucene'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/search/trending': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['trending']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['trending'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/search/trending/events': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['trendingEvents']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['trendingEvents'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/regions': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['listRegions']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['listRegions'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/performers': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getPerformers']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getPerformers'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/payments/client-token': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getClientToken']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getClientToken'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/orders': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     /** Search orders for the logged in user. This method requires user authentication. */
-    get: operations['getOrders']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    get: operations['getOrders'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/orders/{order-id}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     /** Retrieve an order. This method requires user authentication. */
-    get: operations['getOrder']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+    get: operations['getOrder'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/location/find': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['locationForIpAddress']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['locationForIpAddress'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/listing-attributes': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getAll']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getAll'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/experiments/features/{clientKey}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getFeatures']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getFeatures'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['searchEvents']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['searchEvents'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events/{event-id}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getEvent']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getEvent'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events/{event-id}/metadata': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getEventMetadata']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getEventMetadata'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events/{event-id}/listings': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getListings']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getListings'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events/{event-id}/listings/{listing-id}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getListings_1']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getListings_1'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events/v2/paginated': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['searchEventsPaginatedV2']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['searchEventsPaginatedV2'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events/issue-challenge': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['issueChallenge']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['issueChallenge'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/events/checkout/{event-id}/listings/{listing-id}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getCheckoutListings']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getCheckoutListings'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/cms': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['search']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['search'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/cms/venue': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getVenuePage']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getVenuePage'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/cms/region': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getRegionPage']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getRegionPage'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/categories': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['search_1']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['search_1'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/categories/{id}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['findById']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['findById'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/carts/{cart-uuid}/order': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get: operations['getOrderForCart']
-    put?: never
-    post?: never
-    delete?: never
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get: operations['getOrderForCart'];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   '/rest/carts/{cart-uuid}/gift-cards/{gift-card-id}': {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    get?: never
-    put?: never
-    post?: never
-    delete: operations['removeGiftCard']
-    options?: never
-    head?: never
-    patch?: never
-    trace?: never
-  }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    post?: never;
+    delete: operations['removeGiftCard'];
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
 }
-export type webhooks = Record<string, never>
+export type webhooks = Record<string, never>;
 export interface components {
   schemas: {
     ErrorDetails: {
-      message?: string
-      errors?: string[]
-    }
+      message?: string;
+      errors?: string[];
+    };
     UpdateCartRequest: {
-      shipToCountryCode?: string
-      emailAddress?: string
-      phoneNumber?: string
+      shipToCountryCode?: string;
+      emailAddress?: string;
+      phoneNumber?: string;
       /** Format: int32 */
-      quantity?: number
-      firstName?: string
-      lastName?: string
-      emailOptIn?: boolean
-      smsOptIn?: boolean
+      quantity?: number;
+      firstName?: string;
+      lastName?: string;
+      emailOptIn?: boolean;
+      smsOptIn?: boolean;
       /** Format: int64 */
-      deliveryMethodId?: number
-    }
+      deliveryMethodId?: number;
+    };
     Cart: {
-      uuid: string
-      emailAddress: string
-      phoneNumber?: string
+      uuid: string;
+      emailAddress: string;
+      phoneNumber?: string;
       /** Format: int64 */
-      eventId: number
+      eventId: number;
       /** Format: int64 */
-      listingId: number
+      listingId: number;
       /** Format: int32 */
-      quantity: number
-      firstName?: string
-      lastName?: string
-      pricePerTicket: number
-      serviceFee: number
-      deliveryFee: number
-      taxAmount: number
-      availableDeliveryMethods?: components['schemas']['DeliveryMethod'][]
-      deliveryMethod: components['schemas']['DeliveryMethod']
-      promoDiscount: number
-      promoDescription?: string
-      giftCardRedemptions?: components['schemas']['GiftCardRedemption'][]
-      section: string
-      row: string
-      notes: string
-      seatNumbers?: string
-      event: components['schemas']['Event']
-      emailOptIn: boolean
-      smsOptIn: boolean
-      listing: components['schemas']['Listing']
-      shipToCountryCode?: string
+      quantity: number;
+      firstName?: string;
+      lastName?: string;
+      pricePerTicket: number;
+      serviceFee: number;
+      deliveryFee: number;
+      taxAmount: number;
+      availableDeliveryMethods?: components['schemas']['DeliveryMethod'][];
+      deliveryMethod: components['schemas']['DeliveryMethod'];
+      promoDiscount: number;
+      promoDescription?: string;
+      giftCardRedemptions?: components['schemas']['GiftCardRedemption'][];
+      section: string;
+      row: string;
+      notes: string;
+      seatNumbers?: string;
+      event: components['schemas']['Event'];
+      emailOptIn: boolean;
+      smsOptIn: boolean;
+      listing: components['schemas']['Listing'];
+      shipToCountryCode?: string;
       /** Format: int64 */
-      orderId?: number
-      checkoutVersion?: string
-      serviceFeePerTicket?: number
-      amountToCharge?: number
-      cartTotal?: number
-    }
+      orderId?: number;
+      checkoutVersion?: string;
+      serviceFeePerTicket?: number;
+      amountToCharge?: number;
+      cartTotal?: number;
+    };
     Category: {
       /** Format: int64 */
-      id: number
-      name: string
+      id: number;
+      name: string;
       /** Format: int64 */
-      parentId?: number
+      parentId?: number;
       /** @enum {string} */
-      eventType: 'CONCERTS' | 'COMEDY' | 'SPORTS' | 'THEATER' | 'PARKING'
-      slug?: string
-      heroImagePath?: string
-      heroImageCredit?: string
-      cardImagePath?: string
-      performerHeroImagePath?: string
-      performerHeroImageCredit?: string
-      performerCardImagePath?: string
-    }
+      eventType: 'CONCERTS' | 'COMEDY' | 'SPORTS' | 'THEATER' | 'PARKING';
+      slug?: string;
+      heroImagePath?: string;
+      heroImageCredit?: string;
+      cardImagePath?: string;
+      performerHeroImagePath?: string;
+      performerHeroImageCredit?: string;
+      performerCardImagePath?: string;
+    };
     DeliveryMethod: {
       /** Format: int64 */
-      id: number
-      enumName: string
-      displayName: string
-      retailDisplayName: string
-      description: string
-    }
+      id: number;
+      enumName: string;
+      displayName: string;
+      retailDisplayName: string;
+      description: string;
+    };
     Event: {
       /** Format: int64 */
-      doc?: number
+      doc?: number;
       /** Format: int64 */
-      fields?: number
+      fields?: number;
       /** Format: int64 */
-      id: number
-      name: string
+      id: number;
+      name: string;
       /** Format: int64 */
-      venueId: number
+      venueId: number;
       /** Format: int64 */
-      venueConfigurationId: number
+      venueConfigurationId: number;
       /** Format: date-time */
-      eventTimeLocal: string
+      eventTimeLocal: string;
       /** Format: date-time */
-      endDate?: string
-      timeTbd: boolean
-      dateTbd: boolean
-      url?: string
-      parking: boolean
+      endDate?: string;
+      timeTbd: boolean;
+      dateTbd: boolean;
+      url?: string;
+      parking: boolean;
       /** Format: int64 */
-      parkingEventId?: number
+      parkingEventId?: number;
       /** Format: int32 */
-      minimumAge?: number
-      ifNecessary: boolean
-      multiDate: boolean
+      minimumAge?: number;
+      ifNecessary: boolean;
+      multiDate: boolean;
       /** Format: date-time */
-      eventTimeUtc?: string
+      eventTimeUtc?: string;
       /** Format: int64 */
-      cmsPageId?: number
-      eventPerformers?: components['schemas']['EventPerformer'][]
-      venue?: components['schemas']['Venue']
-      slug?: string
-      venueConfiguration?: components['schemas']['VenueConfiguration']
-      seasonTicket: boolean
+      cmsPageId?: number;
+      eventPerformers?: components['schemas']['EventPerformer'][];
+      venue?: components['schemas']['Venue'];
+      slug?: string;
+      venueConfiguration?: components['schemas']['VenueConfiguration'];
+      seasonTicket: boolean;
       /** Format: date-time */
-      nextOnsaleTimeLocal?: string
+      nextOnsaleTimeLocal?: string;
       /** Format: date-time */
-      nextPresaleTimeLocal?: string
+      nextPresaleTimeLocal?: string;
       /** Format: date-time */
-      lastOnsaleTimeLocal?: string
+      lastOnsaleTimeLocal?: string;
       /** Format: date-time */
-      lastPresaleTimeLocal?: string
+      lastPresaleTimeLocal?: string;
       /** Format: int32 */
-      daysToEvent?: number
+      daysToEvent?: number;
       /** Format: int32 */
-      daysToOnsale?: number
+      daysToOnsale?: number;
       /** Format: int32 */
-      daysToPresale?: number
+      daysToPresale?: number;
       /** @enum {string} */
-      pricingType?: 'DEFAULT' | 'ALL_IN_TICKET_DETAILS' | 'ALL_IN_TICKET_PAGE'
+      pricingType?: 'DEFAULT' | 'ALL_IN_TICKET_DETAILS' | 'ALL_IN_TICKET_PAGE';
       /** Format: int32 */
-      availableTickets?: number
+      availableTickets?: number;
       /** Format: double */
-      percentInventoryAvailable?: number
-    }
+      percentInventoryAvailable?: number;
+    };
     EventPerformer: {
       /** Format: int64 */
-      id: number
+      id: number;
       /** Format: int64 */
-      performerId: number
-      master: boolean
-      performer?: components['schemas']['Performer']
-    }
+      performerId: number;
+      master: boolean;
+      performer?: components['schemas']['Performer'];
+    };
     GiftCardRedemption: {
-      amountRedeemed: number
+      amountRedeemed: number;
       /** Format: int64 */
-      giftCardId: number
-    }
+      giftCardId: number;
+    };
     Listing: {
       /** Format: int64 */
-      id: number
+      id: number;
       /** Format: int64 */
-      eventId: number
-      section: string
+      eventId: number;
+      section: string;
       /** Format: int64 */
-      sectionId: number
-      row: string
-      notes?: string
+      sectionId: number;
+      row: string;
+      notes?: string;
       /** Format: int32 */
-      quantity: number
-      validSplitQuantities: number[]
-      flex: boolean
-      instant: boolean
-      displayPrice: number
-      serviceFee?: number
-      powerSeller: boolean
+      quantity: number;
+      validSplitQuantities: number[];
+      flex: boolean;
+      instant: boolean;
+      displayPrice: number;
+      serviceFee?: number;
+      powerSeller: boolean;
       /** Format: date */
-      inHandDate?: string
-      stockType: string
-      deliveryMethods: components['schemas']['DeliveryMethod'][]
-      attributes?: number[]
-      seatNumbers?: string
-      generalAdmission: boolean
-    }
+      inHandDate?: string;
+      stockType: string;
+      deliveryMethods: components['schemas']['DeliveryMethod'][];
+      attributes?: number[];
+      seatNumbers?: string;
+      generalAdmission: boolean;
+    };
     Performer: {
       /** Format: int64 */
-      id: number
-      name: string
+      id: number;
+      name: string;
       /** Format: int64 */
-      homeVenueId?: number
+      homeVenueId?: number;
       /** Format: int64 */
-      homeVenueConfigId?: number
+      homeVenueConfigId?: number;
       /** Format: int64 */
-      primaryCategoryId: number
+      primaryCategoryId: number;
       /** Format: int64 */
-      parentPerformerId?: number
-      parking: boolean
+      parentPerformerId?: number;
+      parking: boolean;
       /** Format: int64 */
-      parkingPerformerId?: number
-      slug?: string
-      heroImagePath?: string
-      heroImageCredit?: string
-      cardImagePath?: string
-      primaryCategory?: components['schemas']['Category']
+      parkingPerformerId?: number;
+      slug?: string;
+      heroImagePath?: string;
+      heroImageCredit?: string;
+      cardImagePath?: string;
+      primaryCategory?: components['schemas']['Category'];
       /** Format: int64 */
-      cmsPageId?: number
+      cmsPageId?: number;
       /** Format: int32 */
-      eventCount?: number
-      parkingPerformer?: components['schemas']['Performer']
-      parentPerformer?: components['schemas']['Performer']
-      hasChildren?: boolean
-      childPerformers?: components['schemas']['Performer'][]
-      homeVenue?: components['schemas']['Venue']
-      parkingParent?: components['schemas']['Performer']
+      eventCount?: number;
+      parkingPerformer?: components['schemas']['Performer'];
+      parentPerformer?: components['schemas']['Performer'];
+      hasChildren?: boolean;
+      childPerformers?: components['schemas']['Performer'][];
+      homeVenue?: components['schemas']['Venue'];
+      parkingParent?: components['schemas']['Performer'];
       /** Format: int32 */
-      popularity?: number
-      performerStats?: components['schemas']['PerformerStats']
-    }
+      popularity?: number;
+      performerStats?: components['schemas']['PerformerStats'];
+    };
     PerformerStats: {
       /** Format: int64 */
-      id?: number
+      id?: number;
       /** Format: int64 */
-      performerId?: number
+      performerId?: number;
       /** Format: int32 */
-      clicks1Day?: number
+      clicks1Day?: number;
       /** Format: int32 */
-      clicks7Day?: number
+      clicks7Day?: number;
       /** Format: int32 */
-      clicks30Day?: number
-    }
+      clicks30Day?: number;
+    };
     Venue: {
       /** Format: int64 */
-      id: number
-      name: string
-      addr1: string
-      addr2?: string
-      city: string
-      state: string
-      postalCode?: string
-      country: string
+      id: number;
+      name: string;
+      addr1: string;
+      addr2?: string;
+      city: string;
+      state: string;
+      postalCode?: string;
+      country: string;
       /** Format: double */
-      latitude?: number
+      latitude?: number;
       /** Format: double */
-      longitude?: number
-      externalUrl?: string
+      longitude?: number;
+      externalUrl?: string;
       /** Format: int32 */
-      capacity?: number
-      externalPhone?: string
-      timeZone?: string
+      capacity?: number;
+      externalPhone?: string;
+      timeZone?: string;
       /** Format: int32 */
-      utcOffsetMinutes?: number
-      parentVenue: boolean
+      utcOffsetMinutes?: number;
+      parentVenue: boolean;
       /** Format: int64 */
-      parentVenueId?: number
-      parking: boolean
+      parentVenueId?: number;
+      parking: boolean;
       /** Format: int64 */
-      parkingVenueId?: number
+      parkingVenueId?: number;
       /** Format: int64 */
-      regionId?: number
-      slug?: string
-      heroImagePath?: string
-      heroImageCredit?: string
-      cardImagePath?: string
+      regionId?: number;
+      slug?: string;
+      heroImagePath?: string;
+      heroImageCredit?: string;
+      cardImagePath?: string;
       /** Format: int64 */
-      cmsPageId?: number
-      parkingVenue?: components['schemas']['Venue']
-      parentVenueObj?: components['schemas']['Venue']
-      parkingParent?: components['schemas']['Venue']
+      cmsPageId?: number;
+      parkingVenue?: components['schemas']['Venue'];
+      parentVenueObj?: components['schemas']['Venue'];
+      parkingParent?: components['schemas']['Venue'];
       /** Format: int32 */
-      popularity?: number
-      regionName?: string
-      singleLineAddress?: string
-    }
+      popularity?: number;
+      regionName?: string;
+      singleLineAddress?: string;
+    };
     VenueConfiguration: {
       /** Format: int64 */
-      id: number
+      id: number;
       /** Format: int64 */
-      venueId: number
-      name: string
-      svgMapFileName: string
-      generalAdmission: boolean
-      staticMap: boolean
-      groups?: components['schemas']['VenueConfigurationGroup'][]
-      sections?: components['schemas']['VenueConfigurationSection'][]
-    }
+      venueId: number;
+      name: string;
+      svgMapFileName: string;
+      generalAdmission: boolean;
+      staticMap: boolean;
+      groups?: components['schemas']['VenueConfigurationGroup'][];
+      sections?: components['schemas']['VenueConfigurationSection'][];
+    };
     VenueConfigurationGroup: {
       /** Format: int64 */
-      id: number
+      id: number;
       /** Format: int64 */
-      venueConfigurationId: number
-      name: string
-      color: string
-      generalAdmission: boolean
-      skipNormalization: boolean
-      noAdmission: boolean
-      hideListings: boolean
-    }
+      venueConfigurationId: number;
+      name: string;
+      color: string;
+      generalAdmission: boolean;
+      skipNormalization: boolean;
+      noAdmission: boolean;
+      hideListings: boolean;
+    };
     VenueConfigurationSection: {
       /** Format: int64 */
-      id: number
+      id: number;
       /** Format: int64 */
-      venueConfigurationId: number
+      venueConfigurationId: number;
       /** Format: int64 */
-      groupId: number
-      name: string
-      groupName: string
-      svgMapId: string
-    }
+      groupId: number;
+      name: string;
+      groupName: string;
+      svgMapId: string;
+    };
     UpdateCustomerRequest: {
-      email: string
-      phone?: string
-      firstName?: string
-      lastName?: string
-      company?: string
-      postalCode?: string
-      emailOptIn?: boolean
-      smsOptIn?: boolean
-    }
+      email: string;
+      phone?: string;
+      firstName?: string;
+      lastName?: string;
+      company?: string;
+      postalCode?: string;
+      emailOptIn?: boolean;
+      smsOptIn?: boolean;
+    };
     Customer: {
-      firstName?: string
-      lastName?: string
-      emailAddress: string
-      password?: string
-      phoneNumber?: string
-      company?: string
-      postalCode?: string
-      emailMarketingConsent?: boolean
-      smsMarketingConsent?: boolean
-      emailVerified?: boolean
-      phoneVerified?: boolean
-    }
+      firstName?: string;
+      lastName?: string;
+      emailAddress: string;
+      password?: string;
+      phoneNumber?: string;
+      company?: string;
+      postalCode?: string;
+      emailMarketingConsent?: boolean;
+      smsMarketingConsent?: boolean;
+      emailVerified?: boolean;
+      phoneVerified?: boolean;
+    };
     ChangePasswordRequest: {
-      password?: string
-    }
+      password?: string;
+    };
     UnsubscribeRequest: {
-      token: string
-    }
+      token: string;
+    };
     AddPerformerEventAlertRequest: {
-      email: string
+      email: string;
       /** Format: int32 */
-      regionId?: number
+      regionId?: number;
       /** Format: int64 */
-      performerId: number
-    }
+      performerId: number;
+    };
     SessionRequest: {
-      url?: string
+      url?: string;
       params?: {
-        empty?: boolean
+        empty?: boolean;
       } & {
-        [key: string]: string
-      }
+        [key: string]: string;
+      };
       headers?: {
-        empty?: boolean
+        empty?: boolean;
       } & {
-        [key: string]: string
-      }
-    }
+        [key: string]: string;
+      };
+    };
     SessionResponse: {
-      sessionId: string
-      profileId: string
-      profileData: string
-      status?: string
-      sessionData?: string
-    }
+      sessionId: string;
+      profileId: string;
+      profileData: string;
+      status?: string;
+      sessionData?: string;
+    };
     GetSTCRequest: {
-      firstName?: string
-      lastName?: string
-      email?: string
-      phone?: string
-      countryCode?: string
-      state?: string
-      eventTimeLocal?: string
-    }
+      firstName?: string;
+      lastName?: string;
+      email?: string;
+      phone?: string;
+      countryCode?: string;
+      state?: string;
+      eventTimeLocal?: string;
+    };
     GetSTCResponse: {
-      clientMetadataId?: string
-    }
+      clientMetadataId?: string;
+    };
     SendGetTicketsEmailRequest: {
       /** Format: int64 */
-      orderId: number
-    }
+      orderId: number;
+    };
     FindOrderRequest: {
-      email: string
+      email: string;
       /** Format: int64 */
-      orderId: number
-    }
+      orderId: number;
+    };
     Address: {
-      phoneNumber?: string
-      firstName: string
-      lastName: string
-      company?: string
-      postalCode: string
-      address1: string
-      address2?: string
-      city: string
-      state: string
-      country: string
-      save?: boolean
-    }
+      phoneNumber?: string;
+      firstName: string;
+      lastName: string;
+      company?: string;
+      postalCode: string;
+      address1: string;
+      address2?: string;
+      city: string;
+      state: string;
+      country: string;
+      save?: boolean;
+    };
     Order: {
       /** Format: int64 */
-      id: number
+      id: number;
       /** Format: date-time */
-      createdAt: string
-      status: components['schemas']['OrderStatus']
-      emailAddress: string
-      phoneNumber: string
-      deliveryMethod?: string
-      deliveryMethodDetails?: components['schemas']['DeliveryMethod']
-      serviceFee: number
-      taxAmount: number
-      deliveryFee: number
-      insuranceFee: number
-      hasInsurance: boolean
+      createdAt: string;
+      status: components['schemas']['OrderStatus'];
+      emailAddress: string;
+      phoneNumber: string;
+      deliveryMethod?: string;
+      deliveryMethodDetails?: components['schemas']['DeliveryMethod'];
+      serviceFee: number;
+      taxAmount: number;
+      deliveryFee: number;
+      insuranceFee: number;
+      hasInsurance: boolean;
       /** @enum {string} */
-      insuranceOfferStatus?: 'NO_OFFER' | 'ACCEPTED' | 'DECLINED'
-      otherFee?: number
-      orderTotal: number
+      insuranceOfferStatus?: 'NO_OFFER' | 'ACCEPTED' | 'DECLINED';
+      otherFee?: number;
+      orderTotal: number;
       /** Format: date */
-      inHandDate?: string
-      orderNotes?: string
-      delivered: boolean
+      inHandDate?: string;
+      orderNotes?: string;
+      delivered: boolean;
       /** Format: date-time */
-      deliveryTime?: string
-      processed: boolean
-      cancelled: boolean
-      billingAddress?: components['schemas']['Address']
-      shippingAddress?: components['schemas']['Address']
-      items: components['schemas']['OrderItem'][]
-      paymentMethod?: string
-      creditCardLastFour?: string
-      creditCardType?: string
-      identityVerificationUrl?: string
-      gp?: number
-      showReviewPopup?: boolean
-      insurance?: components['schemas']['OrderInsurance']
-      declinedInsurance: boolean
-      rca?: boolean
-      promoCodeLastFour?: string
-    }
+      deliveryTime?: string;
+      processed: boolean;
+      cancelled: boolean;
+      billingAddress?: components['schemas']['Address'];
+      shippingAddress?: components['schemas']['Address'];
+      items: components['schemas']['OrderItem'][];
+      paymentMethod?: string;
+      creditCardLastFour?: string;
+      creditCardType?: string;
+      identityVerificationUrl?: string;
+      gp?: number;
+      showReviewPopup?: boolean;
+      insurance?: components['schemas']['OrderInsurance'];
+      declinedInsurance: boolean;
+      rca?: boolean;
+      promoCodeLastFour?: string;
+    };
     OrderInsurance: {
       /** Format: int64 */
-      id?: number
+      id?: number;
       /** Format: int64 */
-      orderId?: number
-      allianzExternalCode?: string
-      allianzQuoteId?: string
-      allianzCxid?: string
-      allianzResponseId?: string
-      purchase?: boolean
+      orderId?: number;
+      allianzExternalCode?: string;
+      allianzQuoteId?: string;
+      allianzCxid?: string;
+      allianzResponseId?: string;
+      purchase?: boolean;
       /** @enum {string} */
-      purchaseAuthorizationStatus?:
-        | 'COMPLETE'
-        | 'INCOMPLETE'
-        | 'RESIGN'
-        | 'DECLINED_OFFER'
+      purchaseAuthorizationStatus?: 'COMPLETE' | 'INCOMPLETE' | 'RESIGN' | 'DECLINED_OFFER';
       /** @enum {string} */
       requestStatus?:
         | 'SUCCESS_PURCHASE'
         | 'SUCCESS_DECLINE'
         | 'PAYMENT_FAILED'
         | 'FAILED'
-        | 'NOT_SUBMITTED'
+        | 'NOT_SUBMITTED';
       /** Format: date-time */
-      nextRetryTime?: string
+      nextRetryTime?: string;
       /** Format: int32 */
-      retryCount?: number
-      success?: boolean
-      braintreeTransactionId?: string
-      braintreePaymentMethodToken?: string
-      waitingPurchaseDecision?: boolean
-      reconciled?: boolean
-      actualAmountReceived?: number
-      reconciliationId?: string
-      adjustmentAmount?: number
-      cancelled?: boolean
+      retryCount?: number;
+      success?: boolean;
+      braintreeTransactionId?: string;
+      braintreePaymentMethodToken?: string;
+      waitingPurchaseDecision?: boolean;
+      reconciled?: boolean;
+      actualAmountReceived?: number;
+      reconciliationId?: string;
+      adjustmentAmount?: number;
+      cancelled?: boolean;
       /** Format: int64 */
-      updateUserId?: number
-      updateUser?: string
-    }
+      updateUserId?: number;
+      updateUser?: string;
+    };
     OrderItem: {
-      event: components['schemas']['Event']
-      section: string
-      row: string
-      lowSeat?: string
-      highSeat?: string
-      notes?: string
+      event: components['schemas']['Event'];
+      section: string;
+      row: string;
+      lowSeat?: string;
+      highSeat?: string;
+      notes?: string;
       /** Format: int32 */
-      quantity: number
-      unitBilled: number
-      flex: boolean
-      instant: boolean
-      stockType: string
-      fulfilled: boolean
+      quantity: number;
+      unitBilled: number;
+      flex: boolean;
+      instant: boolean;
+      stockType: string;
+      fulfilled: boolean;
       /** @enum {string} */
       fulfillmentMethod?:
         | 'SUBMIT_TRANSFER_URL'
@@ -1421,7 +1417,7 @@ export interface components {
         | 'PRINT_AT_HOME'
         | 'CUSTOMER_PICK_UP'
         | 'ACCOUNT_SURRENDER'
-        | 'UPS'
+        | 'UPS';
       /** @enum {string} */
       transferSource?:
         | 'TICKETMASTER'
@@ -1435,10478 +1431,10450 @@ export interface components {
         | 'PK_PASS'
         | 'DICE'
         | 'PARK_WHIZ'
-        | 'OTHER'
-      customerPickupContactName?: string
-      customerPickupContactPhone?: string
-      customerPickupLocation?: string
-      customerPickupNotes?: string
-      upgradeSection?: string
-      upgradeRow?: string
-      upgradeNotes?: string
-      trackingNumber?: string
-      trackingUrl?: string
+        | 'OTHER';
+      customerPickupContactName?: string;
+      customerPickupContactPhone?: string;
+      customerPickupLocation?: string;
+      customerPickupNotes?: string;
+      upgradeSection?: string;
+      upgradeRow?: string;
+      upgradeNotes?: string;
+      trackingNumber?: string;
+      trackingUrl?: string;
       /** Format: int64 */
-      listingId?: number
-    }
+      listingId?: number;
+    };
     OrderStatus: {
       /** Format: int64 */
-      id: number
-      name: string
-      headline: string
-      description: string
+      id: number;
+      name: string;
+      headline: string;
+      description: string;
       /** @enum {string} */
-      actionParty: 'SELLER' | 'BUYER' | 'INTERNAL' | 'NONE'
-    }
+      actionParty: 'SELLER' | 'BUYER' | 'INTERNAL' | 'NONE';
+    };
     DownloadFileRequest: {
-      accessToken: string
-    }
+      accessToken: string;
+    };
     DownloadFileResponse: {
-      base64FileBytes?: string
-    }
+      base64FileBytes?: string;
+    };
     TransferUrlRequest: {
-      accessToken: string
-    }
+      accessToken: string;
+    };
     TransferUrlResponse: {
-      transferUrl?: string
-    }
+      transferUrl?: string;
+    };
     PurchaseWebRequest: {
       /** Format: int64 */
-      orderId: number
-      paymentMethodNonce?: string
-    }
+      orderId: number;
+      paymentMethodNonce?: string;
+    };
     QuoteWebRequest: {
-      cartUuid: string
-      paymentMethod: string
-      address: components['schemas']['Address']
-      userAgent?: string
-    }
+      cartUuid: string;
+      paymentMethod: string;
+      address: components['schemas']['Address'];
+      userAgent?: string;
+    };
     GroupPrice: {
-      adminFee?: string
-      price?: number
+      adminFee?: string;
+      price?: number;
       /** Format: int32 */
-      sequence?: number
-      sequenceName?: string
-    }
+      sequence?: number;
+      sequenceName?: string;
+    };
     IndividualPrice: {
-      adminFee?: string
-      price?: number
+      adminFee?: string;
+      price?: number;
       /** Format: int32 */
-      sequence?: number
-      sequenceName?: string
-    }
+      sequence?: number;
+      sequenceName?: string;
+    };
     Location: {
-      locationCode?: string
-      locationType?: string
-      autoRender?: boolean
-      output?: string
-      outputType?: string
-      selector?: string
-      status?: components['schemas']['LocationStatus']
-      offers?: components['schemas']['Offer'][]
-      templateCode?: string
-      treatmentCode?: string
-    }
+      locationCode?: string;
+      locationType?: string;
+      autoRender?: boolean;
+      output?: string;
+      outputType?: string;
+      selector?: string;
+      status?: components['schemas']['LocationStatus'];
+      offers?: components['schemas']['Offer'][];
+      templateCode?: string;
+      treatmentCode?: string;
+    };
     LocationStatus: {
-      code?: string
-      errorText?: string
-      message?: string
-      reason?: string
-    }
+      code?: string;
+      errorText?: string;
+      message?: string;
+      reason?: string;
+    };
     Message: {
       /** Format: int32 */
-      messageSequence?: number
-      messageTag?: string
-      compiledMessage?: string
-    }
+      messageSequence?: number;
+      messageTag?: string;
+      compiledMessage?: string;
+    };
     Offer: {
-      contentCode?: string
-      contentType?: string
-      id?: string
+      contentCode?: string;
+      contentType?: string;
+      id?: string;
       /** Format: int32 */
-      sequence?: number
-      messages?: components['schemas']['Message'][]
-    }
+      sequence?: number;
+      messages?: components['schemas']['Message'][];
+    };
     Price: {
-      isAvailable?: boolean
-      isIncluded?: boolean
-      price?: number
-      sequences?: components['schemas']['Sequence'][]
-    }
+      isAvailable?: boolean;
+      isIncluded?: boolean;
+      price?: number;
+      sequences?: components['schemas']['Sequence'][];
+    };
     Product: {
-      isAvailable?: boolean
-      externalCode?: string
-      individualPrices?: components['schemas']['IndividualPrice'][]
-      groupPrices?: components['schemas']['GroupPrice'][]
-      prices?: components['schemas']['Price'][]
-      pricingModelCode?: string
-      pricingModelDescription?: string
-      pricingModelMaxAmount?: number
-      pricingModelMinAmount?: number
-      productCode?: string
-      productName?: string
-      productSpecificMessages?: components['schemas']['ProductSpecificMessage'][]
-      productType?: string
-      supplierCode?: string
-      totalPrice?: number
-      quoteId?: string
-      offerId?: string
-    }
+      isAvailable?: boolean;
+      externalCode?: string;
+      individualPrices?: components['schemas']['IndividualPrice'][];
+      groupPrices?: components['schemas']['GroupPrice'][];
+      prices?: components['schemas']['Price'][];
+      pricingModelCode?: string;
+      pricingModelDescription?: string;
+      pricingModelMaxAmount?: number;
+      pricingModelMinAmount?: number;
+      productCode?: string;
+      productName?: string;
+      productSpecificMessages?: components['schemas']['ProductSpecificMessage'][];
+      productType?: string;
+      supplierCode?: string;
+      totalPrice?: number;
+      quoteId?: string;
+      offerId?: string;
+    };
     ProductSpecificMessage: {
-      type?: string
-      uri?: string
-    }
+      type?: string;
+      uri?: string;
+    };
     QuoteResponse: {
-      status?: components['schemas']['Status']
-      products?: components['schemas']['Product'][]
-      locations?: components['schemas']['Location'][]
-      transactionDetails?: components['schemas']['TransactionDetails']
-    }
+      status?: components['schemas']['Status'];
+      products?: components['schemas']['Product'][];
+      locations?: components['schemas']['Location'][];
+      transactionDetails?: components['schemas']['TransactionDetails'];
+    };
     Sequence: {
-      name?: string
-      event?: string
+      name?: string;
+      event?: string;
       /** Format: int32 */
-      value?: number
-    }
+      value?: number;
+    };
     Status: {
-      code?: string
-      creationDate?: string
-      processId?: string
-      version?: string
-    }
+      code?: string;
+      creationDate?: string;
+      processId?: string;
+      version?: string;
+    };
     TransactionDetails: {
-      controlType?: string
-      cxid?: string
-      responseId?: string
-      segmentCode?: string
-      treatmentId?: string
-      treeCode?: string
-      populationCode?: string
-    }
+      controlType?: string;
+      cxid?: string;
+      responseId?: string;
+      segmentCode?: string;
+      treatmentId?: string;
+      treeCode?: string;
+      populationCode?: string;
+    };
     ExperimentSession: {
       /** Format: int64 */
-      id?: number
-      experimentUuid: string
-      variantUuid: string
-      sessionUuid?: string
+      id?: number;
+      experimentUuid: string;
+      variantUuid: string;
+      sessionUuid?: string;
       /** Format: int64 */
-      eventId?: number
-    }
+      eventId?: number;
+    };
     EmailSupportRequest: {
-      fromEmail: string
-      fromFirstName: string
-      fromLastName: string
-      mobilePhone: string
-      orderId?: string
-      message: string
-    }
+      fromEmail: string;
+      fromFirstName: string;
+      fromLastName: string;
+      mobilePhone: string;
+      orderId?: string;
+      message: string;
+    };
     SellTicketsForm: {
-      firstName: string
-      lastName: string
-      mobilePhone: string
-      emailAddress: string
-      event: string
+      firstName: string;
+      lastName: string;
+      mobilePhone: string;
+      emailAddress: string;
+      event: string;
       /** Format: int32 */
-      quantity: number
-      section: string
-      row: string
-      lowSeat?: string
-      highSeat?: string
-      deliveryMethod: string
-      inPossession?: boolean
+      quantity: number;
+      section: string;
+      row: string;
+      lowSeat?: string;
+      highSeat?: string;
+      deliveryMethod: string;
+      inPossession?: boolean;
       /** Format: date */
-      inHandDate?: string
-      askingPrice?: number
-      notes?: string
-    }
+      inHandDate?: string;
+      askingPrice?: number;
+      notes?: string;
+    };
     CreateCartRequest: {
-      emailAddress: string
+      emailAddress: string;
       /** Format: int64 */
-      listingId: number
+      listingId: number;
       /** Format: int32 */
-      quantity: number
+      quantity: number;
       /** Format: int64 */
-      eventId: number
-      emailOptIn?: boolean
-      smsOptIn?: boolean
-      checkoutVersion?: string
-    }
+      eventId: number;
+      emailOptIn?: boolean;
+      smsOptIn?: boolean;
+      checkoutVersion?: string;
+    };
     ApplyPromoByEmailTokenRequest: {
-      token?: string
-    }
+      token?: string;
+    };
     InsuranceData: {
-      externalCode?: string
-      quoteId?: string
-      cxid?: string
-      responseId?: string
-    }
+      externalCode?: string;
+      quoteId?: string;
+      cxid?: string;
+      responseId?: string;
+    };
     PlaceOrderRequest: {
-      shippingAddress?: components['schemas']['Address']
-      billingAddress: components['schemas']['Address']
-      shippingIsBilling?: boolean
+      shippingAddress?: components['schemas']['Address'];
+      billingAddress: components['schemas']['Address'];
+      shippingIsBilling?: boolean;
       /** @description Required if the cart has an outstanding balance. */
-      paymentNonce?: string
+      paymentNonce?: string;
       /** @enum {string} */
-      paymentMethod?: 'applePay' | 'googlePay' | 'payPal' | 'creditCard'
-      customer: components['schemas']['Customer']
-      emailAddress: string
-      phoneNumber: string
-      cartUuid: string
-      hasInsurance?: boolean
-      insuranceFee?: number
-      orderTotal: number
+      paymentMethod?: 'applePay' | 'googlePay' | 'payPal' | 'creditCard';
+      customer: components['schemas']['Customer'];
+      emailAddress: string;
+      phoneNumber: string;
+      cartUuid: string;
+      hasInsurance?: boolean;
+      insuranceFee?: number;
+      orderTotal: number;
       /** Format: int64 */
-      deliveryMethodId: number
-      confirmedMultipleEventOrders?: boolean
-      braintreeDeviceData?: string
-      unitBilled?: number
-      serviceFee?: number
-      deliveryFee?: number
-      taxAmount?: number
-      devicePayload?: string
-      insuranceData?: components['schemas']['InsuranceData']
-      cardVerificationNonce?: string
-      postponedInsuranceOffer?: boolean
-    }
+      deliveryMethodId: number;
+      confirmedMultipleEventOrders?: boolean;
+      braintreeDeviceData?: string;
+      unitBilled?: number;
+      serviceFee?: number;
+      deliveryFee?: number;
+      taxAmount?: number;
+      devicePayload?: string;
+      insuranceData?: components['schemas']['InsuranceData'];
+      cardVerificationNonce?: string;
+      postponedInsuranceOffer?: boolean;
+    };
     PlaceOrderResponse: {
       /** Format: int64 */
-      orderId?: number
-    }
+      orderId?: number;
+    };
     ResetPasswordRequest: {
-      password: string
-      token: string
-    }
+      password: string;
+      token: string;
+    };
     TokenRequest: {
-      token: string
-    }
+      token: string;
+    };
     JwtAuthenticationResponse: {
-      accessToken?: string
-      tokenType?: string
-      customer?: components['schemas']['Customer']
-    }
+      accessToken?: string;
+      tokenType?: string;
+      customer?: components['schemas']['Customer'];
+    };
     LoginRequest: {
-      email: string
-      password: string
-    }
+      email: string;
+      password: string;
+    };
     FullSessionResponse: {
-      userSession?: components['schemas']['UserSession']
-      userProfile?: components['schemas']['UserProfile']
-    }
+      userSession?: components['schemas']['UserSession'];
+      userProfile?: components['schemas']['UserProfile'];
+    };
     UserProfile: {
-      profileId?: string
-      utmSource?: string
-      utmMedium?: string
-      utmCampaign?: string
-      utmTerm?: string
-      utmContent?: string
-      gclid?: string
-      msclkid?: string
+      profileId?: string;
+      utmSource?: string;
+      utmMedium?: string;
+      utmCampaign?: string;
+      utmTerm?: string;
+      utmContent?: string;
+      gclid?: string;
+      msclkid?: string;
       /** Format: int64 */
-      keywordId?: number
-      target?: string
-      adGroup?: string
+      keywordId?: number;
+      target?: string;
+      adGroup?: string;
       /** Format: int64 */
-      regionId?: number
-      url?: string
-      userAgent?: string
-      referrer?: string
-      city?: string
-      state?: string
+      regionId?: number;
+      url?: string;
+      userAgent?: string;
+      referrer?: string;
+      city?: string;
+      state?: string;
       /** Format: int32 */
-      metroCode?: number
-      ipAddress?: string
-      gbraid?: string
-      wbraid?: string
-    }
+      metroCode?: number;
+      ipAddress?: string;
+      gbraid?: string;
+      wbraid?: string;
+    };
     UserSession: {
-      sessionId?: string
-      profileId?: string
-      startTime?: string
-      priceModel?: string
-      experimentSessions?: components['schemas']['ExperimentSession'][]
-    }
+      sessionId?: string;
+      profileId?: string;
+      startTime?: string;
+      priceModel?: string;
+      experimentSessions?: components['schemas']['ExperimentSession'][];
+    };
     AdGroupEntityResult: {
-      performer?: components['schemas']['Performer']
-      venue?: components['schemas']['Venue']
-      region?: components['schemas']['Region']
-    }
+      performer?: components['schemas']['Performer'];
+      venue?: components['schemas']['Venue'];
+      region?: components['schemas']['Region'];
+    };
     Region: {
       /** Format: int64 */
-      id: number
-      name: string
+      id: number;
+      name: string;
       /** Format: double */
-      latitude?: number
+      latitude?: number;
       /** Format: double */
-      longitude?: number
+      longitude?: number;
       /** Format: int32 */
-      venueRadius: number
-      heroImagePath?: string
-      heroImageCredit?: string
-      cardImagePath?: string
-      slug?: string
-    }
+      venueRadius: number;
+      heroImagePath?: string;
+      heroImageCredit?: string;
+      cardImagePath?: string;
+      slug?: string;
+    };
     SearchAdGroupResult: {
-      adGroupEntityResult?: components['schemas']['AdGroupEntityResult']
-      events?: components['schemas']['Event'][]
-    }
+      adGroupEntityResult?: components['schemas']['AdGroupEntityResult'];
+      events?: components['schemas']['Event'][];
+    };
     SearchResult: {
-      performers?: components['schemas']['Performer'][]
-      events?: components['schemas']['Event'][]
-      venues?: components['schemas']['Venue'][]
-      parkingPerformers?: components['schemas']['Performer'][]
-    }
+      performers?: components['schemas']['Performer'][];
+      events?: components['schemas']['Event'][];
+      venues?: components['schemas']['Venue'][];
+      parkingPerformers?: components['schemas']['Performer'][];
+    };
     TrendingResult: {
-      trendingEvents?: components['schemas']['Event'][]
-      trendingVenues?: components['schemas']['Venue'][]
-      trendingConcertPerformers?: components['schemas']['Performer'][]
-      trendingSportsPerformers?: components['schemas']['Performer'][]
-      trendingTheaterPerformers?: components['schemas']['Performer'][]
-      trendingComedyPerformers?: components['schemas']['Performer'][]
-    }
+      trendingEvents?: components['schemas']['Event'][];
+      trendingVenues?: components['schemas']['Venue'][];
+      trendingConcertPerformers?: components['schemas']['Performer'][];
+      trendingSportsPerformers?: components['schemas']['Performer'][];
+      trendingTheaterPerformers?: components['schemas']['Performer'][];
+      trendingComedyPerformers?: components['schemas']['Performer'][];
+    };
     ClientTokenResponse: {
-      token?: string
-    }
+      token?: string;
+    };
     Geolocation: {
-      locationDisplay?: string
-      city?: string
-      stateAbbreviation?: string
-      state?: string
+      locationDisplay?: string;
+      city?: string;
+      stateAbbreviation?: string;
+      state?: string;
       /** Format: int32 */
-      metroCode?: number
+      metroCode?: number;
       /** Format: double */
-      latitude?: number
+      latitude?: number;
       /** Format: double */
-      longitude?: number
-      closestRegion?: components['schemas']['Region']
-    }
+      longitude?: number;
+      closestRegion?: components['schemas']['Region'];
+    };
     ListingAttribute: {
       /** Format: int64 */
-      id: number
-      disclosure: boolean
-      viewDisclosure: boolean
-      name: string
-    }
+      id: number;
+      disclosure: boolean;
+      viewDisclosure: boolean;
+      name: string;
+    };
     GetEventResponse: {
-      event?: components['schemas']['Event']
-      redirect?: boolean
-      redirectLocation?: string
-    }
+      event?: components['schemas']['Event'];
+      redirect?: boolean;
+      redirectLocation?: string;
+    };
     GetEventMetadataResponse: {
-      heroImage?: string
-      title?: string
-      metaDescription?: string
-      metaKeywords?: string
-      event?: components['schemas']['Event']
-      redirect?: boolean
-      redirectLocation?: string
-    }
+      heroImage?: string;
+      title?: string;
+      metaDescription?: string;
+      metaKeywords?: string;
+      event?: components['schemas']['Event'];
+      redirect?: boolean;
+      redirectLocation?: string;
+    };
     ListingPayload: {
-      listings?: components['schemas']['Listing'][]
-      event?: components['schemas']['Event']
-      venueConfiguration?: components['schemas']['VenueConfiguration']
-      redirect?: boolean
-      redirectLocation?: string
-      expVariantString?: string
-      experimentId?: string
+      listings?: components['schemas']['Listing'][];
+      event?: components['schemas']['Event'];
+      venueConfiguration?: components['schemas']['VenueConfiguration'];
+      redirect?: boolean;
+      redirectLocation?: string;
+      expVariantString?: string;
+      experimentId?: string;
       /** Format: int32 */
-      variationId?: number
-    }
+      variationId?: number;
+    };
     LucenePaginatedResultEvent: {
-      results?: components['schemas']['Event'][]
-      pagination?: components['schemas']['LucenePagination']
-    }
+      results?: components['schemas']['Event'][];
+      pagination?: components['schemas']['LucenePagination'];
+    };
     LucenePagination: {
       /** Format: int32 */
-      currentPage?: number
+      currentPage?: number;
       /** Format: int32 */
-      pageSize?: number
+      pageSize?: number;
       /** Format: int32 */
-      totalPages?: number
+      totalPages?: number;
       /** Format: int32 */
-      totalResults?: number
-      hasNextPage?: boolean
-      hasPreviousPage?: boolean
-    }
+      totalResults?: number;
+      hasNextPage?: boolean;
+      hasPreviousPage?: boolean;
+    };
     CheckoutListingPayload: {
-      listings?: components['schemas']['Listing'][]
-      event?: components['schemas']['Event']
-      venueConfiguration?: components['schemas']['VenueConfiguration']
-      redirect?: boolean
-      redirectLocation?: string
-      expVariantString?: string
-      experimentId?: string
+      listings?: components['schemas']['Listing'][];
+      event?: components['schemas']['Event'];
+      venueConfiguration?: components['schemas']['VenueConfiguration'];
+      redirect?: boolean;
+      redirectLocation?: string;
+      expVariantString?: string;
+      experimentId?: string;
       /** Format: int32 */
-      variationId?: number
-    }
+      variationId?: number;
+    };
     CmsPathResponse: {
       /** Format: int64 */
-      pageId?: number
-      path?: string
-      title?: string
-      metaDescription?: string
-      metaKeywords?: string
-      event?: components['schemas']['Event']
-      venue?: components['schemas']['Venue']
-      region?: components['schemas']['Region']
-      performer?: components['schemas']['Performer']
-      template?: string
-      events?: components['schemas']['Event'][]
-      paginatedEvents?: components['schemas']['PaginatedResultEvent']
+      pageId?: number;
+      path?: string;
+      title?: string;
+      metaDescription?: string;
+      metaKeywords?: string;
+      event?: components['schemas']['Event'];
+      venue?: components['schemas']['Venue'];
+      region?: components['schemas']['Region'];
+      performer?: components['schemas']['Performer'];
+      template?: string;
+      events?: components['schemas']['Event'][];
+      paginatedEvents?: components['schemas']['PaginatedResultEvent'];
       customFieldValues?: {
-        [key: string]: string
-      }
-      topPerformers?: components['schemas']['Performer'][]
-      category?: components['schemas']['Category']
-      redirect?: boolean
-      redirectLocation?: string
-      eventSearchParameters?: components['schemas']['EventSearchParameters']
-      showScarcity?: boolean
-      cookies?: components['schemas']['Cookie'][]
-    }
+        [key: string]: string;
+      };
+      topPerformers?: components['schemas']['Performer'][];
+      category?: components['schemas']['Category'];
+      redirect?: boolean;
+      redirectLocation?: string;
+      eventSearchParameters?: components['schemas']['EventSearchParameters'];
+      showScarcity?: boolean;
+      cookies?: components['schemas']['Cookie'][];
+    };
     Cookie: {
-      name?: string
-      value?: string
+      name?: string;
+      value?: string;
       attributes?: {
-        [key: string]: string
-      }
+        [key: string]: string;
+      };
       /** Format: int32 */
-      maxAge?: number
-      secure?: boolean
-      httpOnly?: boolean
-      domain?: string
-      path?: string
+      maxAge?: number;
+      secure?: boolean;
+      httpOnly?: boolean;
+      domain?: string;
+      path?: string;
       /** @deprecated */
-      comment?: string
+      comment?: string;
       /**
        * Format: int32
        * @deprecated
        */
-      version?: number
-    }
+      version?: number;
+    };
     EventSearchParameters: {
-      eventId?: number[]
-      categoryId?: number[]
-      city?: string
-      state?: string
-      performerId?: number[]
-      venueId?: number[]
+      eventId?: number[];
+      categoryId?: number[];
+      city?: string;
+      state?: string;
+      performerId?: number[];
+      venueId?: number[];
       /** Format: date-time */
-      eventTimeFrom?: string
+      eventTimeFrom?: string;
       /** Format: date-time */
-      eventTimeTo?: string
-      keyword?: string
+      eventTimeTo?: string;
+      keyword?: string;
       /** Format: int64 */
-      venueConfigurationId?: number
+      venueConfigurationId?: number;
       /** @description Filter event occurring during daytime when true and nightly when false. */
-      daytime?: boolean
-      eventStatus?: (
-        | 'AS_SCHEDULED'
-        | 'POSTPONED'
-        | 'CANCELLED'
-        | 'RESCHEDULED'
-        | 'MERGED'
-      )[]
+      daytime?: boolean;
+      eventStatus?: ('AS_SCHEDULED' | 'POSTPONED' | 'CANCELLED' | 'RESCHEDULED' | 'MERGED')[];
       /** Format: int64 */
-      parkingVenueId?: number
+      parkingVenueId?: number;
       /** Format: int64 */
-      regionId?: number
+      regionId?: number;
       /** Format: int32 */
-      pageSize?: number
+      pageSize?: number;
       /** Format: int32 */
-      pageNumber?: number
-      sortBy?: string
+      pageNumber?: number;
+      sortBy?: string;
       /** @enum {string} */
-      sortDirection?: 'ASC' | 'DESC'
+      sortDirection?: 'ASC' | 'DESC';
       /** @enum {string} */
-      categoryEventType?:
-        | 'CONCERTS'
-        | 'COMEDY'
-        | 'SPORTS'
-        | 'THEATER'
-        | 'PARKING'
+      categoryEventType?: 'CONCERTS' | 'COMEDY' | 'SPORTS' | 'THEATER' | 'PARKING';
       /** Format: int32 */
-      lastSeenDoc?: number
+      lastSeenDoc?: number;
       /** Format: int64 */
-      lastSeenFields?: number
-    }
+      lastSeenFields?: number;
+    };
     PaginatedResultEvent: {
-      results?: components['schemas']['Event'][]
-      pagination?: components['schemas']['Pagination']
-    }
+      results?: components['schemas']['Event'][];
+      pagination?: components['schemas']['Pagination'];
+    };
     Pagination: {
       /** Format: int32 */
-      currentPage?: number
+      currentPage?: number;
       /** Format: int32 */
-      pageSize?: number
+      pageSize?: number;
       /** Format: int32 */
-      totalPages?: number
+      totalPages?: number;
       /** Format: int32 */
-      totalResults?: number
-      hasNextPage?: boolean
-      hasPreviousPage?: boolean
-    }
-  }
-  responses: never
-  parameters: never
-  requestBodies: never
-  headers: never
-  pathItems: never
+      totalResults?: number;
+      hasNextPage?: boolean;
+      hasPreviousPage?: boolean;
+    };
+  };
+  responses: never;
+  parameters: never;
+  requestBodies: never;
+  headers: never;
+  pathItems: never;
 }
-export type $defs = Record<string, never>
+export type $defs = Record<string, never>;
 export interface operations {
   findByUuidWithListings: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'cart-uuid': string
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'cart-uuid': string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Cart']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Cart'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   updateCart: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'cart-uuid': string
-      }
-      cookie?: never
-    }
+        'cart-uuid': string;
+      };
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['UpdateCartRequest']
-      }
-    }
+        'application/json': components['schemas']['UpdateCartRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Cart']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Cart'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getLoggedInUser: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Customer']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Customer'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   updateProfile: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['UpdateCustomerRequest']
-      }
-    }
+        'application/json': components['schemas']['UpdateCustomerRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Customer']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Customer'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   updatePassword: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['ChangePasswordRequest']
-      }
-    }
+        'application/json': components['schemas']['ChangePasswordRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   unsubscribe: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['UnsubscribeRequest']
-      }
-    }
+        'application/json': components['schemas']['UnsubscribeRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   addPerformerEventAlert: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['AddPerformerEventAlertRequest']
-      }
-    }
+        'application/json': components['schemas']['AddPerformerEventAlertRequest'];
+      };
+    };
     responses: {
       /** @description No Content */
       204: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   addCartAbandonment: {
     parameters: {
       query: {
-        token: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        token: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getSession: {
     parameters: {
       query: {
-        sessionId: string
-      }
-      header?: never
-      path?: never
+        sessionId: string;
+      };
+      header?: never;
+      path?: never;
       cookie?: {
-        gt_sdt?: string
-        gt_pdt?: string
-      }
-    }
-    requestBody?: never
+        gt_sdt?: string;
+        gt_pdt?: string;
+      };
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['FullSessionResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['FullSessionResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   postSession: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
+      query?: never;
+      header?: never;
+      path?: never;
       cookie?: {
-        gt_pid?: string
-        gt_pdt?: string
-        gt_sid?: string
-        gt_sdt?: string
-      }
-    }
+        gt_pid?: string;
+        gt_pdt?: string;
+        gt_sid?: string;
+        gt_sdt?: string;
+      };
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['SessionRequest']
-      }
-    }
+        'application/json': components['schemas']['SessionRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['SessionResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['SessionResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   validatePromoCode: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': string
-      }
-    }
+        'application/json': string;
+      };
+    };
     responses: {
       /** @description No Content */
       204: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getSTC: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['GetSTCRequest']
-      }
-    }
+        'application/json': components['schemas']['GetSTCRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['GetSTCResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['GetSTCResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   confirmTransferReceipt: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'secret-value': string
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'secret-value': string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   sendGetTicketsEmail: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['SendGetTicketsEmailRequest']
-      }
-    }
+        'application/json': components['schemas']['SendGetTicketsEmailRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   findByEmailAndOrderId: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['FindOrderRequest']
-      }
-    }
+        'application/json': components['schemas']['FindOrderRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Order']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Order'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   downloadFile: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['DownloadFileRequest']
-      }
-    }
+        'application/json': components['schemas']['DownloadFileRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['DownloadFileResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['DownloadFileResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   acceptTransferUrl: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['TransferUrlRequest']
-      }
-    }
+        'application/json': components['schemas']['TransferUrlRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['TransferUrlResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['TransferUrlResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   purchase: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['PurchaseWebRequest']
-      }
-    }
+        'application/json': components['schemas']['PurchaseWebRequest'];
+      };
+    };
     responses: {
       /** @description No Content */
       204: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getInsuranceQuote: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['QuoteWebRequest']
-      }
-    }
+        'application/json': components['schemas']['QuoteWebRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['QuoteResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['QuoteResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   insertExperimentSession: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
+      query?: never;
+      header?: never;
+      path?: never;
       cookie?: {
-        gt_sid?: string
-      }
-    }
+        gt_sid?: string;
+      };
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['ExperimentSession']
-      }
-    }
+        'application/json': components['schemas']['ExperimentSession'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   emailSupport: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['EmailSupportRequest']
-      }
-    }
+        'application/json': components['schemas']['EmailSupportRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   submitSellTicketsForm: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['SellTicketsForm']
-      }
-    }
+        'application/json': components['schemas']['SellTicketsForm'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   createCart: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
+      query?: never;
+      header?: never;
+      path?: never;
       cookie?: {
-        gt_pid?: string
-        gt_sid?: string
-        gt_pdt?: string
-      }
-    }
+        gt_pid?: string;
+        gt_sid?: string;
+        gt_pdt?: string;
+      };
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['CreateCartRequest']
-      }
-    }
+        'application/json': components['schemas']['CreateCartRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Cart']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Cart'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   applyPromoCode: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'cart-uuid': string
-      }
-      cookie?: never
-    }
+        'cart-uuid': string;
+      };
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': string
-      }
-    }
+        'application/json': string;
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Cart']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Cart'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   applyPromoByEmailToken: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'cart-uuid': string
-      }
-      cookie?: never
-    }
+        'cart-uuid': string;
+      };
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['ApplyPromoByEmailTokenRequest']
-      }
-    }
+        'application/json': components['schemas']['ApplyPromoByEmailTokenRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   createOrder: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'cart-uuid': string
-      }
+        'cart-uuid': string;
+      };
       cookie?: {
-        gt_pid?: string
-        gt_sid?: string
-        gt_pdt?: string
-        _ga?: string
-        _gid?: string
-      }
-    }
+        gt_pid?: string;
+        gt_sid?: string;
+        gt_pdt?: string;
+        _ga?: string;
+        _gid?: string;
+      };
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['PlaceOrderRequest']
-      }
-    }
+        'application/json': components['schemas']['PlaceOrderRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['PlaceOrderResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['PlaceOrderResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   verifyToken: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': string
-      }
-    }
+        'application/json': string;
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': number
-        }
-      }
+          'application/json;charset=utf-8': number;
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   resetPassword: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['ResetPasswordRequest']
-      }
-    }
+        'application/json': components['schemas']['ResetPasswordRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   authenticateUserByFPT: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['TokenRequest']
-      }
-    }
+        'application/json': components['schemas']['TokenRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['JwtAuthenticationResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['JwtAuthenticationResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   authenticateUser: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['LoginRequest']
-      }
-    }
+        'application/json': components['schemas']['LoginRequest'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['JwtAuthenticationResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['JwtAuthenticationResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   forgotPassword: {
     parameters: {
       query: {
-        email: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        email: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   emailLogin: {
     parameters: {
       query: {
-        email: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        email: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   signup: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
     requestBody: {
       content: {
-        'application/json': components['schemas']['Customer']
-      }
-    }
+        'application/json': components['schemas']['Customer'];
+      };
+    };
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Customer']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Customer'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   searchAdGroup: {
     parameters: {
       query: {
-        adGroupId: number
-        venueResults?: boolean
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        adGroupId: number;
+        venueResults?: boolean;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['SearchAdGroupResult']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['SearchAdGroupResult'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   searchLucene: {
     parameters: {
       query?: {
         /** @description The keyword to search for. Ignored for the trending endpoint. */
-        keyword?: string
+        keyword?: string;
         /** @description The latitude of the location to search from, requires both latitude and longitude to be set */
-        latitude?: string
+        latitude?: string;
         /** @description The longitude of the location to search from, requires both latitude and longitude to be set */
-        longitude?: string
+        longitude?: string;
         /** @description The region id to search from. */
-        regionId?: string
+        regionId?: string;
         /** @description The venue id to search from. */
-        venueId?: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        venueId?: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['SearchResult']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['SearchResult'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   trending: {
     parameters: {
       query?: {
         /** @description The keyword to search for. Ignored for the trending endpoint. */
-        keyword?: string
+        keyword?: string;
         /** @description The latitude of the location to search from, requires both latitude and longitude to be set */
-        latitude?: string
+        latitude?: string;
         /** @description The longitude of the location to search from, requires both latitude and longitude to be set */
-        longitude?: string
+        longitude?: string;
         /** @description The region id to search from. */
-        regionId?: string
+        regionId?: string;
         /** @description The venue id to search from. */
-        venueId?: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        venueId?: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['TrendingResult']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['TrendingResult'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   trendingEvents: {
     parameters: {
       query?: {
         /** @description The region id to search from. */
-        regionId?: string
+        regionId?: string;
         /** @description Category id to search from. */
-        categoryId?: string
+        categoryId?: string;
         /** @description Venue id to search from. */
-        venueId?: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        venueId?: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Event'][]
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Event'][];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   listRegions: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Region'][]
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Region'][];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getPerformers: {
     parameters: {
       query?: {
-        performerId?: number[]
-        categoryId?: number[]
-        keyword?: string
-        homeVenueId?: number
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        performerId?: number[];
+        categoryId?: number[];
+        keyword?: string;
+        homeVenueId?: number;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Performer'][]
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Performer'][];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getClientToken: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['ClientTokenResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['ClientTokenResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getOrders: {
     parameters: {
       query?: {
-        orderTimeFrom?: string
-        orderTimeTo?: string
-        eventTimeFrom?: string
-        eventTimeTo?: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        orderTimeFrom?: string;
+        orderTimeTo?: string;
+        eventTimeFrom?: string;
+        eventTimeTo?: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Order'][]
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Order'][];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getOrder: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'order-id': number
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'order-id': number;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Order']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Order'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   locationForIpAddress: {
     parameters: {
       query: {
-        ipAddress: string
-        country: string
-        latitude?: number
-        longitude?: number
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        ipAddress: string;
+        country: string;
+        latitude?: number;
+        longitude?: number;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Geolocation']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Geolocation'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getAll: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['ListingAttribute'][]
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['ListingAttribute'][];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getFeatures: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        clientKey: string
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        clientKey: string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': string
-        }
-      }
+          'application/json;charset=utf-8': string;
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   searchEvents: {
     parameters: {
       query?: {
-        eventId?: number[]
-        categoryId?: number[]
-        city?: string
-        state?: string
-        performerId?: number[]
-        venueId?: number[]
+        eventId?: number[];
+        categoryId?: number[];
+        city?: string;
+        state?: string;
+        performerId?: number[];
+        venueId?: number[];
         /** @example 2021-01-01T00:00:00 */
-        eventTimeFrom?: string
+        eventTimeFrom?: string;
         /** @example 2021-01-01T00:00:00 */
-        eventTimeTo?: string
-        keyword?: string
-        venueConfigurationId?: number
+        eventTimeTo?: string;
+        keyword?: string;
+        venueConfigurationId?: number;
         /** @description Filter event occurring during daytime when true and nightly when false. */
-        daytime?: string
-        eventStatus?: (
-          | 'AS_SCHEDULED'
-          | 'POSTPONED'
-          | 'CANCELLED'
-          | 'RESCHEDULED'
-          | 'MERGED'
-        )[]
-        parkingVenueId?: number
-        regionId?: number
-        pageSize?: number
-        pageNumber?: number
-        sortBy?: string
-        sortDirection?: 'ASC' | 'DESC'
-        categoryEventType?:
-          | 'CONCERTS'
-          | 'COMEDY'
-          | 'SPORTS'
-          | 'THEATER'
-          | 'PARKING'
-        lastSeenDoc?: number
-        lastSeenFields?: number
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        daytime?: string;
+        eventStatus?: ('AS_SCHEDULED' | 'POSTPONED' | 'CANCELLED' | 'RESCHEDULED' | 'MERGED')[];
+        parkingVenueId?: number;
+        regionId?: number;
+        pageSize?: number;
+        pageNumber?: number;
+        sortBy?: string;
+        sortDirection?: 'ASC' | 'DESC';
+        categoryEventType?: 'CONCERTS' | 'COMEDY' | 'SPORTS' | 'THEATER' | 'PARKING';
+        lastSeenDoc?: number;
+        lastSeenFields?: number;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Event'][]
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Event'][];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getEvent: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'event-id': number
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'event-id': number;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['GetEventResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['GetEventResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getEventMetadata: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'event-id': number
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'event-id': number;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['GetEventMetadataResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['GetEventMetadataResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getListings: {
     parameters: {
       query?: {
-        sv?: string
-      }
+        sv?: string;
+      };
       header?: {
-        'X-Bot-Detection'?: string
-      }
+        'X-Bot-Detection'?: string;
+      };
       path: {
-        'event-id': number
-      }
+        'event-id': number;
+      };
       cookie?: {
-        gt_pid?: string
-        gt_sid?: string
-        gt_sdt?: string
-        gt_pdt?: string
-      }
-    }
-    requestBody?: never
+        gt_pid?: string;
+        gt_sid?: string;
+        gt_sdt?: string;
+        gt_pdt?: string;
+      };
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['ListingPayload']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['ListingPayload'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getListings_1: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'event-id': number
-        'listing-id': number
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'event-id': number;
+        'listing-id': number;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['ListingPayload']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['ListingPayload'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   searchEventsPaginatedV2: {
     parameters: {
       query?: {
-        eventId?: number[]
-        categoryId?: number[]
-        city?: string
-        state?: string
-        performerId?: number[]
-        venueId?: number[]
+        eventId?: number[];
+        categoryId?: number[];
+        city?: string;
+        state?: string;
+        performerId?: number[];
+        venueId?: number[];
         /** @example 2021-01-01T00:00:00 */
-        eventTimeFrom?: string
+        eventTimeFrom?: string;
         /** @example 2021-01-01T00:00:00 */
-        eventTimeTo?: string
-        keyword?: string
-        venueConfigurationId?: number
+        eventTimeTo?: string;
+        keyword?: string;
+        venueConfigurationId?: number;
         /** @description Filter event occurring during daytime when true and nightly when false. */
-        daytime?: string
-        eventStatus?: (
-          | 'AS_SCHEDULED'
-          | 'POSTPONED'
-          | 'CANCELLED'
-          | 'RESCHEDULED'
-          | 'MERGED'
-        )[]
-        parkingVenueId?: number
-        regionId?: number
-        pageSize?: number
-        pageNumber?: number
-        sortBy?: string
-        sortDirection?: 'ASC' | 'DESC'
-        eventType?: ('CONCERTS' | 'COMEDY' | 'SPORTS' | 'THEATER' | 'PARKING')[]
-        lastSeenDoc?: number
-        lastSeenFields?: number
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        daytime?: string;
+        eventStatus?: ('AS_SCHEDULED' | 'POSTPONED' | 'CANCELLED' | 'RESCHEDULED' | 'MERGED')[];
+        parkingVenueId?: number;
+        regionId?: number;
+        pageSize?: number;
+        pageNumber?: number;
+        sortBy?: string;
+        sortDirection?: 'ASC' | 'DESC';
+        eventType?: ('CONCERTS' | 'COMEDY' | 'SPORTS' | 'THEATER' | 'PARKING')[];
+        lastSeenDoc?: number;
+        lastSeenFields?: number;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['LucenePaginatedResultEvent']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['LucenePaginatedResultEvent'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   issueChallenge: {
     parameters: {
-      query?: never
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': Record<string, never>
-        }
-      }
+          'application/json;charset=utf-8': Record<string, never>;
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Method Not Allowed */
       405: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
       /** @description Not Acceptable */
       406: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
       /** @description Service Unavailable */
       503: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
-    }
-  }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
+    };
+  };
   getCheckoutListings: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'event-id': number
-        'listing-id': number
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'event-id': number;
+        'listing-id': number;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['CheckoutListingPayload']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['CheckoutListingPayload'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   search: {
     parameters: {
       query: {
-        path: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        path: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['CmsPathResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['CmsPathResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getVenuePage: {
     parameters: {
       query: {
-        path: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        path: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['CmsPathResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['CmsPathResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getRegionPage: {
     parameters: {
       query: {
-        path: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        path: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['CmsPathResponse']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['CmsPathResponse'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   search_1: {
     parameters: {
       query?: {
-        categoryId?: number[]
-        entityType?: 'PERFORMER' | 'EVENT'
-        entityId?: number
-        slug?: string
-      }
-      header?: never
-      path?: never
-      cookie?: never
-    }
-    requestBody?: never
+        categoryId?: number[];
+        entityType?: 'PERFORMER' | 'EVENT';
+        entityId?: number;
+        slug?: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Category'][]
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Category'][];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   findById: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        id: number
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        id: number;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Category']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Category'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   getOrderForCart: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'cart-uuid': string
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'cart-uuid': string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          'application/json;charset=utf-8': components['schemas']['Order']
-        }
-      }
+          'application/json;charset=utf-8': components['schemas']['Order'];
+        };
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
   removeGiftCard: {
     parameters: {
-      query?: never
-      header?: never
+      query?: never;
+      header?: never;
       path: {
-        'cart-uuid': string
-        'gift-card-id': number
-      }
-      cookie?: never
-    }
-    requestBody?: never
+        'cart-uuid': string;
+        'gift-card-id': number;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
     responses: {
       /** @description OK */
       200: {
         headers: {
-          [name: string]: unknown
-        }
-        content?: never
-      }
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
       /** @description Bad Request */
       400: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*':
             | {
-                [key: string]: Record<string, never>
+                [key: string]: Record<string, never>;
               }
-            | components['schemas']['ErrorDetails']
-        }
-      }
+            | components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unauthorized */
       401: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Payment Required */
       402: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Forbidden */
       403: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Not Found */
       404: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Unprocessable Entity */
       422: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description CVV Validation Error */
       470: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description AVS Validation Error */
       471: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Price Changed */
       475: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Accertify pre-auth fraud check */
       476: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Promo or Gift Card */
       479: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Cart Completed */
       488: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Invalid Cart */
       489: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Tickets not available */
       499: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
-          '*/*': components['schemas']['ErrorDetails']
-        }
-      }
+          '*/*': components['schemas']['ErrorDetails'];
+        };
+      };
       /** @description Internal Server Error */
       500: {
         headers: {
-          [name: string]: unknown
-        }
+          [name: string]: unknown;
+        };
         content: {
           '*/*': {
-            [key: string]: Record<string, never>
-          }
-        }
-      }
-    }
-  }
+            [key: string]: Record<string, never>;
+          };
+        };
+      };
+    };
+  };
 }

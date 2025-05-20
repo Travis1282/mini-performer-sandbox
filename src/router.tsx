@@ -1,32 +1,31 @@
-import Cookies from 'js-cookie'
-import { GlobalErrorContent } from './components/errors/oh-no'
-import { Loading } from './components/loading'
-import About from './pages/about'
-import Home from './pages/home/home'
-import { Layout } from './pages/layout'
-import { PrimaryLayout } from './pages/primary-layout'
-import Slug from './pages/slug'
-import { queryClient } from './query-client'
-import { CLOSEST_REGION_COOKIE } from './services/location/constants'
-import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events'
-import { sentryCreateBrowserRouter } from './services/sentry/instrument'
+import Cookies from 'js-cookie';
+import { GlobalErrorContent } from './components/errors/oh-no';
+import { Loading } from './components/loading';
+import About from './pages/about';
+import Home from './pages/home/home';
+import { Layout } from './pages/layout';
+import { PrimaryLayout } from './pages/primary-layout';
+import { getPerformerData } from './pages/slug/services /getPerformerData';
+import Slug from './pages/slug/slug-layout';
+import { queryClient } from './query-client';
+import { CLOSEST_REGION_COOKIE } from './services/location/constants';
+import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events';
+import { sentryCreateBrowserRouter } from './services/sentry/instrument';
 
 const router = sentryCreateBrowserRouter([
   {
     Component: Layout,
     ErrorBoundary: GlobalErrorContent,
-    hydrateFallbackElement: <Loading />,
     children: [
       {
         Component: PrimaryLayout,
-        hydrateFallbackElement: <Loading />,
         children: [
           {
             Component: Home,
             index: true,
             hydrateFallbackElement: <Loading />,
             loader: async ({ request }) => {
-              const closestRegionId = Cookies.get(CLOSEST_REGION_COOKIE)
+              const closestRegionId = Cookies.get(CLOSEST_REGION_COOKIE);
 
               const loaderData = await getSearchTrendingEvents({
                 init: {
@@ -37,13 +36,10 @@ const router = sentryCreateBrowserRouter([
                     regionId: closestRegionId ?? '0',
                   },
                 },
-              })
-              queryClient.setQueryData(
-                ['trending-events', 'get', closestRegionId],
-                loaderData
-              )
+              });
+              queryClient.setQueryData(['trending-events', 'get', closestRegionId], loaderData);
 
-              return loaderData
+              return loaderData;
             },
           },
           {
@@ -53,6 +49,18 @@ const router = sentryCreateBrowserRouter([
           {
             Component: Slug,
             path: ':slug',
+            loader: async ({ request, params: { slug } }) => {
+              if (!slug) {
+                return {
+                  slug: '404',
+                };
+              }
+              const url = new URL(request.url);
+              const searchParams = Object.fromEntries(url.searchParams);
+              const performerData = await getPerformerData(slug, searchParams);
+
+              return performerData;
+            },
           },
         ],
       },
@@ -63,15 +71,15 @@ const router = sentryCreateBrowserRouter([
           const [loaderModule, componentModule] = await Promise.all([
             import('./pages/tickets/tickets.loader'),
             import('./pages/tickets/tickets'),
-          ])
+          ]);
           return {
             loader: loaderModule.default,
             Component: componentModule.default,
-          }
+          };
         },
       },
     ],
   },
-])
+]);
 
-export default router
+export default router;

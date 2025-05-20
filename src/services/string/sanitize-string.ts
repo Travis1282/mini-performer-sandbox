@@ -3,4 +3,4 @@ export const sanitizeString = (str: string) =>
     .replace(/[^a-zA-Z0-9]+/g, '-')
     .replace(/^-+/, '')
     .replace(/-+$/, '')
-    .toLowerCase()
+    .toLowerCase();

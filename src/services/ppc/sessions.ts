@@ -1,8 +1,8 @@
-import type { Context } from 'hono'
-import { getCookie, setCookie } from 'hono/cookie'
-import type { paths } from '../maverick/generated/maverick-schema'
-import { postSessions } from '../maverick/post-sessions'
-import { buildUtmHash } from './buildUtmHash'
+import type { Context } from 'hono';
+import { getCookie, setCookie } from 'hono/cookie';
+import type { paths } from '../maverick/generated/maverick-schema';
+import { postSessions } from '../maverick/post-sessions';
+import { buildUtmHash } from './buildUtmHash';
 import {
   // COOKIE_DOMAIN,
   COOKIE_EXPIRY_DAYS,
@@ -12,34 +12,34 @@ import {
   PROFILE_DATA_COOKIE,
   SESSION_COOKIE,
   SESSION_DATA_COOKIE,
-} from './constants'
-import { paramsHaveChanged } from './paramsHaveChanged'
-import { getUtmHashCookieServer } from './server/getUtmHashCookieServer'
+} from './constants';
+import { paramsHaveChanged } from './paramsHaveChanged';
+import { getUtmHashCookieServer } from './server/getUtmHashCookieServer';
 
 export async function getSessions(c: Context) {
-  let needsUpdate = false
+  let needsUpdate = false;
 
-  const currentParams = buildUtmHash(new URLSearchParams(c.req.query()))
-  const previousParams = getUtmHashCookieServer(c)
-  const haveParamsChanged = paramsHaveChanged(currentParams, previousParams)
-  const profileCookie = getCookie(c, PROFILE_COOKIE)
-  const sessionCookie = getCookie(c, SESSION_COOKIE)
+  const currentParams = buildUtmHash(new URLSearchParams(c.req.query()));
+  const previousParams = getUtmHashCookieServer(c);
+  const haveParamsChanged = paramsHaveChanged(currentParams, previousParams);
+  const profileCookie = getCookie(c, PROFILE_COOKIE);
+  const sessionCookie = getCookie(c, SESSION_COOKIE);
 
   if (!sessionCookie || !profileCookie || haveParamsChanged) {
-    needsUpdate = true
+    needsUpdate = true;
   }
 
   if (!needsUpdate) {
-    return undefined
+    return undefined;
   }
 
   let sessionsPayload:
     | paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
-    | undefined = undefined
+    | undefined = undefined;
 
-  const headerMap = {} as Record<string, string>
+  const headerMap = {} as Record<string, string>;
   for (const [key, value] of c.req.raw.headers.entries()) {
-    headerMap[key] = value
+    headerMap[key] = value;
   }
   try {
     const { data } = await postSessions({
@@ -48,13 +48,13 @@ export async function getSessions(c: Context) {
         params: currentParams,
         headers: headerMap,
       },
-    })
-    sessionsPayload = data
+    });
+    sessionsPayload = data;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 
-  return sessionsPayload
+  return sessionsPayload;
 }
 
 /**
@@ -67,39 +67,39 @@ export function setSessionCookiesAndHeaders(
   c: Context,
   sessionsPayload?: paths['/rest/sessions']['post']['responses']['200']['content']['application/json;charset=utf-8']
 ) {
-  const currentParams = buildUtmHash(new URLSearchParams(c.req.query()))
+  const currentParams = buildUtmHash(new URLSearchParams(c.req.query()));
   if (sessionsPayload?.sessionId) {
-    c.header('X-Go-Session-Id', sessionsPayload.sessionId)
+    c.header('X-Go-Session-Id', sessionsPayload.sessionId);
     setCookie(c, SESSION_COOKIE, sessionsPayload.sessionId, {
       path: '/',
       sameSite: COOKIE_SAME_SITE,
       secure: true,
-    })
+    });
   }
   if (sessionsPayload?.profileId) {
-    c.header('X-Go-Profile-Id', sessionsPayload.profileId)
+    c.header('X-Go-Profile-Id', sessionsPayload.profileId);
     setCookie(c, PROFILE_COOKIE, sessionsPayload.profileId, {
       path: '/',
       maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
       sameSite: COOKIE_SAME_SITE,
       secure: true,
-    })
+    });
   }
 
   if (sessionsPayload?.profileData) {
     setCookie(c, PROFILE_DATA_COOKIE, sessionsPayload.profileData, {
       path: '/',
-    })
+    });
   }
 
   if (sessionsPayload?.sessionData) {
     setCookie(c, SESSION_DATA_COOKIE, sessionsPayload.sessionData, {
       path: '/',
-    })
+    });
   }
 
   setCookie(c, PREVIOUS_PARAMS_COOKIE, btoa(JSON.stringify(currentParams)), {
     path: '/',
     maxAge: COOKIE_EXPIRY_DAYS * 24 * 60 * 60,
-  })
+  });
 }

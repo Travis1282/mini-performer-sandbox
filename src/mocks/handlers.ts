@@ -1,4 +1,4 @@
-import { http, HttpResponse } from 'msw'
+import { http, HttpResponse } from 'msw';
 
 export const handlers = [
   http.post('http://localhost:5173/rest/sessions', () => {
@@ -10,33 +10,30 @@ export const handlers = [
       sessionData:
         'N4d6VD2xkmaziteJZOeuAx0tfcCSD4jUrzGsNnueeYS8-_subYjp-sC9RfaEfeojcdBRfyb_jerydnmdvrz8E_PD_6XIE3XVprE0S_pikm39tQAvZDLjuKBtn7Tcy1Ils5BWi8SVSO2FbTVww4zUCfLkrriokX_dYI76S5wgn9Kd14K5ZiYLnTuiRathdwX798E_HarokGEQxf-Hos3aOwduonsq4Mh_DQ6ODqsSj8o.7tDChdJOA2MPAfQIdA974-zwab7x9M6tEzH1evpdDdw',
       status: 'ok',
-    })
+    });
   }),
-  http.get(
-    'http://localhost:5173/rest/experiments/features/sdk-nBR0cXqdj9rICERK',
-    () => {
-      return HttpResponse.json({
-        status: 200,
-        features: {
-          'top-events-rollout-test': {
-            defaultValue: false,
-            rules: [
-              {
-                force: true,
-                coverage: 0.5,
-                hashAttribute: 'id',
-              },
-            ],
-          },
-          'experiment-reporting-a-a-test': {
-            defaultValue: false,
-          },
-          'all-in-pricing': {
-            defaultValue: false,
-          },
+  http.get('http://localhost:5173/rest/experiments/features/sdk-nBR0cXqdj9rICERK', () => {
+    return HttpResponse.json({
+      status: 200,
+      features: {
+        'top-events-rollout-test': {
+          defaultValue: false,
+          rules: [
+            {
+              force: true,
+              coverage: 0.5,
+              hashAttribute: 'id',
+            },
+          ],
         },
-        dateUpdated: '2025-01-31T22:22:00.270Z',
-      })
-    }
-  ),
-]
+        'experiment-reporting-a-a-test': {
+          defaultValue: false,
+        },
+        'all-in-pricing': {
+          defaultValue: false,
+        },
+      },
+      dateUpdated: '2025-01-31T22:22:00.270Z',
+    });
+  }),
+];

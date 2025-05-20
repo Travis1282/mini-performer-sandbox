@@ -1,0 +1,319 @@
+{
+  "template": "home",
+  "path": "/",
+  "metaKeywords": "score tickets marketplace experiences sports concerts shows cities",
+  "metaDescription": "Score Tickets is an online ticket marketplace that simplifies event ticketing, connecting users with a wide range of live experiences.",
+  "title": "Madonna Tickets - Buy Madonna Tour & Concert Tickets",
+  "footerLinks": [
+    {
+      "title": "Link Group 1",
+      "links": [
+        { "title": "Morbi molestie suscipit", "href": "#" },
+        { "title": "Pellentesque habitant morbi", "href": "#" },
+        { "title": "Curabitur", "href": "#" },
+        { "title": "Nulla facilisi", "href": "#" },
+        { "title": "Vestibulum ornare laoreet", "href": "#" }
+      ]
+    },
+    {
+      "title": "Link Group 2",
+      "links": [
+        { "title": "Morbi molestie suscipit", "href": "#" },
+        { "title": "Pellentesque habitant morbi", "href": "#" },
+        { "title": "Curabitur", "href": "#" },
+        { "title": "Nulla facilisi", "href": "#" },
+        { "title": "Vestibulum ornare laoreet", "href": "#" }
+      ]
+    },
+    {
+      "title": "Link Group 3",
+      "links": [
+        { "title": "Morbi molestie suscipit", "href": "#" },
+        { "title": "Pellentesque habitant morbi", "href": "#" },
+        { "title": "Curabitur", "href": "#" },
+        { "title": "Nulla facilisi", "href": "#" },
+        { "title": "Vestibulum ornare laoreet", "href": "#" }
+      ]
+    },
+    {
+      "title": "Link Group 4",
+      "links": [
+        { "title": "Morbi molestie suscipit", "href": "#" },
+        { "title": "Pellentesque habitant morbi", "href": "#" },
+        { "title": "Curabitur", "href": "#" },
+        { "title": "Nulla facilisi", "href": "#" },
+        { "title": "Vestibulum ornare laoreet", "href": "#" }
+      ]
+    },
+    {
+      "title": "Link Group 5",
+      "links": [
+        { "title": "Morbi molestie suscipit", "href": "#" },
+        { "title": "Pellentesque habitant morbi", "href": "#" },
+        { "title": "Curabitur", "href": "#" },
+        { "title": "Nulla facilisi", "href": "#" },
+        { "title": "Vestibulum ornare laoreet", "href": "#" }
+      ]
+    }
+  ],
+  "homeTopLinks": [
+    {
+      "title": "Top Sporting Events",
+      "links": [
+        { "title": "Milwaukee Brewers Tickets", "href": "#" },
+        { "title": "Chicago Cubs Tickets", "href": "#" },
+        { "title": "Houston Astros Tickets", "href": "#" },
+        { "title": "Philadelphia Phillies Tickets", "href": "#" },
+        { "title": "Washington Nationals Tickets", "href": "#" }
+      ]
+    },
+    {
+      "title": "Top Concert Events",
+      "links": [
+        { "title": "Drake Tickets", "href": "#" },
+        { "title": "Ed Sheeran Tickets", "href": "#" },
+        { "title": "Bruno Mars Tickets", "href": "#" },
+        { "title": "Jorja Smith Tickets", "href": "#" },
+        { "title": "Beyonce Tickets", "href": "#" }
+      ]
+    },
+    {
+      "title": "Top Theater Events",
+      "links": [
+        { "title": "Les Miserables Tickets", "href": "#" },
+        { "title": "Hamilton Tickets", "href": "#" },
+        { "title": "Moulin Rouge Tickets", "href": "#" },
+        { "title": "Wicked Tickets", "href": "#" },
+        { "title": "Million Dollar Quartet Tickets", "href": "#" }
+      ]
+    }
+  ],
+  "recentlyViewed": [
+    { "category": "Drake", "url": "/img/PerformerDrake.webp" },
+    { "category": "Ed Sheeran", "url": "/img/PerformerEdSheeran.webp" },
+    { "category": "Bruno Mars", "url": "/img/PerformerBrunoMars.webp" },
+    { "category": "Jorja Smith", "url": "/img/PerformerJorjaSmith.webp" }
+  ],
+  "categories": {
+    "data": [
+      { "category": "NFL", "url": "/img/NFL Football.webp" },
+      { "category": "NBA", "url": "/img/NBA Basketball.webp" },
+      { "category": "Broadway", "url": "/img/Broadway.webp" },
+      { "category": "MLS", "url": "/img/MLS Soccer.webp" },
+      { "category": "NHL", "url": "/img/NHL Hockey.webp" },
+      { "category": "NCAA FB", "url": "/img/NCAA Football.webp" },
+      { "category": "NCAA BB", "url": "/img/NCAA Mens Basketball.webp" },
+      { "category": "Comedy", "url": "/img/Comedy.webp" }
+    ],
+    "hasNext": true
+  },
+  "popularCities": [
+    { "category": "New York", "url": "/img/NewYork.webp" },
+    { "category": "Miami", "url": "/img/Miami.webp" },
+    { "category": "Chicago", "url": "/img/Chicago.webp" },
+    { "category": "Atlanta", "url": "/img/Atlanta.webp" }
+  ],
+
+  "popularVenues": [
+    { "category": "Crypto.com Arena", "url": "/img/CryptoArena.webp" },
+    { "category": "The Forum", "url": "/img/TheForum.webp" },
+    {
+      "category": "Los Angeles Memorial Coliseum",
+      "url": "/img/LosAngelesColiseum.webp"
+    },
+    { "category": "Hollywood Bowl", "url": "/img/HollywoodBowl.webp" }
+  ],
+  "topEventPicks": {
+    "trending": [
+      {
+        "category": "NBA Draft 2023",
+        "slug": "nbadraft2023",
+        "url": "/img/NBA Basketball Draft.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Beyonce",
+        "slug": "beyonce",
+        "url": "/img/PerformerBeyonce.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Baseball Championship",
+        "slug": "baseballchampionship",
+        "url": "/img/Baseball-1.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Eminem",
+        "slug": "eminem",
+        "url": "/img/PerformerEminem.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "2023 US Championship",
+        "slug": "2023uschampionship",
+        "url": "/img/US Tennis Championship.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Taylor Swift",
+        "slug": "taylorswift",
+        "url": "/img/PerformerTaylorSwift.webp",
+        "location": "Chicago, IL"
+      }
+    ],
+    "sports": [
+      {
+        "category": "NBA Draft 2023",
+        "slug": "nbadraft2023",
+        "url": "/img/NBA Basketball Draft.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Baseball Championship",
+        "slug": "baseballchampionship",
+        "url": "/img/Baseball-1.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "2023 US Championship",
+        "slug": "2023uschampionship",
+        "url": "/img/US Tennis Championship.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Eminem",
+        "slug": "eminem",
+        "url": "/img/PerformerEminem.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Beyonce",
+        "slug": "beyonce",
+        "url": "/img/PerformerBeyonce.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Taylor Swift",
+        "slug": "taylorswift",
+        "url": "/img/PerformerTaylorSwift.webp",
+        "location": "Chicago, IL"
+      }
+    ],
+    "concerts": [
+      {
+        "category": "Eminem",
+        "slug": "eminem",
+        "url": "/img/PerformerEminem.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Beyonce",
+        "slug": "beyonce",
+        "url": "/img/PerformerBeyonce.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Taylor Swift",
+        "slug": "taylorswift",
+        "url": "/img/PerformerTaylorSwift.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "NBA Draft 2023",
+        "slug": "nbadraft2023",
+        "url": "/img/NBA Basketball Draft.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Baseball Championship",
+        "slug": "baseballchampionship",
+        "url": "/img/Baseball-1.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "2023 US Championship",
+        "slug": "2023uschampionship",
+        "url": "/img/US Tennis Championship.webp",
+        "location": "Chicago, IL"
+      }
+    ],
+    "shows": [
+      {
+        "category": "Taylor Swift",
+        "slug": "taylorswift",
+        "url": "/img/PerformerTaylorSwift.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Beyonce",
+        "slug": "beyonce",
+        "url": "/img/PerformerBeyonce.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Eminem",
+        "slug": "eminem",
+        "url": "/img/PerformerEminem.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "NBA Draft 2023",
+        "slug": "nbadraft2023",
+        "url": "/img/NBA Basketball Draft.webp",
+        "location": "Chicago, IL"
+      },
+      {
+        "category": "Baseball Championship",
+        "slug": "baseballchampionship",
+        "url": "/img/Baseball-1.webp",
+        "location": "Chicago, IL"
+      },
+
+      {
+        "category": "2023 US Championship",
+        "slug": "2023uschampionship",
+        "url": "/img/US Tennis Championship.webp",
+        "location": "Chicago, IL"
+      }
+    ]
+  },
+
+  "trendingEvents": [
+    {
+      "eventName": "Beyonce",
+      "slug": "beyonce",
+      "url": "/img/PerformerBeyonce-1.webp",
+      "location": "Chicago, IL",
+      "time": "Tue, 7:00pm"
+    },
+    {
+      "eventName": "Washington Nationals at Chicago Cubs",
+      "slug": "chicagocubs",
+      "url": "/img/ChicagoCubsStadium.webp",
+      "location": "Chicago, IL",
+      "time": "Tue, 7:00pm"
+    },
+    {
+      "eventName": "Taylor Swift",
+      "slug": "taylorswift",
+      "url": "/img/PerformerTaylorSwift.webp",
+      "location": "Chicago, IL",
+      "time": "Tue, 7:00pm"
+    }
+  ],
+  "cityList": [
+    "Chicago",
+    "New York",
+    "Los Angeles",
+    "Miami",
+    "Atlanta",
+    "Boston",
+    "Dallas",
+    "Houston",
+    "Las Vegas",
+    "San Francisco",
+    "Seattle",
+    "Washington DC"
+  ]
+}

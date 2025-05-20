@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 // import { ResaleDisclosure } from "@/components/ResaleDisclosure";
 // import { Arrow } from "@/components/Shared/Arrow";
@@ -9,19 +9,19 @@
 // import { useIsMobile } from "@/hooks/useIsMobile";
 // import { useSearchParams } from "@/hooks/useSearchParams";
 // import { basePath } from "../../../services/config";
-import EllipsisVerticalIcon from '@heroicons/react/24/outline/EllipsisVerticalIcon'
-import clsx from 'clsx'
-import dayjs from 'dayjs'
-import { useState } from 'react'
-import SVG from 'react-inlinesvg'
-import { Link } from 'react-router'
+import EllipsisVerticalIcon from '@heroicons/react/24/outline/EllipsisVerticalIcon';
+import clsx from 'clsx';
+import dayjs from 'dayjs';
+import { useState } from 'react';
+import SVG from 'react-inlinesvg';
+import { Link } from 'react-router';
 
 // import { ContactHeader } from "../ContactHeader";
-import type { components } from '../../../services/maverick/generated/maverick-schema'
+import type { components } from '../../../services/maverick/generated/maverick-schema';
 
 // import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path'
-import { getEventName } from '../../../services/events/get-event-name'
-import { resolveImagePath } from '../../../services/images/resolve-image-path'
+import { getEventName } from '../../../services/events/get-event-name';
+import { resolveImagePath } from '../../../services/images/resolve-image-path';
 
 // const MultiEventPopup = dynamic(
 //   () => import("./MultiEventPopup").then((mod) => mod.MultiEventPopup),
@@ -40,15 +40,12 @@ import { resolveImagePath } from '../../../services/images/resolve-image-path'
 // );
 
 export interface LayoutNavbarTicketsProps {
-  event: components['schemas']['Event']
-  performer?: components['schemas']['Performer']
+  event: components['schemas']['Event'];
+  performer?: components['schemas']['Performer'];
 }
 
-export function LayoutNavbarTickets({
-  event,
-  performer,
-}: LayoutNavbarTicketsProps) {
-  const [, setOpen] = useState(false)
+export function LayoutNavbarTickets({ event, performer }: LayoutNavbarTicketsProps) {
+  const [, setOpen] = useState(false);
   // const eventUrl = event ? getEventTicketsPath(event) : ''
   // const breadcrumbLinks = generateBreadcrumbLinks(performer, {
   //   title: event?.name ?? "",
@@ -56,7 +53,7 @@ export function LayoutNavbarTickets({
   // });
   // const { isMobile } = useIsMobile()
 
-  const eventDate = dayjs(event.eventTimeLocal)
+  const eventDate = dayjs(event.eventTimeLocal);
   // let { showResaleDisclosure } = useDisclosureContext();
 
   // const isUtah = event?.venue?.state === 'UT'
@@ -88,7 +85,7 @@ export function LayoutNavbarTickets({
       className="ml-2 cursor-pointer lg:block"
       data-testid="performer-info-popup-button"
       onClick={() => {
-        setOpen(true)
+        setOpen(true);
       }}
     >
       <SVG
@@ -97,11 +94,11 @@ export function LayoutNavbarTickets({
       />
       <EllipsisVerticalIcon className="text-go-blue-500 size-8 lg:hidden" />
     </button>
-  )
+  );
 
   // useSaveRecentlyViewed(performer, "performer");
 
-  const isSameYear = eventDate.isSame(dayjs(), 'year')
+  const isSameYear = eventDate.isSame(dayjs(), 'year');
   // const ticketsLoadingSequence = useFeatureIsOn("tickets-loading-sequence");
 
   return (
@@ -169,9 +166,7 @@ export function LayoutNavbarTickets({
               <div className="hidden flex-row gap-1 lg:flex lg:gap-2">
                 {!event.dateTbd ? (
                   <span data-testid="eventDate" id="eventDate">
-                    {eventDate.format(
-                      `${isSameYear ? 'ddd, MMM DD' : 'ddd, MMM DD, YYYY'}`
-                    )}
+                    {eventDate.format(`${isSameYear ? 'ddd, MMM DD' : 'ddd, MMM DD, YYYY'}`)}
                   </span>
                 ) : (
                   <span data-testid="eventDateTBD" id="eventDateTBD">
@@ -214,10 +209,7 @@ export function LayoutNavbarTickets({
                   {`${event?.venue?.name}`}
                 </a>
                 <span className="bg-dark hidden h-[2px] w-[2px] shrink-0 self-center rounded-[21px] opacity-40 lg:block"></span>
-                <span
-                  data-testid="eventVenueCityState"
-                  id="eventVenueCityState"
-                >
+                <span data-testid="eventVenueCityState" id="eventVenueCityState">
                   {event?.venue?.city}
                   {event?.venue?.state ? `, ${event?.venue?.state}` : ''}
                 </span>
@@ -230,12 +222,7 @@ export function LayoutNavbarTickets({
         {/* {!isMobile ? <ContactHeader /> : null} */}
 
         <div className="relative ml-8 hidden lg:flex">
-          <Link
-            aria-label="Go to Home Page"
-            className="w-[177px]"
-            id="logoNavBar"
-            to="/"
-          >
+          <Link aria-label="Go to Home Page" className="w-[177px]" id="logoNavBar" to="/">
             <img
               alt="gotickets logo"
               className="flex h-[13px]! w-[130px]! lg:h-[18px]! lg:w-[177px]!"
@@ -258,5 +245,5 @@ export function LayoutNavbarTickets({
         /> */}
       </nav>
     </>
-  )
+  );
 }

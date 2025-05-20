@@ -1,0 +1,28 @@
+{
+  "data": [
+    { "category": "Adult Contemporary", "url": "/img/Adult Contemporary.webp" },
+    { "category": "Alternative", "url": "/img/Alternative.webp" },
+    { "category": "Amateur Wrestling", "url": "/img/Amateur Wrestling.webp" },
+    { "category": "Arena Football", "url": "/img/Arena Football.webp" },
+    { "category": "Arts and Theater", "url": "/img/Arts and Theater.webp" },
+    { "category": "Atlanta", "url": "/img/Atlanta.webp" },
+    { "category": "Auto Racing", "url": "/img/Auto Racing.webp" },
+    { "category": "Award Shows", "url": "/img/Award Shows.webp" },
+    { "category": "Ballet and Dance", "url": "/img/Ballet and Dance.webp" },
+    { "category": "Baseball-1", "url": "/img/Baseball-1.webp" },
+    { "category": "Baseball", "url": "/img/Baseball.webp" },
+    { "category": "Basketball", "url": "/img/Basketball.webp" },
+    { "category": "Beyonce", "url": "/img/Beyonce.webp" },
+    { "category": "Blues and Jazz", "url": "/img/Blues and Jazz.webp" },
+    { "category": "Boxing", "url": "/img/Boxing.webp" },
+    { "category": "Broadway", "url": "/img/Broadway.webp" },
+    {
+      "category": "Canadian Basketball",
+      "url": "/img/Canadian Basketball.webp"
+    },
+    { "category": "Chicago", "url": "/img/Chicago.webp" },
+    { "category": "ChicagoCubsStadium", "url": "/img/ChicagoCubsStadium.webp" },
+    { "category": "Christian-1", "url": "/img/Christian-1.webp" }
+  ],
+  "hasNext": true
+}

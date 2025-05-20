@@ -1,13 +1,13 @@
-import type { components } from '../maverick/generated/maverick-schema'
+import type { components } from '../maverick/generated/maverick-schema';
 
 export function shouldShowSeatedTogether({
   isMultiple,
   event,
   listing,
 }: {
-  isMultiple: boolean
-  event?: components['schemas']['Event']
-  listing?: components['schemas']['Listing']
+  isMultiple: boolean;
+  event?: components['schemas']['Event'];
+  listing?: components['schemas']['Listing'];
 }) {
   return (
     isMultiple &&
@@ -16,5 +16,5 @@ export function shouldShowSeatedTogether({
     !event?.parking &&
     !listing?.attributes?.includes(32) &&
     !listing?.generalAdmission
-  )
+  );
 }

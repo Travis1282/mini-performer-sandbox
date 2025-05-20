@@ -5,4 +5,4 @@ export const Loading = () => (
       <div className="text-xl font-bold">Loading...</div>
     </div>
   </div>
-)
+);

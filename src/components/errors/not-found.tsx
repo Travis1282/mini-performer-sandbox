@@ -1,4 +1,4 @@
-import { resolveImagePath } from '../../services/images/resolve-image-path'
+import { resolveImagePath } from '../../services/images/resolve-image-path';
 
 export default function NotFound() {
   return (
@@ -12,13 +12,11 @@ export default function NotFound() {
           src={resolveImagePath('/img/NotFound404.svg')}
           width={315}
         />
-        <h2 className="text-dark h2-sm lg:h2-lg mb-3">
-          This Page Doesn&rsquo;t Exist
-        </h2>
+        <h2 className="text-dark h2-sm lg:h2-lg mb-3">This Page Doesn&rsquo;t Exist</h2>
         <span className="text-dark text-large mb-12 opacity-60">
           It never existed or was deleted. Sorry!
         </span>
       </div>
     </>
-  )
+  );
 }

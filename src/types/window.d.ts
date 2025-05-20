@@ -1,19 +1,18 @@
-interface Window {
-  __GT_GB_PAYLOAD__: FeatureApiResponse
+import type { FeatureApiResponse } from '@growthbook/growthbook';
 
-  __GT_LOC__: {
-    ip: string
-    loc: string
-    latitude: string
-    longitude: string
-    closestRegionId: string
+declare global {
+  interface Window {
+    __GT_GB_PAYLOAD__: FeatureApiResponse;
+    __GT_LOC__: {
+      ip: string;
+      loc: string;
+      latitude: string;
+      longitude: string;
+      closestRegionId: string;
+      ApplePaySession: {
+        canMakePayments(): boolean;
+      };
+    };
+    clarity?: (type: string, event: string, value?: string | string[]) => void;
   }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  __GT_SESSIONS_PAYLOAD__: any
-
-  // Add your custom properties here
-  // For example:
-  // myCustomProperty: string;
-  // myCustomFunction: () => void;
 }

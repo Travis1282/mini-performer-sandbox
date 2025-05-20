@@ -1,16 +1,16 @@
-import { useCategoriesContext } from '@/services/categories/use-categories-context'
-import { useRegionsContext } from '@/services/categories/use-regions-context'
-import { useLocationContext } from '@/services/location/useLocationContext'
-import { getSearchTrendingEvents } from '@/services/maverick/get-search-trending-events'
-import { keepPreviousData, useQuery } from '@tanstack/react-query'
-import type { components } from '../../services/maverick/generated/maverick-schema'
-import { Event } from './components/event'
+import { useCategoriesContext } from '@/services/categories/use-categories-context';
+import { useRegionsContext } from '@/services/categories/use-regions-context';
+import { useLocationContext } from '@/services/location/useLocationContext';
+import { getSearchTrendingEvents } from '@/services/maverick/get-search-trending-events';
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import type { components } from '../../services/maverick/generated/maverick-schema';
+import { Event } from './components/event';
 
 export default function Home() {
-  const catgegories = useCategoriesContext()
-  const regions = useRegionsContext()
+  const catgegories = useCategoriesContext();
+  const regions = useRegionsContext();
 
-  const location = useLocationContext()
+  const location = useLocationContext();
 
   const results = useQuery({
     queryKey: ['trending-events', 'get', location.trendingRegion],
@@ -20,9 +20,9 @@ export default function Home() {
       }),
     placeholderData: keepPreviousData,
     staleTime: 500,
-  })
+  });
 
-  const { data: trendingEvents, isFetching, isPlaceholderData } = results
+  const { data: trendingEvents, isFetching, isPlaceholderData } = results;
 
   return (
     <>
@@ -32,9 +32,7 @@ export default function Home() {
           Top Events in{' '}
           <select
             className="custom-select text-go-blue-500 relative appearance-none focus:outline-hidden"
-            onChange={(event) =>
-              location.onChangeTrendingRegion(event.target.value)
-            }
+            onChange={(event) => location.onChangeTrendingRegion(event.target.value)}
             value={location.trendingRegion}
           >
             <option value="">All regions</option>
@@ -70,11 +68,9 @@ export default function Home() {
         trendingEvents?.data?.length &&
         trendingEvents?.data?.length > 0 ? (
           <ul className="flex flex-col gap-2">
-            {trendingEvents?.data?.map(
-              (event: components['schemas']['Event']) => (
-                <Event event={event} key={event.id} />
-              )
-            )}
+            {trendingEvents?.data?.map((event: components['schemas']['Event']) => (
+              <Event event={event} key={event.id} />
+            ))}
           </ul>
         ) : null}
         <h2 className="text-2xl font-bold">Categories</h2>
@@ -99,5 +95,5 @@ export default function Home() {
         </ul>
       </section>
     </>
-  )
+  );
 }

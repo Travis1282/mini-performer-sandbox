@@ -1,0 +1,25 @@
+{
+  "data": [
+    { "category": "Christian", "url": "/img/Christian.webp" },
+    { "category": "Circus", "url": "/img/Circus.webp" },
+    { "category": "Cirque", "url": "/img/Cirque.webp" },
+    { "category": "City", "url": "/img/City.webp" },
+    { "category": "Classical", "url": "/img/Classical.webp" },
+    { "category": "College Sports", "url": "/img/College Sports.webp" },
+    { "category": "Comedy", "url": "/img/Comedy.webp" },
+    { "category": "Concerts", "url": "/img/Concerts.webp" },
+    { "category": "Country and Folk", "url": "/img/Country and Folk.webp" },
+    { "category": "CryptoArena", "url": "/img/CryptoArena.webp" },
+    { "category": "Electronica", "url": "/img/Electronica.webp" },
+    { "category": "European Soccer", "url": "/img/European Soccer.webp" },
+    { "category": "Extreme Sports", "url": "/img/Extreme Sports.webp" },
+    { "category": "F1", "url": "/img/F1.webp" },
+    { "category": "Family", "url": "/img/Family.webp" },
+    { "category": "Fighting", "url": "/img/Fighting.webp" },
+    { "category": "Food and Drink", "url": "/img/Food and Drink.webp" },
+    { "category": "Football", "url": "/img/Football.webp" },
+    { "category": "Funk", "url": "/img/Funk.webp" },
+    { "category": "Golf", "url": "/img/Golf.webp" }
+  ],
+  "hasNext": false
+}

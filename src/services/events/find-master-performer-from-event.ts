@@ -1,4 +1,4 @@
-import type { components } from '../maverick/generated/maverick-schema'
+import type { components } from '../maverick/generated/maverick-schema';
 
 export function findMasterPerformerFromEvent(
   event?: components['schemas']['Event']
@@ -8,5 +8,5 @@ export function findMasterPerformerFromEvent(
       event?.eventPerformers &&
       event?.eventPerformers?.find((performer) => performer.master)) ??
     event?.eventPerformers?.[0]
-  )
+  );
 }

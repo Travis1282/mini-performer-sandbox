@@ -1,34 +1,34 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-import { Display } from './display.constants'
+import { Display } from './display.constants';
 
 export function useIsMobile(): { isMobile: boolean } {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(Boolean(window.innerWidth < Display.lg))
+    setIsMobile(Boolean(window.innerWidth < Display.lg));
 
     function mediaQueryCallback(e: MediaQueryListEvent) {
-      setIsMobile(e.matches)
+      setIsMobile(e.matches);
     }
 
-    const mediaQuery = window.matchMedia(`(max-width: ${Display.lg}px)`)
-    const isOldQuery = !mediaQuery.addEventListener
+    const mediaQuery = window.matchMedia(`(max-width: ${Display.lg}px)`);
+    const isOldQuery = !mediaQuery.addEventListener;
     if (isOldQuery) {
-      mediaQuery['addListener'](mediaQueryCallback)
+      mediaQuery['addListener'](mediaQueryCallback);
     } else {
-      mediaQuery?.addEventListener('change', mediaQueryCallback)
+      mediaQuery?.addEventListener('change', mediaQueryCallback);
     }
     return () => {
       if (isOldQuery) {
-        mediaQuery['addListener'](mediaQueryCallback)
+        mediaQuery['addListener'](mediaQueryCallback);
       } else {
-        mediaQuery?.addEventListener('change', mediaQueryCallback)
+        mediaQuery?.addEventListener('change', mediaQueryCallback);
       }
-    }
-  }, [])
+    };
+  }, []);
 
-  return { isMobile }
+  return { isMobile };
 }

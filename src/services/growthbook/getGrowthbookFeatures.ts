@@ -1,9 +1,9 @@
-import type { FeatureApiResponse } from '@growthbook/growthbook-react'
-import { gbClientKey } from '../config'
-import { getFeatures } from '../maverick/get-features'
+import type { FeatureApiResponse } from '@growthbook/growthbook-react';
+import { gbClientKey } from '../config';
+import { getFeatures } from '../maverick/get-features';
 
 export async function getGrowthbookFeatures() {
-  let featuresPayload: FeatureApiResponse | undefined = undefined
+  let featuresPayload: FeatureApiResponse | undefined = undefined;
   try {
     const { data } = await getFeatures({
       params: {
@@ -11,10 +11,10 @@ export async function getGrowthbookFeatures() {
           clientKey: gbClientKey,
         },
       },
-    })
-    featuresPayload = data as FeatureApiResponse
+    });
+    featuresPayload = data as FeatureApiResponse;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-  return featuresPayload
+  return featuresPayload;
 }

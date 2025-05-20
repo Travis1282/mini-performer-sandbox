@@ -1,52 +1,52 @@
-import type { PanZoom } from 'panzoom'
+import type { PanZoom } from 'panzoom';
 
-import panzoom from 'panzoom'
-import { useEffect, useRef, useState } from 'react'
-import SVG from 'react-inlinesvg'
+import panzoom from 'panzoom';
+import { useEffect, useRef, useState } from 'react';
+import SVG from 'react-inlinesvg';
 
-import useColorizeSVG from '../services/useColorizeSvg'
+import useColorizeSVG from '../services/useColorizeSvg';
 
 interface MapProps {
-  mapSrc: string
+  mapSrc: string;
 }
 
 export const Map = ({ mapSrc }: MapProps) => {
-  const [mapLoaded, setMapLoaded] = useState(false)
-  const mapRef = useRef<HTMLDivElement>(null)
-  const panZoomRef = useRef<PanZoom>(null)
+  const [mapLoaded, setMapLoaded] = useState(false);
+  const mapRef = useRef<HTMLDivElement>(null);
+  const panZoomRef = useRef<PanZoom>(null);
   const { colorSvgSections } = useColorizeSVG({
     mapRef,
-  })
+  });
 
   useEffect(() => {
     if (!mapLoaded) {
-      return
+      return;
     }
 
     if (!mapRef.current) {
-      return
+      return;
     }
-    const svgGroup = mapRef.current.querySelector('[id="parent-group"]')
+    const svgGroup = mapRef.current.querySelector('[id="parent-group"]');
     if (!svgGroup) {
-      return
+      return;
     }
-    colorSvgSections()
+    colorSvgSections();
     const panZoom = panzoom(svgGroup as SVGElement, {
       bounds: true,
       boundsPadding: 0.1,
-    })
-    panZoomRef.current = panZoom
-  }, [colorSvgSections, mapLoaded])
+    });
+    panZoomRef.current = panZoom;
+  }, [colorSvgSections, mapLoaded]);
 
   return (
     <div className="flex h-[17rem] w-full bg-slate-200 p-1" ref={mapRef}>
       <SVG
         className="h-full w-full"
         onLoad={() => {
-          setMapLoaded(true)
+          setMapLoaded(true);
         }}
         src={mapSrc}
       />
     </div>
-  )
-}
+  );
+};

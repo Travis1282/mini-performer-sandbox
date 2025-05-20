@@ -1,0 +1,728 @@
+[
+  {
+    "id": 136,
+    "name": "Comedy",
+    "slug": "comedy",
+    "heroImagePath": "https://static.gotickets.com/9cb174ec-be6c-4124-bb2d-bb4476167e1f.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/b934b0a5-45f3-4a3f-b009-5ab7612c9684.webp"
+  },
+  {
+    "id": 6,
+    "name": "Concerts",
+    "slug": "concerts",
+    "heroImagePath": "https://static.gotickets.com/08667a95-a648-42ce-816d-807e2ab1c197.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/74e78cf3-de1d-41d2-920f-2220a4a2437f.webp"
+  },
+  {
+    "id": 5,
+    "name": "Sports",
+    "slug": "sports",
+    "heroImagePath": "https://static.gotickets.com/3649d5b3-2201-4c24-9b67-a1e0a8868d2d.webp",
+    "cardImagePath": "",
+    "performerHeroImagePath": "",
+    "performerCardImagePath": ""
+  },
+  {
+    "id": 7,
+    "name": "Theater",
+    "slug": "theater",
+    "heroImagePath": "https://static.gotickets.com/7bb727a6-b751-4ee0-8f9b-aab2b130b969.webp"
+  },
+  {
+    "id": 139,
+    "name": "Adult Contemporary",
+    "parentId": 6,
+    "slug": "adult-contemporary",
+    "heroImagePath": "https://static.gotickets.com/cbbc2149-0a60-4aa0-8169-acbfcdb4ce1b.jpg",
+    "performerHeroImagePath": "https://static.gotickets.com/220c11fe-3ad4-455f-a7a4-e6d2087441e1.webp"
+  },
+  {
+    "id": 147,
+    "name": "Alternative",
+    "parentId": 6,
+    "slug": "alternative",
+    "heroImagePath": "https://static.gotickets.com/47680858-86aa-4945-b4c2-2a980b728a43.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/c736620c-f77d-414b-a5b8-e9e84455b7eb.webp"
+  },
+  {
+    "id": 189,
+    "name": "Amateur Wrestling",
+    "parentId": 166,
+    "slug": "amateur-wrestling",
+    "heroImagePath": "https://static.gotickets.com/de993def-2236-47c4-92da-2cb1a90354d5.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/b3d43150-3108-4718-8e42-43548301013e.webp"
+  },
+  {
+    "id": 203,
+    "name": "Arena Football",
+    "parentId": 5,
+    "slug": "arena-football",
+    "heroImagePath": "https://static.gotickets.com/5a9be4b1-8c28-464f-9c00-847a51c138a5.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/9e78f655-c0e7-470c-98bd-54bf33595664.webp"
+  },
+  {
+    "id": 164,
+    "name": "Arts and Theater",
+    "parentId": 7,
+    "slug": "arts-and-theater",
+    "heroImagePath": "https://static.gotickets.com/60ff796f-29e5-496c-aed6-9325d232578f.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/d79a9b0c-0710-4198-8698-ec43033790e0.webp"
+  },
+  {
+    "id": 168,
+    "name": "Auto Racing",
+    "parentId": 5,
+    "slug": "auto-racing",
+    "heroImagePath": "https://static.gotickets.com/c827014f-fe1d-4d81-8572-e93aa94d4f99.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/4e91a823-6f54-464d-8f5f-4e52e488acc4.webp"
+  },
+  {
+    "id": 241,
+    "name": "Award Shows",
+    "parentId": 6,
+    "slug": "award-shows",
+    "heroImagePath": "https://static.gotickets.com/08600b17-2957-4f06-bee2-76bddbbe95b5.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/8ec4889a-b39b-4ff3-a7d8-1042624288e4.webp"
+  },
+  {
+    "id": 146,
+    "name": "Ballet and Dance",
+    "parentId": 7,
+    "slug": "ballet-and-dance",
+    "heroImagePath": "https://static.gotickets.com/0e41ed00-09c1-49fa-a8cf-15b54ba48fc2.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/bb2e8ad2-640e-4d85-82f2-d5d20b5d572d.webp"
+  },
+  {
+    "id": 188,
+    "name": "Baseball",
+    "parentId": 5,
+    "slug": "baseball",
+    "heroImagePath": "https://static.gotickets.com/b32c6aa1-d676-41be-9fdb-060d25894cb8.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/cde3c64c-0fd7-499a-9ab5-3f03a20930a9.webp"
+  },
+  {
+    "id": 177,
+    "name": "Basketball",
+    "parentId": 5,
+    "slug": "basketball",
+    "heroImagePath": "https://static.gotickets.com/288a95eb-b252-478f-baa1-2017da3aabc2.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/63b214c2-ccd0-44ce-a9a2-4223c51afb44.webp"
+  },
+  {
+    "id": 153,
+    "name": "Blues and Jazz",
+    "parentId": 6,
+    "slug": "blues-and-jazz",
+    "heroImagePath": "https://static.gotickets.com/6d0d9467-47c7-4f48-be6a-6000d0c28558.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/64ad003c-d7c0-4620-8927-752a0847e30c.webp"
+  },
+  {
+    "id": 220,
+    "name": "Boxing",
+    "parentId": 159,
+    "slug": "boxing"
+  },
+  {
+    "id": 184,
+    "name": "Broadway",
+    "parentId": 7,
+    "slug": "broadway"
+  },
+  {
+    "id": 245,
+    "name": "Canadian Basketball",
+    "parentId": 177,
+    "slug": "canadian-basketball"
+  },
+  {
+    "id": 238,
+    "name": "Celtic",
+    "parentId": 6,
+    "slug": "celtic"
+  },
+  {
+    "id": 235,
+    "name": "Christian",
+    "parentId": 6,
+    "slug": "christian"
+  },
+  {
+    "id": 190,
+    "name": "Circus",
+    "parentId": 7,
+    "slug": "circus"
+  },
+  {
+    "id": 150,
+    "name": "Cirque",
+    "parentId": 7,
+    "slug": "cirque"
+  },
+  {
+    "id": 191,
+    "name": "City",
+    "parentId": 6,
+    "slug": "city"
+  },
+  {
+    "id": 178,
+    "name": "Classical",
+    "parentId": 6,
+    "slug": "classical"
+  },
+  {
+    "id": 204,
+    "name": "College Sports",
+    "parentId": 5,
+    "slug": "college-sports"
+  },
+  {
+    "id": 138,
+    "name": "Country and Folk",
+    "parentId": 6,
+    "slug": "country-and-folk"
+  },
+  {
+    "id": 167,
+    "name": "Dance/Electronica",
+    "parentId": 6,
+    "slug": "danceelectronica"
+  },
+  {
+    "id": 202,
+    "name": "e-Sports",
+    "parentId": 5,
+    "slug": "e-sports"
+  },
+  {
+    "id": 222,
+    "name": "European Soccer",
+    "parentId": 174,
+    "slug": "european-soccer"
+  },
+  {
+    "id": 176,
+    "name": "Extreme Sports",
+    "parentId": 5,
+    "slug": "extreme-sports"
+  },
+  {
+    "id": 226,
+    "name": "F1",
+    "parentId": 168,
+    "slug": "f1"
+  },
+  {
+    "id": 154,
+    "name": "Family",
+    "parentId": 7,
+    "slug": "family"
+  },
+  {
+    "id": 159,
+    "name": "Fighting",
+    "parentId": 5,
+    "slug": "fighting"
+  },
+  {
+    "id": 237,
+    "name": "Food and Drink",
+    "parentId": 186,
+    "slug": "food-and-drink"
+  },
+  {
+    "id": 187,
+    "name": "Football",
+    "parentId": 5,
+    "slug": "football"
+  },
+  {
+    "id": 234,
+    "name": "Funk",
+    "parentId": 6,
+    "slug": "funk"
+  },
+  {
+    "id": 209,
+    "name": "Golf",
+    "parentId": 5,
+    "slug": "golf"
+  },
+  {
+    "id": 240,
+    "name": "Gospel",
+    "parentId": 6,
+    "slug": "gospel"
+  },
+  {
+    "id": 179,
+    "name": "Gymnastics",
+    "parentId": 5,
+    "slug": "gymnastics"
+  },
+  {
+    "id": 140,
+    "name": "Hard Rock",
+    "parentId": 6,
+    "slug": "hard-rock"
+  },
+  {
+    "id": 239,
+    "name": "Hawaiian",
+    "parentId": 6,
+    "slug": "hawaiian"
+  },
+  {
+    "id": 233,
+    "name": "Heavy Metal",
+    "parentId": 6,
+    "slug": "heavy-metal"
+  },
+  {
+    "id": 161,
+    "name": "Hockey",
+    "parentId": 5,
+    "slug": "hockey"
+  },
+  {
+    "id": 243,
+    "name": "Holiday",
+    "parentId": 7,
+    "slug": "holiday"
+  },
+  {
+    "id": 195,
+    "name": "Horse Racing",
+    "parentId": 5,
+    "slug": "horse-racing"
+  },
+  {
+    "id": 232,
+    "name": "Indie",
+    "parentId": 6,
+    "slug": "indie"
+  },
+  {
+    "id": 223,
+    "name": "International Soccer",
+    "parentId": 174,
+    "slug": "international-soccer"
+  },
+  {
+    "id": 165,
+    "name": "K-pop",
+    "parentId": 6,
+    "slug": "k-pop"
+  },
+  {
+    "id": 225,
+    "name": "Kickboxing",
+    "parentId": 159,
+    "slug": "kickboxing"
+  },
+  {
+    "id": 196,
+    "name": "Lacrosse",
+    "parentId": 5,
+    "slug": "lacrosse"
+  },
+  {
+    "id": 158,
+    "name": "Latin Music",
+    "parentId": 6,
+    "slug": "latin-music"
+  },
+  {
+    "id": 208,
+    "name": "LIV Golf",
+    "parentId": 209,
+    "slug": "liv-golf"
+  },
+  {
+    "id": 162,
+    "name": "Magic",
+    "parentId": 7,
+    "slug": "magic"
+  },
+  {
+    "id": 180,
+    "name": "Minor League Baseball",
+    "parentId": 188,
+    "slug": "minor-league-baseball"
+  },
+  {
+    "id": 228,
+    "name": "Minor League Hockey",
+    "parentId": 161,
+    "slug": "minor-league-hockey"
+  },
+  {
+    "id": 215,
+    "name": "Mixed Martial Arts",
+    "parentId": 159,
+    "slug": "mma"
+  },
+  {
+    "id": 171,
+    "name": "MLB Baseball",
+    "parentId": 188,
+    "slug": "mlb-baseball"
+  },
+  {
+    "id": 206,
+    "name": "MLS Soccer",
+    "parentId": 174,
+    "slug": "mls-soccer"
+  },
+  {
+    "id": 227,
+    "name": "Monster Trucks",
+    "parentId": 176,
+    "slug": "monster-trucks"
+  },
+  {
+    "id": 218,
+    "name": "Motorcross",
+    "parentId": 176,
+    "slug": "motorcross"
+  },
+  {
+    "id": 151,
+    "name": "Motorsports",
+    "parentId": 5,
+    "slug": "motorsports"
+  },
+  {
+    "id": 186,
+    "name": "Music Festivals",
+    "parentId": 6,
+    "slug": "music-festivals"
+  },
+  {
+    "id": 144,
+    "name": "Musical",
+    "parentId": 7,
+    "slug": "musical"
+  },
+  {
+    "id": 170,
+    "name": "NASCAR Racing",
+    "parentId": 168,
+    "slug": "nascar-racing"
+  },
+  {
+    "id": 175,
+    "name": "NBA Basketball",
+    "parentId": 177,
+    "slug": "nba-basketball"
+  },
+  {
+    "id": 182,
+    "name": "NCAA Football",
+    "parentId": 187,
+    "slug": "ncaa-football"
+  },
+  {
+    "id": 216,
+    "name": "NCAA Gymnastics",
+    "parentId": 179,
+    "slug": "ncaa-gymnastics"
+  },
+  {
+    "id": 172,
+    "name": "NCAA Mens Baseball",
+    "parentId": 188,
+    "slug": "ncaa-mens-baseball"
+  },
+  {
+    "id": 157,
+    "name": "NCAA Mens Basketball",
+    "parentId": 177,
+    "slug": "ncaa-mens-basketball"
+  },
+  {
+    "id": 211,
+    "name": "NCAA Mens Hockey",
+    "parentId": 161,
+    "slug": "ncaa-mens-hockey"
+  },
+  {
+    "id": 205,
+    "name": "NCAA Mens Lacrosse",
+    "parentId": 196,
+    "slug": "ncaa-mens-lacrosse"
+  },
+  {
+    "id": 230,
+    "name": "NCAA Mens Soccer",
+    "parentId": 174,
+    "slug": "ncaa-mens-soccer"
+  },
+  {
+    "id": 248,
+    "name": "NCAA Mens Volleyball",
+    "parentId": 197,
+    "slug": "ncaa-mens-volleyball"
+  },
+  {
+    "id": 214,
+    "name": "NCAA Womens Basketball",
+    "parentId": 177,
+    "slug": "ncaa-womens-basketball"
+  },
+  {
+    "id": 247,
+    "name": "NCAA Womens Lacrosse",
+    "parentId": 196,
+    "slug": "ncaa-womens-lacrosse"
+  },
+  {
+    "id": 231,
+    "name": "NCAA Womens Soccer",
+    "parentId": 174,
+    "slug": "ncaa-womens-soccer"
+  },
+  {
+    "id": 213,
+    "name": "NCAA Womens Softball",
+    "parentId": 142,
+    "slug": "ncaa-womens-softball"
+  },
+  {
+    "id": 207,
+    "name": "NCAA Womens Volleyball",
+    "parentId": 197,
+    "slug": "ncaa-womens-volleyball"
+  },
+  {
+    "id": 210,
+    "name": "NCAA Wrestling",
+    "parentId": 166,
+    "slug": "ncaa-wrestling"
+  },
+  {
+    "id": 163,
+    "name": "New Age",
+    "parentId": 6,
+    "slug": "new-age"
+  },
+  {
+    "id": 181,
+    "name": "NFL Football",
+    "parentId": 187,
+    "slug": "nfl-football",
+    "heroImagePath": "https://static.gotickets.com/677b4e87-2b23-4206-86a3-ac7b0150d565.webp"
+  },
+  {
+    "id": 183,
+    "name": "NHL Hockey",
+    "parentId": 161,
+    "slug": "nhl-hockey"
+  },
+  {
+    "id": 200,
+    "name": "Off-Broadway",
+    "parentId": 7,
+    "slug": "off-broadway"
+  },
+  {
+    "id": 224,
+    "name": "Olympic Sports",
+    "parentId": 5,
+    "slug": "olympic-sports"
+  },
+  {
+    "id": 160,
+    "name": "Opera",
+    "parentId": 6,
+    "slug": "opera"
+  },
+  {
+    "id": 185,
+    "name": "Other Concerts",
+    "parentId": 6,
+    "slug": "other-concerts"
+  },
+  {
+    "id": 143,
+    "name": "Other Sports",
+    "parentId": 5,
+    "slug": "other-sports"
+  },
+  {
+    "id": 155,
+    "name": "Other Theater",
+    "parentId": 7,
+    "slug": "other-theater"
+  },
+  {
+    "id": 192,
+    "name": "PGA Golf",
+    "parentId": 209,
+    "slug": "pga-golf"
+  },
+  {
+    "id": 194,
+    "name": "Podcast",
+    "parentId": 7,
+    "slug": "podcast"
+  },
+  {
+    "id": 242,
+    "name": "Poetry",
+    "parentId": 7,
+    "slug": "poetry"
+  },
+  {
+    "id": 141,
+    "name": "Pop",
+    "parentId": 6,
+    "slug": "pop"
+  },
+  {
+    "id": 212,
+    "name": "Pro Wrestling",
+    "parentId": 166,
+    "slug": "pro-wrestling"
+  },
+  {
+    "id": 148,
+    "name": "Public Speaking",
+    "parentId": 7,
+    "slug": "public-speaking"
+  },
+  {
+    "id": 229,
+    "name": "Punk",
+    "parentId": 6,
+    "slug": "punk"
+  },
+  {
+    "id": 149,
+    "name": "R&B",
+    "parentId": 6,
+    "slug": "rb"
+  },
+  {
+    "id": 145,
+    "name": "Rap/Hip Hop",
+    "parentId": 6,
+    "slug": "rap-hip-hop"
+  },
+  {
+    "id": 173,
+    "name": "Reggae",
+    "parentId": 6,
+    "slug": "reggae"
+  },
+  {
+    "id": 137,
+    "name": "Rock",
+    "parentId": 6,
+    "slug": "rock",
+    "heroImagePath": "https://static.gotickets.com/042c0fb3-d224-4320-b161-25da02a894ea.webp",
+    "performerHeroImagePath": "https://static.gotickets.com/f360004e-9aa0-4ff0-bf18-09182b735cd7.webp"
+  },
+  {
+    "id": 156,
+    "name": "Rodeo",
+    "parentId": 5,
+    "slug": "rodeo"
+  },
+  {
+    "id": 201,
+    "name": "Rugby",
+    "parentId": 5,
+    "slug": "rugby"
+  },
+  {
+    "id": 193,
+    "name": "Skating",
+    "parentId": 5,
+    "slug": "skating"
+  },
+  {
+    "id": 174,
+    "name": "Soccer",
+    "parentId": 5,
+    "slug": "soccer"
+  },
+  {
+    "id": 142,
+    "name": "Softball",
+    "parentId": 5,
+    "slug": "softball"
+  },
+  {
+    "id": 246,
+    "name": "Soul",
+    "parentId": 6,
+    "slug": "soul"
+  },
+  {
+    "id": 219,
+    "name": "Supercross",
+    "parentId": 176,
+    "slug": "supercross"
+  },
+  {
+    "id": 236,
+    "name": "Symphony",
+    "parentId": 6,
+    "slug": "symphony"
+  },
+  {
+    "id": 169,
+    "name": "Tennis",
+    "parentId": 5,
+    "slug": "tennis"
+  },
+  {
+    "id": 244,
+    "name": "Tribute",
+    "parentId": 6,
+    "slug": "tribute"
+  },
+  {
+    "id": 217,
+    "name": "Truck Racing",
+    "parentId": 168,
+    "slug": "truck-racing"
+  },
+  {
+    "id": 221,
+    "name": "US Minor League Soccer",
+    "parentId": 174,
+    "slug": "us-minor-league-soccer"
+  },
+  {
+    "id": 197,
+    "name": "Volleyball",
+    "parentId": 5,
+    "slug": "volleyball"
+  },
+  {
+    "id": 199,
+    "name": "WNBA",
+    "parentId": 177,
+    "slug": "wnba"
+  },
+  {
+    "id": 152,
+    "name": "World Music",
+    "parentId": 6,
+    "slug": "world-music"
+  },
+  {
+    "id": 166,
+    "name": "Wrestling",
+    "parentId": 5,
+    "slug": "wrestling"
+  },
+  {
+    "id": 198,
+    "name": "XFL",
+    "parentId": 187,
+    "slug": "xfl"
+  }
+]

@@ -1,1 +1,1 @@
-export const OneDayInSeconds = 86400
+export const OneDayInSeconds = 86400;

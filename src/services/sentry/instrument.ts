@@ -1,5 +1,5 @@
-import * as Sentry from '@sentry/react'
-import { useEffect } from 'react'
+import * as Sentry from '@sentry/react';
+import { useEffect } from 'react';
 
 import {
   createBrowserRouter,
@@ -7,9 +7,9 @@ import {
   matchRoutes,
   useLocation,
   useNavigationType,
-} from 'react-router'
+} from 'react-router';
 
-const sentryDsn = import.meta.env.SENTRY_DSN ?? import.meta.env.VITE_SENTRY_DSN
+const sentryDsn = import.meta.env.SENTRY_DSN ?? import.meta.env.VITE_SENTRY_DSN;
 
 try {
   Sentry.init({
@@ -49,10 +49,10 @@ try {
     replaysSessionSampleRate: 0,
     replaysOnErrorSampleRate: 1.0,
     sampleRate: 1.0,
-  })
+  });
 } catch (error) {
-  console.error('Error initializing Sentry:', error)
+  console.error('Error initializing Sentry:', error);
 }
 
 export const sentryCreateBrowserRouter: typeof createBrowserRouter =
-  Sentry.wrapCreateBrowserRouterV7(createBrowserRouter)
+  Sentry.wrapCreateBrowserRouterV7(createBrowserRouter);

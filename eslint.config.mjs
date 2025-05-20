@@ -1,10 +1,10 @@
-import eslint from '@eslint/js'
-import eslintConfigPrettier from 'eslint-config-prettier'
-import perfectionist from 'eslint-plugin-perfectionist'
-import reactPlugin from 'eslint-plugin-react'
-import hooksPlugin from 'eslint-plugin-react-hooks'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
+import eslint from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import perfectionist from 'eslint-plugin-perfectionist';
+import reactPlugin from 'eslint-plugin-react';
+import hooksPlugin from 'eslint-plugin-react-hooks';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
@@ -23,8 +23,8 @@ export default tseslint.config(
       'public/',
       'dist/',
       'node_modules/',
-      'src/services/maverick/generated/',
       'src/icons/**/*.tsx',
+      '**/maverick-schema.d.ts',
     ],
   },
   {
@@ -32,10 +32,7 @@ export default tseslint.config(
       perfectionist,
     },
     rules: {
-      'perfectionist/sort-imports': [
-        'error',
-        { type: 'alphabetical', newlinesBetween: 'ignore' },
-      ],
+      'perfectionist/sort-imports': ['error', { type: 'alphabetical', newlinesBetween: 'ignore' }],
       'perfectionist/sort-interfaces': 'error',
       'perfectionist/sort-jsx-props': 'error',
       'perfectionist/sort-union-types': 'error',
@@ -79,4 +76,4 @@ export default tseslint.config(
       'perfectionist/sort-imports': 'off',
     },
   }
-)
+);

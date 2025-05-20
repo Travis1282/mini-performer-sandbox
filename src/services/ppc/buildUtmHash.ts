@@ -1,13 +1,13 @@
-import { PARAMS_TO_CHECK } from './constants'
+import { PARAMS_TO_CHECK } from './constants';
 
 export const buildUtmHash = (searchParams: URLSearchParams) => {
-  const initialParams: Record<string, string> = {}
+  const initialParams: Record<string, string> = {};
   for (const param of PARAMS_TO_CHECK) {
-    const value = searchParams.get(param)
+    const value = searchParams.get(param);
     if (value) {
-      initialParams[param] = value
+      initialParams[param] = value;
     }
   }
 
-  return initialParams
-}
+  return initialParams;
+};

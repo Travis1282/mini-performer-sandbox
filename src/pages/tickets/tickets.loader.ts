@@ -1,5 +1,5 @@
-import type { LoaderFunctionArgs } from 'react-router'
-import { getEventMetadata } from '@/services/maverick/get-event-metadata'
+import type { LoaderFunctionArgs } from 'react-router';
+import { getEventMetadata } from '@/services/maverick/get-event-metadata';
 
 export function loader({ request, params }: LoaderFunctionArgs) {
   return getEventMetadata({
@@ -11,7 +11,7 @@ export function loader({ request, params }: LoaderFunctionArgs) {
         'event-id': Number(params.eventId),
       },
     },
-  })
+  });
 }
 
-export default loader
+export default loader;

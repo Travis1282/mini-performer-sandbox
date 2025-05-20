@@ -1,35 +1,35 @@
-'use client'
+'use client';
 // Missing growthbook check for smaller fonts/maps
-import type { CSSProperties } from 'react'
+import type { CSSProperties } from 'react';
 // import { Button } from "@/components/Shared/Button";
 // import TicketBadge from "@/components/Shared/TicketBadge";
 // import Tooltip from "@/components/Shared/Tooltip";
 // import { SeatSecureBadge } from "@/components/TicketsContainer/TicketListItem/SeatSecure";
 // import { useVenueConfigurationContext } from "@/components/TicketsContainer/utils/useVenueConfiguration";
-import clsx from 'clsx'
-import React from 'react'
-import { useMemo } from 'react'
-import { Link } from 'react-router'
-import type { components } from '../../../services/maverick/generated/maverick-schema'
-import type { Listing } from '../../../types/listing'
-import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path'
-import { shouldShowClearView } from '../../../services/events/should-show-clear-view'
-import { shouldShowSeatedTogether } from '../../../services/events/should-show-seated-together'
-import { makeTestid } from '../../../services/string/make-test-id'
-import { useVenueConfigurationContext } from '../services/useVenueConfiguration'
+import clsx from 'clsx';
+import React from 'react';
+import { useMemo } from 'react';
+import { Link } from 'react-router';
+import type { components } from '../../../services/maverick/generated/maverick-schema';
+import type { Listing } from '../../../types/listing';
+import { getEventTicketsPath } from '../../../services/events/get-event-tickets-path';
+import { shouldShowClearView } from '../../../services/events/should-show-clear-view';
+import { shouldShowSeatedTogether } from '../../../services/events/should-show-seated-together';
+import { makeTestid } from '../../../services/string/make-test-id';
+import { useVenueConfigurationContext } from '../services/useVenueConfiguration';
 
 interface TicketListItemProps {
-  className?: string
-  event: components['schemas']['Event']
+  className?: string;
+  event: components['schemas']['Event'];
   //   isGeneralAdmission?: boolean;
-  isInternational?: boolean
+  isInternational?: boolean;
   //   isMobile?: boolean;
   //   isParking: boolean;
-  listing: Listing
+  listing: Listing;
   //   onClick: () => void;
-  quantityFilter?: number
-  showSoldTickets?: false | number
-  style?: CSSProperties
+  quantityFilter?: number;
+  showSoldTickets?: false | number;
+  style?: CSSProperties;
 }
 
 // const imagePath = resolveImagePath("/img/info-icon.svg");
@@ -88,58 +88,55 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
   quantityFilter,
   isInternational,
 }: TicketListItemProps) => {
-  const { getColorBySectionId } = useVenueConfigurationContext()
-  const sectionColor = getColorBySectionId(listing.sectionId)
+  const { getColorBySectionId } = useVenueConfigurationContext();
+  const sectionColor = getColorBySectionId(listing.sectionId);
 
   const useAllInPricing =
     listing &&
     listing.displayPrice > 0 &&
     listing.displayPriceWithFees &&
-    event?.pricingType === 'ALL_IN_TICKET_PAGE'
+    event?.pricingType === 'ALL_IN_TICKET_PAGE';
 
   const ticketsQuantity = useMemo(
     () =>
-      listing?.validSplitQuantities?.length &&
-      listing?.validSplitQuantities?.length > 1
+      listing?.validSplitQuantities?.length && listing?.validSplitQuantities?.length > 1
         ? `${Math.min(...listing.validSplitQuantities)}-${Math.max(
             ...listing.validSplitQuantities
           )}`
         : `${listing?.validSplitQuantities?.[0]}`,
     [listing]
-  )
+  );
 
   const ticketQuantity = useMemo(() => {
-    const singular = Number(quantityFilter || ticketsQuantity) === 1
-    const text = `${quantityFilter || ticketsQuantity} ${
-      singular ? 'Ticket' : 'Tickets'
-    }`
+    const singular = Number(quantityFilter || ticketsQuantity) === 1;
+    const text = `${quantityFilter || ticketsQuantity} ${singular ? 'Ticket' : 'Tickets'}`;
     return {
       text,
       isMany: !singular,
-    }
-  }, [ticketsQuantity, quantityFilter])
+    };
+  }, [ticketsQuantity, quantityFilter]);
 
   const displayPrice = useAllInPricing
     ? (listing.displayPriceWithFees ?? 0)
-    : (listing?.displayPrice ?? 0)
+    : (listing?.displayPrice ?? 0);
 
   const price = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
     maximumFractionDigits: 0,
     minimumFractionDigits: 0,
-  }).format(displayPrice)
+  }).format(displayPrice);
 
   const showSeatTogether = shouldShowSeatedTogether({
     isMultiple: ticketQuantity.isMany,
     event,
     listing,
-  })
+  });
 
   const showClearView = shouldShowClearView({
     listing,
     event,
-  })
+  });
   return (
     <Link
       className={clsx(
@@ -148,10 +145,7 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
         className
       )}
       data-cy="ticketListItem"
-      data-testid={`${makeTestid(
-        `${listing.section}-${listing.row}`,
-        'ticket-list-item'
-      )}`}
+      data-testid={`${makeTestid(`${listing.section}-${listing.row}`, 'ticket-list-item')}`}
       id={`${listing.id}`}
       style={{ ...style, borderLeftColor: sectionColor }}
       to={`${getEventTicketsPath(event)}/${listing.id}`}
@@ -159,18 +153,12 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
       <>
         <div className="flex flex-col">
           <span
-            className={clsx(
-              'inline-block text-sm font-semibold break-words italic lg:text-base'
-            )}
+            className={clsx('inline-block text-sm font-semibold break-words italic lg:text-base')}
             data-testid="ticket-list-item-title"
           >
             {listing.section ? `${listing.section}, ` : ''} Row {listing.row}
           </span>
-          <div
-            className={clsx(
-              'mt-1 flex flex-col text-[11px] text-stone-700 lg:text-[13px]'
-            )}
-          >
+          <div className={clsx('mt-1 flex flex-col text-[11px] text-stone-700 lg:text-[13px]')}>
             <div className="flex items-center">
               <span className="mr-2 font-medium">{ticketQuantity.text}</span>
               {/* {listing.lowPrice || listing.lastInSection ? (
@@ -185,41 +173,29 @@ const TicketListItem: React.FC<TicketListItemProps> = ({
             <span className="flex flex-wrap items-center">
               {/* {showClearView ? <InfoIcon /> : null} */}
               {showClearView ? <span>Clear view</span> : null}
-              {showClearView && showSeatTogether ? (
-                <span className="mr-1">,</span>
-              ) : null}
-              {showSeatTogether ? (
-                <span>You will be seated together.</span>
-              ) : null}
+              {showClearView && showSeatTogether ? <span className="mr-1">,</span> : null}
+              {showSeatTogether ? <span>You will be seated together.</span> : null}
             </span>
           </div>
         </div>
         <div className="flex flex-col items-end pl-3">
-          <div
-            className={clsx(
-              'mb-1 flex items-center justify-end gap-[3px] lg:text-[15px]'
-            )}
-          >
+          <div className={clsx('mb-1 flex items-center justify-end gap-[3px] lg:text-[15px]')}>
             <span
-              className={clsx(
-                'flex flex-row gap-1 font-semibold! whitespace-nowrap text-black'
-              )}
+              className={clsx('flex flex-row gap-1 font-semibold! whitespace-nowrap text-black')}
               data-testid="ticket-list-item-price"
             >
               {price}
             </span>
             <span className={clsx('font-normal text-stone-400')}>ea</span>
           </div>
-          {isInternational && (
-            <div className="mb-1 text-xs text-stone-600">USD</div>
-          )}
+          {isInternational && <div className="mb-1 text-xs text-stone-600">USD</div>}
           <div className="bg-go-blue-500 rounded-md px-3 py-2 text-xs font-semibold text-white lg:px-5 lg:py-3 lg:text-sm">
             Select
           </div>
         </div>
       </>
     </Link>
-  )
-}
+  );
+};
 
-export default TicketListItem
+export default TicketListItem;

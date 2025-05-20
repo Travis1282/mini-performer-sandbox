@@ -1,39 +1,43 @@
-import { Hono } from 'hono'
-import { logger } from 'hono/logger'
-import manifest from '../dist/.vite/manifest.json'
-import { buildBootstrappedData } from './services/bootstrappedData'
-import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures'
-import { getLocationRegion } from './services/location/getLocationRegion'
-import {
-  getSessions,
-  setSessionCookiesAndHeaders,
-} from './services/ppc/sessions'
-import { basicProxy } from './services/proxy'
+import { Hono } from 'hono';
+import { logger } from 'hono/logger';
+import { buildBootstrappedData } from './services/bootstrappedData';
+import { getGrowthbookFeatures } from './services/growthbook/getGrowthbookFeatures';
+import { getLocationRegion } from './services/location/getLocationRegion';
+import { getSessions, setSessionCookiesAndHeaders } from './services/ppc/sessions';
+import { basicProxy } from './services/proxy';
 
-const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0]
-const entryFile: string | undefined = manifest['src/client.tsx']?.file
+interface ManifestEntry {
+  css?: string[];
+  file: string;
+}
 
-const app = new Hono()
-app.use(logger())
+const manifest: Record<string, ManifestEntry> = {
+  'src/client.tsx': {
+    file: 'assets/client.js',
+    css: ['assets/client.css'],
+  },
+};
 
-app.on(
-  ['GET', 'POST', 'PUT', 'DELETE'],
-  '/rest/*',
-  basicProxy(import.meta.env.VITE_MAVERICK_URL)
-)
+const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0];
+const entryFile: string | undefined = manifest['src/client.tsx']?.file;
+
+const app = new Hono();
+app.use(logger());
+
+app.on(['GET', 'POST', 'PUT', 'DELETE'], '/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL));
 
 app.get('*', async (c, next) => {
-  const sessionsPayload = await getSessions(c)
+  const sessionsPayload = await getSessions(c);
 
-  setSessionCookiesAndHeaders(c, sessionsPayload)
+  setSessionCookiesAndHeaders(c, sessionsPayload);
 
-  await next()
-})
+  await next();
+});
 
 app.get('*', async (c) => {
-  const { ipLocation, closestRegionId } = await getLocationRegion(c)
+  const { ipLocation, closestRegionId } = await getLocationRegion(c);
 
-  const featuresPayload = await getGrowthbookFeatures()
+  const featuresPayload = await getGrowthbookFeatures();
 
   return c.html(
     `
@@ -51,7 +55,7 @@ app.get('*', async (c) => {
         </body>
       </html>
     `
-  )
-})
+  );
+});
 
-export default app
+export default app;
