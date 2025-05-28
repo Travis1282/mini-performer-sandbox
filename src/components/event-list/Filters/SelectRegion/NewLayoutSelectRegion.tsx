@@ -1,25 +1,24 @@
-'use client'
+'use client';
 
-import { Popover } from '../Popover'
-import { RegionList } from './Regionlist'
-import { Offcanvas } from '@/components/Shared/Offcanvas'
-import type { Region } from '@/contracts/entities/region'
-import type { components } from '@/contracts/generated/maverick-schema'
-import { useIsMobile } from '@/hooks/useIsMobile'
-import { useAppStore } from '@/store/AppStoreProvider'
-import { ChevronDownIcon } from '@heroicons/react/24/outline'
-import clsx from 'clsx'
-import type { MouseEvent, ReactNode } from 'react'
-import { useEffect, useState } from 'react'
+import type { Region } from '@/contracts/entities/region';
+import type { components } from '@/contracts/generated/maverick-schema';
+import type { MouseEvent, ReactNode } from 'react';
+import { Offcanvas } from '@/components/Offcanvas';
+import { Popover } from '@/components/Popover';
+import { useIsMobile } from '@/hooks/useIsMobile';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
+import { useEffect, useState } from 'react';
+import { RegionList } from './Regionlist';
 
 export interface NewLayoutSelectRegionProps {
-  children?: ReactNode
-  className?: string
-  disabled?: boolean
-  dropdownPosition?: string
-  regions: components['schemas']['Region'][]
-  selected: components['schemas']['Region'] | undefined
-  setSelected: (region: components['schemas']['Region'] | undefined) => void
+  children?: ReactNode;
+  className?: string;
+  disabled?: boolean;
+  dropdownPosition?: string;
+  regions: components['schemas']['Region'][];
+  selected: components['schemas']['Region'] | undefined;
+  setSelected: (region: components['schemas']['Region'] | undefined) => void;
 }
 
 export const NewLayoutSelectRegion = ({
@@ -30,41 +29,34 @@ export const NewLayoutSelectRegion = ({
   selected,
   setSelected,
 }: NewLayoutSelectRegionProps) => {
-  const setIsRegionDropdownOpen = useAppStore(
-    (state) => state.setIsRegionDropdownOpen
-  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_, setIsRegionDropdownOpen] = useState(false);
 
-  const { isMobile } = useIsMobile()
-  const [isOpen, setIsOpen] = useState(false)
-  const [search, setSearch] = useState('')
+  const { isMobile } = useIsMobile();
+  const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState('');
 
   function handleSelect(region: Region) {
-    setSelected(region)
-    setIsOpen(false)
+    setSelected(region);
+    setIsOpen(false);
   }
 
   function toggleDropdown(evt: MouseEvent) {
-    evt.preventDefault()
-    if (
-      !(evt.target instanceof SVGElement && evt.target.dataset.dropdownXButton)
-    ) {
-      setIsOpen((prevState) => !prevState)
+    evt.preventDefault();
+    if (!(evt.target instanceof SVGElement && evt.target.dataset.dropdownXButton)) {
+      setIsOpen((prevState) => !prevState);
     }
   }
 
   useEffect(() => {
-    setSearch('')
+    setSearch('');
     if (setIsRegionDropdownOpen) {
-      setIsRegionDropdownOpen(isOpen)
+      setIsRegionDropdownOpen(isOpen);
     }
-  }, [isOpen, setIsRegionDropdownOpen])
+  }, [isOpen, setIsRegionDropdownOpen]);
 
   return (
-    <div
-      className={`${className ?? ''}`}
-      data-cy="select-region"
-      data-testid="select-region"
-    >
+    <div className={`${className ?? ''}`} data-cy="select-region" data-testid="select-region">
       <Popover
         onOpenChange={(open) => setIsOpen(open)}
         open={isMobile ? false : isOpen}
@@ -89,11 +81,10 @@ export const NewLayoutSelectRegion = ({
           ) : (
             <button
               className={clsx(
-                'h-[33px] shrink-0 overflow-hidden rounded-3xl bg-white font-medium text-dark shadow-dropdown-button-box-shadow h6-sm lg:h-[36px] lg:h6-lg',
+                'text-dark shadow-dropdown-button-box-shadow h6-sm lg:h6-lg h-[33px] shrink-0 overflow-hidden rounded-3xl bg-white font-medium lg:h-[36px]',
                 selected && 'bg-accent! text-white',
 
-                disabled &&
-                  'hover:none active:none cursor-not-allowed opacity-50'
+                disabled && 'hover:none active:none cursor-not-allowed opacity-50'
               )}
               data-cy="select-region-activator"
               data-testid="select-region-activator"
@@ -105,7 +96,7 @@ export const NewLayoutSelectRegion = ({
                 {`${selected ? `${selected.name}` : 'Location'}`}
                 <span
                   aria-label="Reset Location"
-                  className="flex h-full items-center pl-2 pr-3.5 text-[8px]!"
+                  className="flex h-full items-center pr-3.5 pl-2 text-[8px]!"
                   id="resetLocationButton"
                 >
                   <ChevronDownIcon className="mt-0.5 h-4 w-4" />
@@ -128,7 +119,7 @@ export const NewLayoutSelectRegion = ({
         <Offcanvas
           label="Select Location"
           onClick={() => {
-            setIsOpen(false)
+            setIsOpen(false);
           }}
           open={isOpen}
         >
@@ -142,5 +133,5 @@ export const NewLayoutSelectRegion = ({
         </Offcanvas>
       ) : null}
     </div>
-  )
-}
+  );
+};

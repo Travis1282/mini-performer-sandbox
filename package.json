@@ -2,9 +2,10 @@
   "name": "cloudflare-pages",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "pnpm run load-env && NODE_ENV=production vite build --mode client && NODE_ENV=production vite build",
-    "preview": "wrangler pages dev",
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "start": "node dist/index.js",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000",
     "deploy": "pnpm run build && wrangler pages deploy",
     "types-generate": "pnpm openapi-typescript https://maverick-public-services-stage.dev.gotickets.com/api/open-api -o ./src/services/maverick/generated/maverick-schema.d.ts",
     "check-env": "node scripts/get-env.js",
