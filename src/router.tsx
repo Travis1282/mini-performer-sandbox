@@ -1,18 +1,11 @@
-import Cookies from 'js-cookie';
+import { createBrowserRouter } from 'react-router';
 import { GlobalErrorContent } from './components/errors/oh-no';
-import { Loading } from './components/loading';
-import About from './pages/about';
-import Home from './pages/home/home';
 import { Layout } from './pages/layout';
 import { PrimaryLayout } from './pages/primary-layout';
 import { getPerformerData } from './pages/slug/services /getPerformerData';
 import Slug from './pages/slug/slug-layout';
-import { queryClient } from './query-client';
-import { CLOSEST_REGION_COOKIE } from './services/location/constants';
-import { getSearchTrendingEvents } from './services/maverick/get-search-trending-events';
-import { sentryCreateBrowserRouter } from './services/sentry/instrument';
 
-const router = sentryCreateBrowserRouter([
+const router = createBrowserRouter([
   {
     Component: Layout,
     ErrorBoundary: GlobalErrorContent,
@@ -21,62 +14,20 @@ const router = sentryCreateBrowserRouter([
         Component: PrimaryLayout,
         children: [
           {
-            Component: Home,
-            index: true,
-            hydrateFallbackElement: <Loading />,
-            loader: async ({ request }) => {
-              const closestRegionId = Cookies.get(CLOSEST_REGION_COOKIE);
-
-              const loaderData = await getSearchTrendingEvents({
-                init: {
-                  signal: request.signal,
-                },
-                params: {
-                  query: {
-                    regionId: closestRegionId ?? '0',
-                  },
-                },
-              });
-              queryClient.setQueryData(['trending-events', 'get', closestRegionId], loaderData);
-
-              return loaderData;
-            },
-          },
-          {
-            Component: About,
-            path: 'about',
-          },
-          {
             Component: Slug,
-            path: ':slug',
-            loader: async ({ request, params: { slug } }) => {
-              if (!slug) {
-                return {
-                  slug: '404',
-                };
-              }
+            path: '/',
+            loader: async ({ request }) => {
               const url = new URL(request.url);
               const searchParams = Object.fromEntries(url.searchParams);
-              const performerData = await getPerformerData(slug, searchParams);
+
+              // Use a default slug for the home route - you can change this to any default performer
+              const defaultSlug = 'billie-eilish'; // or whatever default performer you want
+              const performerData = await getPerformerData(defaultSlug, searchParams);
 
               return performerData;
             },
           },
         ],
-      },
-      {
-        path: '/tickets/:eventId/:slug/:localDate',
-        hydrateFallbackElement: <Loading />,
-        lazy: async () => {
-          const [loaderModule, componentModule] = await Promise.all([
-            import('./pages/tickets/tickets.loader'),
-            import('./pages/tickets/tickets'),
-          ]);
-          return {
-            loader: loaderModule.default,
-            Component: componentModule.default,
-          };
-        },
       },
     ],
   },

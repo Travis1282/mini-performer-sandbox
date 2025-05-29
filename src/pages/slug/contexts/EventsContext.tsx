@@ -1,29 +1,35 @@
-import { getEventsPaginated } from '@/services/maverick/getEventsPaginated';
-import { useQuery } from '@tanstack/react-query';
+import type { Category } from '@/contracts/entities/category';
+import type { Region } from '@/contracts/entities/region';
+import type { TimeByType } from '@/contracts/events/eventFiltersTypes';
+import type { components } from '@/contracts/generated/maverick-schema';
+import { useCategoriesContext } from '@/services/categories/use-categories-context';
+import { useRegionsContext } from '@/services/categories/use-regions-context';
+import {
+  filterEventFn,
+  getFilters,
+  prioritizeUSandCanada,
+  sortEventList,
+} from '@/utils/eventUtils';
 import dayjs from 'dayjs';
-import { createContext, type ReactNode, useContext, useMemo, useState } from 'react';
+import { createContext, type ReactNode, useContext, useMemo } from 'react';
 import { useLocation } from 'react-router';
 import type { GetPerformerDataResp } from '../services /getPerformerData';
 
 interface EventsContextType {
-  error: Error | null;
-  eventsData: Awaited<ReturnType<typeof getEventsPaginated>> | undefined;
-  isLoading: boolean;
-  refetchEvents: () => void;
-  shouldRefetch: boolean;
+  eventsData: components['schemas']['Event'][];
 }
 
 const EventsContext = createContext<EventsContextType | undefined>(undefined);
 
 interface EventsProviderProps {
   children: ReactNode;
-  initialData: GetPerformerDataResp['eventsListResp'];
-  performerId: number;
+  initialData: GetPerformerDataResp['data']['events'];
 }
 
-export function EventsProvider({ children, performerId, initialData }: EventsProviderProps) {
-  const [shouldRefetch, setShouldRefetch] = useState(false);
+export function EventsProvider({ children, initialData }: EventsProviderProps) {
   const location = useLocation();
+  const categories = useCategoriesContext();
+  const regions = useRegionsContext();
 
   const urlParams = useMemo(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -67,97 +73,66 @@ export function EventsProvider({ children, performerId, initialData }: EventsPro
     };
   }, [location.search]);
 
-  const queryParams = useMemo(() => {
-    const baseParams: {
-      performerId: number[];
-      categoryId?: number[];
-      eventType?: ('COMEDY' | 'CONCERTS' | 'PARKING' | 'SPORTS' | 'THEATER')[];
-      eventTimeFrom?: string;
-      eventTimeTo?: string;
-      pageSize: number;
-      sortBy: string;
-      sortDirection: 'ASC' | 'DESC';
-      regionId?: number;
-    } = {
-      performerId: [performerId],
-      pageSize: 20,
-      sortBy: 'eventTimeLocal',
-      sortDirection: 'ASC',
-    };
-
-    // Only add parameters if they have valid values
-    if (urlParams.categories.length > 0) {
-      baseParams.categoryId = urlParams.categories;
+  const filteredEvents = useMemo(() => {
+    if (!initialData || !Array.isArray(initialData)) {
+      return [];
     }
 
-    if (urlParams.types.length > 0) {
-      baseParams.eventType = urlParams.types as (
-        | 'COMEDY'
-        | 'CONCERTS'
-        | 'PARKING'
-        | 'SPORTS'
-        | 'THEATER'
-      )[];
-    }
+    const filters = getFilters(initialData);
 
-    if (urlParams.from) {
-      baseParams.eventTimeFrom = dayjs(urlParams.from).format('YYYY-MM-DDT00:00:00');
-    }
+    // Convert URL params to filter parameters
+    const selectedCategories: Category[] =
+      urlParams.categories.length > 0
+        ? categories.filter((cat) => urlParams.categories.includes(cat.id))
+        : [];
 
-    if (urlParams.to) {
-      baseParams.eventTimeTo = dayjs(urlParams.to).format('YYYY-MM-DDT23:59:59');
-    }
+    const selectedRegion: Region | undefined = urlParams.regionId
+      ? regions.find((region) => region.id.toString() === urlParams.regionId)
+      : undefined;
 
-    if (urlParams.regionId) {
-      const parsedRegionId = parseInt(urlParams.regionId, 10);
-      if (!isNaN(parsedRegionId)) {
-        baseParams.regionId = parsedRegionId;
+    const dateRange =
+      urlParams.from && urlParams.to
+        ? {
+            from: new Date(urlParams.from),
+            to: new Date(urlParams.to),
+          }
+        : undefined;
+
+    const searchParams = new URLSearchParams(location.search);
+    const timeParam = searchParams.get('time');
+    let selectedTime: TimeByType | undefined;
+
+    if (timeParam) {
+      const decodedTime = decodeURIComponent(timeParam);
+      if (decodedTime === 'Day/Night' || decodedTime === 'Day' || decodedTime === 'Night') {
+        selectedTime = decodedTime as TimeByType;
       }
     }
 
-    return baseParams;
-  }, [performerId, urlParams]);
+    const filtered = initialData.filter((event) =>
+      filterEventFn(
+        event,
+        undefined,
+        filters,
+        undefined,
+        urlParams.types.length > 0 ? urlParams.types : undefined,
+        selectedCategories.length > 0 ? selectedCategories : undefined,
+        selectedRegion,
+        dateRange,
+        selectedTime,
+        undefined,
+        categories
+      )
+    );
 
-  const {
-    data: eventsData,
-    isLoading,
-    error,
-    refetch,
-  } = useQuery({
-    queryKey: [
-      'event-list',
-      'get',
-      performerId,
-      urlParams.categories,
-      urlParams.types,
-      urlParams.from,
-      urlParams.to,
-      urlParams.regionId,
-    ],
-    queryFn: () => {
-      console.log('EventsContext API Request Parameters:', queryParams);
-      console.log('URL Params:', urlParams);
-      return getEventsPaginated({
-        query: queryParams,
-      });
-    },
-    enabled: true,
-    initialData,
-  });
-
-  const refetchEvents = () => {
-    setShouldRefetch(true);
-    refetch();
-  };
+    const sortedEvents = sortEventList(filtered);
+    return prioritizeUSandCanada(sortedEvents) as components['schemas']['Event'][];
+  }, [initialData, urlParams, categories, regions, location.search]);
 
   return (
     <EventsContext.Provider
       value={{
-        eventsData,
-        isLoading,
-        error,
-        refetchEvents,
-        shouldRefetch,
+        eventsData: filteredEvents,
       }}
     >
       {children}
