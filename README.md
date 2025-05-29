@@ -1,28 +1,75 @@
-```txt
+# GoTickets Demo App
+
+A ticket marketplace demo built with React, TypeScript, and Vite.
+
+## 🚀 Quick Start
+
+### CodeSandbox Setup
+
+If you're running this in CodeSandbox:
+
+1. **Wait for automatic setup** - CodeSandbox will auto-install dependencies
+2. **If you get a Vite plugin error**, try these steps:
+   ```bash
+   npm install
+   npm run dev
+   ```
+3. **Alternative**: Use the terminal and run:
+   ```bash
+   rm -rf node_modules package-lock.json
+   npm install
+   npm start
+   ```
+
+### Local Development
+
+```bash
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-```txt
-npm run deploy
+## 🛠️ Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run validate` - Run TypeScript checks
+
+## 📁 Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components and layouts
+├── services/      # Data services and contexts
+├── utils/         # Utility functions
+├── hooks/         # Custom React hooks
+└── contracts/     # Type definitions
 ```
 
-## Cloudflare pages project
-https://dash.cloudflare.com/ace3c0a278af90a8ad53ee2fa8a8bd9f/pages/view/fluffy-couscous
+## 🎯 Features
 
+- **Hardcoded Data**: No external API dependencies
+- **Event Listings**: Browse concerts, sports, and theater events
+- **Filtering**: Filter by categories, regions, dates, and times
+- **Responsive Design**: Mobile-friendly interface
+- **TypeScript**: Full type safety
 
-## TODO
+## 🔧 Tech Stack
 
-- [ ] add growthbook
-- [ ] add GTM, other root script tags
-- [ ] testing, linting, type checking on prs
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **React Router** - Navigation
+- **React Query** - State management
 
-## Overriding environment variables on a branch for a preview deployment
+---
 
-create a `.env` file with the environment variables you want to override, and name it with the branch name as a suffix. For example, if you want to override the API URL on the `my-cool-feature` branch, create a `.env.my-cool-feature` file with the following contents:
-
-```sh
-VITE_API_URL=https://preview-api.example.com
-```
-
-To see the order of loading variables for the build, read through the `load-env.js` script.
+*This is a demo application with hardcoded data for demonstration purposes.* 

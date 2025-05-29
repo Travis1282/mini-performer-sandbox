@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import type { ChangeEvent } from 'react';
+import { UAParser } from 'ua-parser-js';
 import type { Listing } from '@/contracts/entities/listing';
 import type { components } from '@/contracts/generated/maverick-schema';
-import type { ChangeEvent } from 'react';
 import { Display } from '@/contracts/UiVariants';
-import { UAParser } from 'ua-parser-js';
-import { s3Url } from './config';
+import { s3Url } from '../services/config';
 
 export function stringUTCDateToLocale(value: string, format = 'en-US'): string {
   return new Intl.DateTimeFormat(format).format(new Date(value));

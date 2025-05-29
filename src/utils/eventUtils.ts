@@ -1,14 +1,14 @@
+import type { DateRange } from 'react-day-picker';
+import dayjs from 'dayjs';
+import isBetween from 'dayjs/plugin/isBetween';
 import type { Category } from '@/contracts/entities/category';
 import type { Region } from '@/contracts/entities/region';
 import type { HomeAndAwayType, TimeByType } from '@/contracts/events/eventFiltersTypes';
 import type { components } from '@/contracts/generated/maverick-schema';
-import type { DateRange } from 'react-day-picker';
 // import type { FilterListIterable } from '@/store/EventListStore';
 // import type { DateRange } from 'react-day-picker';
 import { HomeAndAwayOptions, TimeOptions } from '@/contracts/events/eventFiltersTypes';
 import { leagueMap } from '@/contracts/sports';
-import dayjs from 'dayjs';
-import isBetween from 'dayjs/plugin/isBetween';
 import type { ImageApiParams } from './helpers';
 import { NEARBY_REGION_RADIUS } from './constants';
 import { resolveImagePath, sanitizeString } from './helpers';

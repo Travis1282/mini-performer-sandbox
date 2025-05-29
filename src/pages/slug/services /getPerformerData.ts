@@ -17,13 +17,7 @@ export const getPerformerData = async (
   searchParams?: SearchPageParams['searchParams']
 ): Promise<GetPerformerDataResp | undefined> => {
   try {
-    const response = await getCms({
-      params: {
-        query: {
-          path: slug,
-        },
-      },
-    });
+    const response = await getCms();
 
     const { data } = response;
 

@@ -1,7 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import { VERCEL_ENV } from '@/utils/config';
+import { VERCEL_ENV } from '@/services/config';
 import { resolveImagePath } from '@/utils/helpers';
 import { Copyright } from './CopyRight';
 

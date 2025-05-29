@@ -1,13 +1,7 @@
-import type { components, paths } from '@/contracts/generated/maverick-schema';
+import type { components } from '@/contracts/generated/maverick-schema';
 
-export interface GetCmsOptions {
-  init?: Omit<RequestInit, 'body'>;
-  params: paths['/rest/cms']['get']['parameters'];
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function getCms({ init, params }: GetCmsOptions) {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+export async function getCms() {
+  // Returns hardcoded Billie Eilish data - no external API calls
   return response as unknown as CmsPathResponse;
 }
 

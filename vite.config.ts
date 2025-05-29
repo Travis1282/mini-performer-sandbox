@@ -3,8 +3,9 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  plugins: [react()],
   server: {
-    host: '0.0.0.0',
+    host: true,
     port: 3000,
   },
   resolve: {
@@ -12,5 +13,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  plugins: [react()],
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
 });
