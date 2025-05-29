@@ -10,7 +10,7 @@ import { leagueMap } from '@/contracts/sports';
 import dayjs from 'dayjs';
 import isBetween from 'dayjs/plugin/isBetween';
 import type { ImageApiParams } from './helpers';
-import { NEARBY_REGION_RADIUS } from './contants';
+import { NEARBY_REGION_RADIUS } from './constants';
 import { resolveImagePath, sanitizeString } from './helpers';
 
 type Event = components['schemas']['Event'];

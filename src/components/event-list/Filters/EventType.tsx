@@ -2,7 +2,7 @@
 
 import { DropdownCheckbox } from '@/components/DropdownCheckbox';
 import { useFilterByQueryParams } from '@/hooks/useFilterByQueryParams';
-import { EVENT_TYPE } from '@/utils/contants';
+import { EVENT_TYPE } from '@/utils/constants';
 
 export function EventType() {
   const { types, setTypes } = useFilterByQueryParams();

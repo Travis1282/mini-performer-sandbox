@@ -1,22 +1,20 @@
-'use client'
+'use client';
 
-import { RegionListItem } from './RegionListItem'
-import type { Region } from '@/contracts/entities/region'
-import { resolveImagePath } from '@/utils/helpers'
-import clsx from 'clsx'
-import type { Dispatch, SetStateAction } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import type { Region } from '@/contracts/entities/region';
+import type { Dispatch, SetStateAction } from 'react';
+import { resolveImagePath } from '@/utils/helpers';
+import clsx from 'clsx';
+import { useEffect, useRef, useState } from 'react';
+import { RegionListItem } from './RegionListItem';
 
-interface DataAttributes {
-  [key: `data-${string}`]: unknown
-}
+type DataAttributes = Record<`data-${string}`, unknown>;
 
 export interface SelectRegionSearchListProps extends DataAttributes {
-  clearSearchItem?: string
-  onSelect: (region: Region) => void
-  options: Region[]
-  search: string
-  setSearch: Dispatch<SetStateAction<string>>
+  clearSearchItem?: string;
+  onSelect: (region: Region) => void;
+  options: Region[];
+  search: string;
+  setSearch: Dispatch<SetStateAction<string>>;
 }
 
 export const RegionList = ({
@@ -26,18 +24,18 @@ export const RegionList = ({
   onSelect,
   ...rest
 }: SelectRegionSearchListProps) => {
-  const inputRef = useRef<HTMLInputElement>(null)
-  const [regions, setRegions] = useState<Region[]>(options)
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [regions, setRegions] = useState<Region[]>(options);
 
   useEffect(() => {
     setRegions(
       options.filter((region) => {
         if ((region.name ?? '').toLowerCase().includes(search.toLowerCase())) {
-          return region
+          return region;
         }
       })
-    )
-  }, [options, search])
+    );
+  }, [options, search]);
 
   return (
     <div
@@ -56,7 +54,7 @@ export const RegionList = ({
               data-cy="locationFilterInput"
               id="locationFilterInput"
               onChange={(e) => {
-                setSearch(e.target.value)
+                setSearch(e.target.value);
               }}
               placeholder="Search for a region..."
               ref={inputRef}
@@ -64,11 +62,9 @@ export const RegionList = ({
               value={search}
             />
             <button
-              className={clsx(
-                'absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer p-3'
-              )}
+              className={clsx('absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer p-3')}
               onClick={() => {
-                inputRef.current?.focus()
+                inputRef.current?.focus();
               }}
             >
               <img
@@ -87,15 +83,8 @@ export const RegionList = ({
         <ul className="flex h-full flex-col overflow-y-auto">
           {search && regions.length === 0 && (
             <li className="flex h-full grow flex-col items-center justify-center pb-10">
-              <img
-                alt="search"
-                height={64}
-                src={resolveImagePath('/img/loupe.svg')}
-                width={64}
-              />
-              <h3 className="text-dark h3-sm mt-6 mb-[6px]">
-                No Results Found
-              </h3>
+              <img alt="search" height={64} src={resolveImagePath('/img/loupe.svg')} width={64} />
+              <h3 className="text-dark h3-sm mt-6 mb-[6px]">No Results Found</h3>
               <p className="text-dark h6-lg flex flex-row flex-wrap items-center justify-center break-all opacity-60">
                 Sorry, there are no results for <span>{`"${search}"`}</span>
               </p>
@@ -105,18 +94,14 @@ export const RegionList = ({
           {regions &&
             regions
               .sort((a, b) =>
-                (a.name ?? '') < (b.name ?? '')
-                  ? -1
-                  : (a.name ?? '') > (b.name ?? '')
-                    ? 1
-                    : 0
+                (a.name ?? '') < (b.name ?? '') ? -1 : (a.name ?? '') > (b.name ?? '') ? 1 : 0
               )
               .map((region, index) => (
                 <RegionListItem
                   key={`region-list-item-${region.name}-${index}-id-${region.id}`}
                   onClick={() => {
-                    onSelect(region)
-                    setSearch('')
+                    onSelect(region);
+                    setSearch('');
                   }}
                   region={region}
                 />
@@ -124,5 +109,5 @@ export const RegionList = ({
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};

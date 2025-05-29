@@ -1,23 +1,17 @@
-'use client'
+'use client';
 
-import clsx from 'clsx'
-import type { ReactNode } from 'react'
+import type { ReactNode } from 'react';
+import clsx from 'clsx';
 
 export interface OffcanvasContentProps {
-  children?: ReactNode
-  className?: string
+  children?: ReactNode;
+  className?: string;
 }
 
-export function OffcanvasContent({
-  className,
-  children,
-}: OffcanvasContentProps) {
+export function OffcanvasContent({ className, children }: OffcanvasContentProps) {
   return (
-    <div
-      className={clsx('grow overflow-y-auto', className)}
-      data-cy="offcanvas-content"
-    >
+    <div className={clsx('grow overflow-y-auto', className)} data-cy="offcanvas-content">
       {children}
     </div>
-  )
+  );
 }
