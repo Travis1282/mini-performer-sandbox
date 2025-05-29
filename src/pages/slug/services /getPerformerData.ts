@@ -1,6 +1,5 @@
 import type { components } from '@/contracts/generated/maverick-schema';
 import { getCms } from '@/services/maverick/getCms';
-import { buildServerRequestInit } from '@/utils/buildServerRequestInit';
 import { getHeroImage } from '@/utils/eventUtils';
 import { reThrowError } from '@/utils/reThrowError';
 import { redirect } from 'react-router';
@@ -19,7 +18,6 @@ export const getPerformerData = async (
 ): Promise<GetPerformerDataResp | undefined> => {
   try {
     const response = await getCms({
-      init: buildServerRequestInit(),
       params: {
         query: {
           path: slug,

@@ -3,7 +3,6 @@ import NotFound from '@/components/errors/not-found';
 import { DateRange, EventTime, RegionHeading } from '@/components/event-list/Filters';
 import { SearchEventItem } from '@/components/event-list/search-event-item';
 import ScrollContainer from 'react-indiana-drag-scroll';
-// import Redirect from '@/services/navigation/redirect';
 import { useLoaderData } from 'react-router';
 import type { GetPerformerDataResp } from './services /getPerformerData';
 import { PerformerHeading } from './components/Header';

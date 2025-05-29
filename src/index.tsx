@@ -1,58 +1,35 @@
-import { Hono } from 'hono';
-import { logger } from 'hono/logger';
-import { buildBootstrappedData } from './services/bootstrappedData';
-import { getLocationRegion } from './services/location/getLocationRegion';
-import { getSessions, setSessionCookiesAndHeaders } from './services/ppc/sessions';
-import { basicProxy } from './services/proxy';
+import './services/sentry/instrument';
 
-interface ManifestEntry {
-  css?: string[];
-  file: string;
+import { QueryClientProvider } from '@tanstack/react-query';
+import { createRoot } from 'react-dom/client';
+import { RouterProvider } from 'react-router';
+import '@fontsource-variable/plus-jakarta-sans';
+import '@fontsource-variable/plus-jakarta-sans/wght-italic.css';
+
+import { queryClient } from './query-client';
+import router from './router';
+import { CategoriesProvider } from './services/categories/use-categories-context';
+import { RegionsProvider } from './services/categories/use-regions-context';
+import { LocationProvider } from './services/location/useLocationContext';
+import './style.css';
+
+const rootNode = document.getElementById('root');
+if (rootNode) {
+  try {
+    createRoot(rootNode).render(
+      <QueryClientProvider client={queryClient}>
+        <LocationProvider location={{ closestRegionId: '1' }}>
+          <CategoriesProvider>
+            <RegionsProvider>
+              <RouterProvider router={router} />
+            </RegionsProvider>
+          </CategoriesProvider>
+        </LocationProvider>
+      </QueryClientProvider>
+    );
+  } catch (error) {
+    console.error('Error rendering router:', error);
+  }
+} else {
+  console.error('Root node not found');
 }
-
-const manifest: Record<string, ManifestEntry> = {
-  'src/client.tsx': {
-    file: 'assets/client.js',
-    css: ['assets/client.css'],
-  },
-};
-
-const cssFile: string | undefined = manifest['src/client.tsx']?.css?.[0];
-const entryFile: string | undefined = manifest['src/client.tsx']?.file;
-
-const app = new Hono();
-app.use(logger());
-
-app.on(['GET', 'POST', 'PUT', 'DELETE'], '/rest/*', basicProxy(import.meta.env.VITE_MAVERICK_URL));
-
-app.get('*', async (c, next) => {
-  const sessionsPayload = await getSessions(c);
-
-  setSessionCookiesAndHeaders(c, sessionsPayload);
-
-  await next();
-});
-
-app.get('*', async (c) => {
-  const { ipLocation, closestRegionId } = await getLocationRegion(c);
-
-  return c.html(
-    `
-      <html>
-        <head>
-          <meta charSet="utf-8" />
-          <meta content="width=device-width, initial-scale=1" name="viewport" />
-          ${buildBootstrappedData({ location: ipLocation, closestRegionId })}
-
-          ${cssFile ? `<link crossorigin href=/${cssFile} rel="stylesheet" />` : null}
-        </head>
-        <body>
-          <div id="root"></div>
-          ${entryFile ? `<script crossorigin async type="module" src=/${entryFile}></script>` : null}
-        </body>
-      </html>
-    `
-  );
-});
-
-export default app;

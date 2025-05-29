@@ -1,4 +1,4 @@
-import devServer from '@hono/vite-dev-server';
+import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 
@@ -12,9 +12,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  plugins: [
-    devServer({
-      entry: 'src/index.dev.tsx',
-    }),
-  ],
+  plugins: [react()],
 });
