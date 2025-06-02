@@ -1,7 +1,7 @@
+import clsx from 'clsx';
 import type { components } from '@/contracts/generated/maverick-schema';
 import { getEventTitle, getHeroImage } from '@/utils/eventUtils';
 import { resolveImagePath } from '@/utils/helpers';
-import clsx from 'clsx';
 
 export interface PerformerHeadingProps {
   headerWidth?: number;
@@ -33,7 +33,7 @@ export function PerformerHeading({
   const title = getEventTitle(performer, { titleOverride });
 
   const titleSize = title ? title.length : 0;
-  console.log('titleSize', titleSize);
+
   return (
     <>
       <header

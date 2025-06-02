@@ -1,17 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
-import type { DateRange, Matcher } from 'react-day-picker';
-import { DateRangePicker } from '@/components/event-list/Filters/DateRangePicker';
-import { useFilterByQueryParams } from '@/hooks/useFilterByQueryParams';
+import type { DateAfter, DateBefore, DateRange } from 'react-day-picker';
 import dayjs from 'dayjs';
 import { useEffect } from 'react';
+import { DateRangePicker } from '@/components/event-list/Filters/DateRangePicker';
+import { useFilterByQueryParams } from '@/hooks/useFilterByQueryParams';
 
 interface DateRangeProps {
-  disabledDate?: Matcher | Matcher[] | undefined;
+  disabledBeforeAfter?: DateAfter | DateBefore;
 }
 
-export function DateRange({ disabledDate }: DateRangeProps) {
+export function DateRange({ disabledBeforeAfter }: DateRangeProps) {
   const { dateRange, setDateRange } = useFilterByQueryParams();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export function DateRange({ disabledDate }: DateRangeProps) {
   return (
     <DateRangePicker
       className="flex shrink-0"
-      disabled={disabledDate}
+      disabled={disabledBeforeAfter}
       handleSelectDateRange={setDateRange}
       selectedDateRange={dateRange}
     />

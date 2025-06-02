@@ -1,13 +1,16 @@
+import { redirect } from 'react-router';
+import type { Region } from '@/contracts/entities/region';
 import type { components } from '@/contracts/generated/maverick-schema';
 import { getCms } from '@/services/maverick/getCms';
+import { getRegions } from '@/services/maverick/getRegions';
 import { getHeroImage } from '@/utils/eventUtils';
 import { reThrowError } from '@/utils/reThrowError';
-import { redirect } from 'react-router';
 import type { SearchPageParams } from '../types';
 
 export interface GetPerformerDataResp {
   data: components['schemas']['CmsPathResponse'];
   heroImage: string;
+  regions: Region[];
   searchParams?: SearchPageParams['searchParams'];
   slug: string;
 }
@@ -17,9 +20,8 @@ export const getPerformerData = async (
   searchParams?: SearchPageParams['searchParams']
 ): Promise<GetPerformerDataResp | undefined> => {
   try {
-    const response = await getCms();
-
-    const { data } = response;
+    const { data } = await getCms();
+    const regions = await getRegions();
 
     if (!data) {
       redirect('/404');
@@ -38,6 +40,8 @@ export const getPerformerData = async (
       searchParams,
       data,
       heroImage,
+      regions,
+      
     };
   } catch (error) {
     reThrowError(error);
