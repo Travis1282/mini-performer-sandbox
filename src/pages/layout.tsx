@@ -1,16 +1,13 @@
-import { useLocationContext } from '@/services/location/useLocationContext';
 import clsx from 'clsx';
 import { useEffect } from 'react';
-import { useHotkeys } from 'react-hotkeys-hook';
 import { Outlet } from 'react-router';
 import { useLocalStorage } from 'react-use';
+import { useLocationContext } from '@/services/location/useLocationContext';
 
 export function Layout() {
   const location = useLocationContext();
 
   const [value, setValue, remove] = useLocalStorage('gt-debug', 'hide');
-
-  useHotkeys('ctrl+g+t', () => setValue(value === 'show' ? 'hide' : 'show'), [value]);
 
   useEffect(() => {
     return () => {

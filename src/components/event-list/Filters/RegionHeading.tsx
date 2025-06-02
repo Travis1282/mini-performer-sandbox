@@ -1,15 +1,19 @@
 'use client';
 
+import clsx from 'clsx';
 import type { Region } from '@/contracts/entities/region';
 import { Button } from '@/components/Button/';
 import { useFilterByQueryParams } from '@/hooks/useFilterByQueryParams';
-import { useRegionsContext } from '@/services/categories/use-regions-context';
 import { useLocationContext } from '@/services/location/useLocationContext';
-import clsx from 'clsx';
 import { SelectRegion } from './SelectRegion';
 
-export function RegionHeading({ eventIsGame }: { eventIsGame?: boolean }) {
-  const regions = useRegionsContext();
+export function RegionHeading({
+  eventIsGame,
+  regions,
+}: {
+  eventIsGame?: boolean;
+  regions: Region[];
+}) {
   const { trendingRegion, changeTrendingRegion } = useLocationContext();
   const { setLocation } = useFilterByQueryParams({ regions });
 

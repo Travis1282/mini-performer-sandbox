@@ -2,6 +2,7 @@ import type { components } from '@/contracts/generated/maverick-schema';
 
 export async function getCms() {
   // Returns hardcoded Billie Eilish data - no external API calls
+  await new Promise((resolve) => setTimeout(resolve, 800));
   return response as unknown as CmsPathResponse;
 }
 
